@@ -1,0 +1,28 @@
+{
+  "name": "ArcTerra Expeditions",
+  "domain": "https://arcterra.travel",
+  "journalName": "ArcTerra Project MMXXVII Findings",
+  "journalTagline": "Field notes from ARC | TERRA XY: destinations, voyages and expeditions, charted.",
+  "communityName": "EarthRogues",
+  "email": "Explore@Arcterra.travel",
+  "phone": "561.479.6355",
+  "address": "Miami, FL, USA",
+  "legalName": "ArcTerra LLC",
+  "sellerOfTravel": "ST45327",
+  "airtableBase": "appXUzePYs6cZrQKx",
+  "phoneHref": "+15614796355",
+  "iata": "10783883",
+  "social": {
+    "instagram": "https://www.instagram.com/[HANDLE]",
+    "facebook": "https://www.facebook.com/[PAGE]",
+    "x": "https://x.com/[HANDLE]",
+    "youtube": "https://www.youtube.com/@[CHANNEL]"
+  },
+  "newsTitle": "Sign up for expedition news",
+  "addressLocality": "Miami",
+  "addressRegion": "FL",
+  "addressCountry": "US",
+  "sellerOfTravelHolder": "James Wild Co Companies",
+  "parentCompany": "James Wild Co Companies",
+  "advisorCommission": "6–10%"
+}

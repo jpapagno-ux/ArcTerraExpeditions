@@ -1,0 +1,26 @@
+footer.site{--ivory:#EEEAE3;--ink:#081A26;--mono:'IBM Plex Mono',Menlo,monospace;--display:'Archivo','Arial Black',sans-serif;--fell:'IM Fell English',Georgia,serif;font-family:'Manrope','Helvetica Neue',Arial,sans-serif;line-height:1.6;box-sizing:border-box}
+footer.site *{box-sizing:border-box}footer.site .wrap{max-width:1280px;margin:0 auto;padding:0 20px}
+/* ArcTerra footer: self-contained so static pages (home, journey maps) can use it too */
+footer.site{margin-top:40px;background:linear-gradient(170deg,#1F3746,#10233A 50%,#081A26);color:var(--ivory);padding:44px 0 26px;font-size:14px;position:relative}
+footer.site .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:24px;margin:26px 0}
+footer.site h2.fh{margin:0 0 8px;font:500 11px var(--mono);letter-spacing:.16em;color:#ACBCCF;text-transform:uppercase}
+footer.site a{color:var(--ivory);text-decoration:none;display:block;padding:4px 0}footer.site a:hover{text-decoration:underline}
+footer.site .lg{display:flex;gap:18px;align-items:center}footer.site .lg img{height:28px;width:auto}
+footer.site .legalrow{border-top:1px solid rgba(238,234,227,.18);padding-top:16px;display:flex;gap:16px;flex-wrap:wrap;color:#ACBCCF;font-size:12.5px}
+footer.site .legalrow a{display:inline;color:#ACBCCF}
+footer.site form{display:flex;width:100%;max-width:440px;flex:1 1 280px}footer.site input{flex:1;min-width:0;height:48px;padding:0 14px;background:transparent;border:1px solid rgba(238,234,227,.4);color:var(--ivory);font:inherit}
+footer.site form button{height:48px;padding:0 18px;border:0;background:var(--ivory);color:var(--ink);font:500 12px var(--mono);letter-spacing:.12em;cursor:pointer}
+
+html,body{overflow-x:clip}
+
+footer.site .top-row{display:flex;flex-wrap:wrap;gap:28px;justify-content:space-between;align-items:flex-start;border-bottom:1px solid rgba(238,234,227,.18);padding-bottom:28px}
+footer.site .id{display:grid;gap:12px;max-width:420px}footer.site .id p{margin:0;color:#C9D3DA}
+footer.site .contact a{display:inline-block;padding:2px 0;font-size:15px}
+footer.site .news{flex:1 1 340px;max-width:480px;display:grid;gap:10px}footer.site .news h2.news-h{margin:0;font:800 18px var(--display);font-stretch:125%;text-transform:uppercase;color:var(--ivory)}
+footer.site .news p{margin:0;color:#C9D3DA;font-size:14px}footer.site .news .msg{font-size:13px;min-height:18px}
+footer.site .social{display:flex;gap:10px;margin-top:4px}footer.site .social a{width:44px;height:44px;border:1px solid rgba(238,234,227,.4);display:grid;place-items:center;padding:0}
+footer.site .social a:hover{background:rgba(238,234,227,.1);text-decoration:none}footer.site .social svg{width:18px;height:18px}
+footer.site .hp{position:absolute;left:-5000px}footer.site .vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.totop{position:fixed;right:18px;bottom:18px;width:48px;height:48px;border:0;background:#081A26;color:#fff;font-size:18px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s;z-index:80}.totop.on{opacity:.85;pointer-events:auto}
+footer.site .lg img{height:28px!important;width:auto!important;max-width:none!important;display:block}footer.site h4,footer.site h3{letter-spacing:.16em}footer.site{text-align:left}
+body:has(.bookbar) .totop{bottom:92px}

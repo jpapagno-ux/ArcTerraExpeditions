@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ARC | TERRA XY</title>
+<meta name="description" content="Two worlds, one expedition. ARCX private ocean voyages through Indonesia's Banda Islands and Komodo; TERRA Y overland expeditions across Tibet and East Africa by 4×4, bush plane, rail and on foot.">
+<link rel="canonical" href="https://[DOMAIN]/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ARC | TERRA XY">
+<meta property="og:title" content="ARC | TERRA XY — Luxury Ocean & Land Expeditions">
+<meta property="og:description" content="ARCX ocean voyages and TERRA Y land expeditions, planned day by day as a coordinate ledger.">
+<meta property="og:image" content="https://[DOMAIN]/img/og-arc-terra-xy.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=IBM+Plex+Mono:wght@400;500;600&family=IM+Fell+English:ital@0;1&family=Manrope:wght@400;500;600&display=swap">
+<style>
+/* Layout: split landing — left half ARCX (ocean, carbon chart), right half TERRA Y (land, field-paper chart); live route animations from the four journeys, an engraved globe riding the seam, animated blended logos, one tag line across the bottom; crawlable answer content below the fold. */
+:root{
+  --carbon:#10233A; --carbon2:#1A3352; --deep:#0B1A2B; --mist:#AFCFD1; --ivory:#EEEAE3; --sheet:#F7F3EC;
+  --field:#F1E8D6; --umber:#3B2618; --umber2:#2A1E16; --sienna:#8A4B24; --ochre:#C2894E; --sand:#E3CFAE; --brass:#C9A15A; --ink:#14181C;
+  --line:rgba(20,20,20,.14); --muted:#5A544D;
+  --blend-arcx:linear-gradient(100deg,#F4EFE6 0%,#E2ECEA 42%,#AFCFD1 100%);
+  --blend-ty:linear-gradient(100deg,#F7ECD8 0%,#E8D4B2 48%,#C99D66 100%);
+  --blend-ty-ink:linear-gradient(100deg,#2A1E16 0%,#5A3720 55%,#8A4B24 100%);
+  --display:'Archivo','Arial Black','Helvetica Neue',sans-serif;
+  --body:'Manrope','Helvetica Neue',Arial,sans-serif;
+  --mono:'IBM Plex Mono','SFMono-Regular',Menlo,Consolas,monospace;
+  --fell:'IM Fell English',Georgia,serif;
+  --seam:50%; --seamy:50%;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--ivory);color:var(--ink)}
+body{font-family:var(--body);font-size:16px;line-height:1.6}
+a{color:inherit}
+.g{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+
+/* ---------- logo marks (masked, blended) ---------- */
+.lgm{display:block;-webkit-mask:url(img/arcx-white.png) left bottom/contain no-repeat;mask:url(img/arcx-white.png) left bottom/contain no-repeat;
+  background:linear-gradient(110deg,transparent 42%,rgba(255,255,255,.65) 50%,transparent 58%) 160% 0/250% 100% no-repeat,var(--blend-arcx);aspect-ratio:936/518}
+.lgm.ty{-webkit-mask-image:url(img/terray-white.png);mask-image:url(img/terray-white.png);aspect-ratio:949/495;background:linear-gradient(110deg,transparent 42%,rgba(255,255,255,.55) 50%,transparent 58%) 160% 0/250% 100% no-repeat,var(--blend-ty)}
+.lgm.ty.ink{background:linear-gradient(110deg,transparent 42%,rgba(255,236,200,.7) 50%,transparent 58%) 160% 0/250% 100% no-repeat,var(--blend-ty-ink)}
+.lgm.draw{animation:logoIn 1.6s cubic-bezier(.2,.7,.2,1) both,sheen 9s 2.4s linear infinite}
+.lgm.draw.d2{animation-delay:.35s,3s}
+@keyframes logoIn{from{clip-path:inset(0 100% 0 0);opacity:.15;transform:translateY(6px)}to{clip-path:inset(0 0 0 0);opacity:1;transform:none}}
+@keyframes sheen{0%,72%{background-position:160% 0,0 0}100%{background-position:-60% 0,0 0}}
+
+/* ---------- split hero ---------- */
+.split{position:relative;height:100svh;min-height:660px;max-height:1100px;display:flex;overflow:hidden;background:var(--carbon);isolation:isolate}
+.half{position:relative;flex:1 1 0;min-width:0;overflow:hidden;transition:flex-grow .8s cubic-bezier(.2,.7,.2,1)}
+.sea{background:radial-gradient(120% 90% at 30% 35%,#173350 0%,#10233A 55%,#0B1A2B 100%);color:var(--ivory)}
+.land{background:radial-gradient(120% 90% at 70% 35%,#F6EEDF 0%,#EFE4CE 60%,#E4D5B8 100%);color:var(--umber)}
+.land::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .23 0 0 0 0 .15 0 0 0 0 .09 0 0 0 .14 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");opacity:.55;pointer-events:none}
+.split.h-sea .sea,.split.h-land .land{flex-grow:1.62}
+.half canvas{position:absolute;inset:0;width:100%;height:100%;display:block;transition:opacity .6s,filter .6s}
+.split.h-sea .land canvas,.split.h-land .sea canvas{opacity:.42;filter:saturate(.5)}
+.half::after{content:'';position:absolute;left:0;right:0;bottom:0;height:58%;pointer-events:none;z-index:1}
+.sea::after{background:linear-gradient(180deg,rgba(11,26,43,0),rgba(11,26,43,.78) 55%,rgba(11,26,43,.95))}
+.land::after{background:linear-gradient(180deg,rgba(42,30,22,0),rgba(42,30,22,.6) 38%,rgba(42,30,22,.94) 75%)}
+.brandmark{position:absolute;top:clamp(78px,11vh,120px);z-index:2;display:flex;flex-direction:column;gap:12px;max-width:44%}
+.sea .brandmark{left:clamp(20px,5vw,72px)}
+.land .brandmark{right:clamp(20px,5vw,72px);align-items:flex-end;text-align:right}
+.brandmark .lgm{width:clamp(150px,15vw,240px)}
+.brandmark .cap{font-family:var(--display);font-stretch:125%;font-weight:500;text-transform:uppercase;letter-spacing:.3em;font-size:11px}
+.sea .cap{color:var(--mist)}.land .cap{color:var(--sienna)}
+.tripline{position:absolute;z-index:3;bottom:clamp(250px,31vh,300px);display:flex;flex-direction:column;gap:4px;text-decoration:none;max-width:min(380px,40vw);transition:opacity .5s,transform .5s}
+.sea .tripline{left:clamp(20px,5vw,72px)}
+.land .tripline{right:clamp(20px,5vw,72px);align-items:flex-end;text-align:right;text-shadow:0 1px 14px rgba(42,30,22,.75)}
+.tripline.out{opacity:0;transform:translateY(8px)}
+.tripline .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase}
+.sea .tripline .k{color:var(--mist)}.land .tripline .k{color:#E9CFA4}
+.tripline .n{font-family:var(--display);font-stretch:125%;font-weight:900;text-transform:uppercase;font-size:clamp(24px,2.6vw,38px);line-height:1;color:#F3EEE5}
+.tripline .w{font-family:var(--fell);font-style:italic;font-size:17px;color:#E7E1D6}
+.tripline .s{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;color:rgba(238,234,227,.72)}
+.tripline:hover .n,.tripline:focus-visible .n{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px}
+.seamline{position:absolute;top:0;bottom:0;left:var(--seam);width:1px;background:linear-gradient(180deg,rgba(201,161,90,0),rgba(201,161,90,.55) 20%,rgba(201,161,90,.55) 80%,rgba(201,161,90,0));z-index:4;pointer-events:none;transform:translateX(-.5px)}
+.globe{position:absolute;z-index:5;left:var(--seam);top:44%;width:clamp(170px,26vmin,300px);aspect-ratio:1;transform:translate(-50%,-50%);pointer-events:none;filter:drop-shadow(0 18px 30px rgba(0,0,0,.35))}
+.hinge{position:absolute;z-index:6;top:18px;left:var(--seam);transform:translateX(-50%);display:flex;align-items:center;gap:12px;text-decoration:none;padding:6px 0}
+.hinge .lgm{width:64px}
+.hinge i{display:block;width:1px;height:28px;background:var(--brass)}
+.hinge .vh+span{display:none}
+.topnav{position:absolute;z-index:6;top:22px;display:flex;gap:18px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.topnav.l{left:clamp(20px,5vw,72px)}.topnav.r{right:clamp(20px,5vw,72px)}
+.topnav a{text-decoration:none;padding:8px 0;min-height:44px;display:inline-flex;align-items:center}
+.topnav.l a{color:var(--mist)}.topnav.r a{color:var(--sienna)}
+.topnav a:hover{text-decoration:underline;text-underline-offset:4px}
+.tagbar{position:absolute;z-index:7;left:0;right:0;bottom:0;padding-bottom:clamp(22px,4vh,40px);display:grid;grid-template-columns:var(--seam) minmax(0,1fr);align-items:end;transition:grid-template-columns .8s cubic-bezier(.2,.7,.2,1)}
+.tagbar::before{content:'';grid-column:1/-1;height:1px;margin:0 clamp(20px,5vw,72px) 18px;background:linear-gradient(90deg,rgba(175,207,209,.0),rgba(175,207,209,.55) 30%,rgba(201,161,90,.8) 50%,rgba(227,207,174,.55) 70%,rgba(227,207,174,0))}
+.tagbar h1{display:contents}
+.tagbar h1 span{font-family:var(--display);font-stretch:125%;font-weight:900;text-transform:uppercase;font-size:clamp(26px,4.4vw,68px);line-height:1;letter-spacing:.01em;-webkit-background-clip:text;background-clip:text;color:transparent}
+.tagbar .o{text-align:right;padding-right:clamp(16px,2.2vw,36px);background-image:var(--blend-arcx)}
+.tagbar .t{text-align:left;padding-left:clamp(16px,2.2vw,36px);background-image:var(--blend-ty)}
+.tagbar .acts{display:contents}
+.tagbar .acts a{margin-top:16px;font-family:var(--mono);font-weight:600;font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;min-height:44px;display:inline-flex;align-items:center;gap:10px;padding:0 16px;border:1.5px solid currentColor}
+.tagbar .acts .as{justify-self:end;margin-right:clamp(16px,2.2vw,36px);color:#DCEAEA}
+.tagbar .acts .al{justify-self:start;margin-left:clamp(16px,2.2vw,36px);color:var(--sand)}
+.tagbar .acts .as:hover{background:rgba(175,207,209,.14)}.tagbar .acts .al:hover{background:rgba(227,207,174,.14)}
+.tagbar .lede{grid-column:1/-1;justify-self:center;text-align:center;margin:16px clamp(20px,5vw,72px) 0;max-width:72ch;font-size:13px;line-height:1.55;color:rgba(238,234,227,.78)}
+.tagbar .lede a{color:#F3EEE5}
+.split.zoom-sea .sea canvas,.split.zoom-land .land canvas{transform:scale(1.35);transition:transform .55s cubic-bezier(.5,0,.2,1)}
+@media (max-width:820px){
+  .split{flex-direction:column;height:auto;max-height:none;min-height:0}
+  .half{flex:none;height:58svh;min-height:420px}
+  .split.h-sea .sea,.split.h-land .land{flex-grow:0}
+  .brandmark{top:64px;max-width:70%}
+  .tripline{bottom:30px;max-width:66%}
+  .tripline .n{font-size:26px}
+  .half::after{height:55%}
+  .seamline{display:none}
+  .globe{left:auto;right:-14px;top:var(--seamy);width:118px;transform:translate(0,-50%)}
+  .hinge{left:50%;top:12px}
+  .hinge .lgm.ty.ink{background:var(--blend-ty)}
+  .tripline .k{white-space:nowrap}
+  .topnav{display:none}
+  .tagbar{position:relative;display:block;text-align:center;background:linear-gradient(90deg,var(--deep),#22201C 50%,var(--umber2));padding:28px 16px 30px}
+  .tagbar::before{display:block;margin:0 0 18px}
+  .tagbar h1{display:block;margin:0}
+  .tagbar h1 span{display:block;text-align:center!important;padding:0!important;font-size:clamp(30px,9vw,46px)}
+  .tagbar .acts{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:6px}
+  .tagbar .acts a{margin:10px 0 0!important}
+  .tagbar .lede{margin:16px auto 0}
+}
+
+/* ---------- below the fold ---------- */
+.wrap{max-width:1240px;margin:0 auto}
+section.sec{padding-block:72px}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--sienna)}
+h2{font-family:var(--display);font-stretch:125%;font-weight:900;text-transform:uppercase;font-size:clamp(28px,4vw,48px);line-height:1;margin:10px 0 18px;text-wrap:balance}
+.answer{display:grid;grid-template-columns:minmax(0,1fr);gap:28px}
+@media (min-width:900px){.answer{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,1fr);align-items:start}}
+.answer p.big{font-size:19px;line-height:1.55;margin:0;max-width:52ch}
+.pill{border-top:1.5px solid var(--ink);padding-top:14px}
+.pill h3{margin:0 0 6px;font-family:var(--display);font-stretch:118%;font-weight:800;text-transform:uppercase;font-size:18px;display:flex;align-items:center;gap:10px}
+.pill h3 i{display:inline-block;width:10px;height:10px}
+.pill p{margin:0;font-size:15px;color:#2E2A25}
+.journeys{background:var(--sheet);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.jgrid{display:grid;grid-template-columns:minmax(0,1fr);gap:20px}
+@media (min-width:700px){.jgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1100px){.jgrid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.jcard{display:flex;flex-direction:column;background:#fff;border:1.5px solid var(--ink);text-decoration:none;transition:transform .3s,box-shadow .3s}
+.jcard:hover{transform:translateY(-3px);box-shadow:6px 6px 0 rgba(16,35,58,.15)}
+.jcard .m{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--carbon)}
+.jcard .m img,.jcard .m canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.jcard .m img{filter:saturate(.82) contrast(1.05)}
+.jcard.ty .m{background:var(--field)}
+.jcard .chip{position:absolute;left:10px;top:10px;z-index:2;font-family:var(--mono);font-size:10px;letter-spacing:.14em;padding:3px 8px;color:#F3EEE5}
+.jcard.arcx .chip{background:rgba(16,35,58,.85)}.jcard.ty .chip{background:rgba(59,38,24,.85)}
+.jcard .ex{position:absolute;right:8px;bottom:8px;z-index:2;font-family:var(--mono);font-size:8.5px;letter-spacing:.12em;color:#F4F1EA;background:rgba(16,35,58,.55);padding:2px 6px}
+.jcard .b{padding:16px 16px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.jcard h3{margin:0;font-family:var(--display);font-stretch:125%;font-weight:900;text-transform:uppercase;font-size:21px;line-height:1.05}
+.jcard .w{font-family:var(--fell);font-style:italic;font-size:16px}
+.jcard p{margin:0;font-size:14px;color:#3A352F}
+.jcard .go{margin-top:auto;padding-top:8px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+.jcard.arcx .go{color:var(--carbon)}.jcard.ty .go{color:var(--sienna)}
+.how{display:grid;grid-template-columns:minmax(0,1fr);gap:0;border:1.5px solid var(--ink)}
+@media (min-width:860px){.how{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.how div{padding:22px;border-top:1px solid var(--line)}
+.how div:first-child{border-top:0}
+@media (min-width:860px){.how div{border-top:0;border-left:1px solid var(--line)}.how div:first-child{border-left:0}}
+.how b{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--sienna);margin-bottom:6px}
+.how h3{margin:0 0 6px;font-family:var(--display);font-stretch:118%;font-weight:800;text-transform:uppercase;font-size:17px}
+.how p{margin:0;font-size:14.5px;color:#3A352F}
+details.q{border:1.5px solid var(--ink);background:#fff;margin-top:-1.5px}
+details.q summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center;min-height:52px;padding:14px 18px;font-family:var(--display);font-stretch:112%;font-weight:700;font-size:16px}
+details.q summary::-webkit-details-marker{display:none}
+details.q summary::after{content:'+';font-family:var(--mono);font-size:20px;color:var(--sienna)}
+details.q[open] summary::after{content:'−'}
+details.q p{margin:0;padding:0 18px 18px;max-width:78ch;font-size:15px;color:#2E2A25}
+.report{border:1.5px solid var(--ink);background:var(--field);margin-top:48px}
+.report>summary{cursor:pointer;list-style:none;min-height:48px;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:12px 18px;background:var(--carbon);color:#EEEAE3;font-family:var(--mono);font-size:11px;letter-spacing:.14em}
+.report>summary::-webkit-details-marker{display:none}
+.report .rb{padding:18px;display:grid;grid-template-columns:minmax(0,1fr);gap:18px}
+@media (min-width:980px){.report .rb{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.report h4{margin:0 0 6px;font-family:var(--display);font-stretch:112%;font-weight:800;font-size:14px;text-transform:uppercase;letter-spacing:.06em}
+.report ul{margin:0;padding-left:18px;font-size:14px}.report li{margin:3px 0}
+.report code{font-family:var(--mono);font-size:12px;background:rgba(20,20,20,.07);padding:0 4px;overflow-wrap:anywhere}
+footer{background:linear-gradient(90deg,var(--deep),#1B1A18 50%,var(--umber2));color:#E8E2D6}
+footer .in{max-width:1240px;margin:0 auto;padding-block:36px;display:flex;flex-wrap:wrap;gap:20px 40px;align-items:center;justify-content:space-between}
+footer .marks{display:flex;align-items:center;gap:14px}
+footer .marks .lgm{width:96px}
+footer .marks i{width:1px;height:34px;background:var(--brass)}
+footer nav{display:flex;flex-wrap:wrap;gap:6px 22px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+footer nav a{text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+footer small{flex-basis:100%;font-size:12px;color:rgba(232,226,214,.65)}
+@media (prefers-reduced-motion:reduce){.lgm.draw{animation:none}.half{transition:none}html{scroll-behavior:auto}}
+</style>
+
+<section class="split" id="split" aria-label="Choose an expedition: ocean voyages with ARCX or land expeditions with TERRA Y">
+  <a class="hinge" href="/" aria-label="ARC | TERRA XY home"><span class="lgm" aria-hidden="true"></span><i aria-hidden="true"></i><span class="lgm ty ink" aria-hidden="true"></span></a>
+  <nav class="topnav l" aria-label="Ocean"><a href="/journeys/#ocean">Voyages</a><a href="/journeys/">All journeys</a></nav>
+  <nav class="topnav r" aria-label="Site"><a href="/journeys/">The ledger</a><a href="/enquire/">Enquire</a></nav>
+
+  <div class="half sea" data-side="sea">
+    <canvas id="cvSea" aria-hidden="true"></canvas>
+    <div class="brandmark"><span class="lgm draw" role="img" aria-label="ARCX"></span><span class="cap">Ocean expeditions</span></div>
+    <a class="tripline" id="tlSea" href="/journeys/banda-nutmeg-and-fire/"><span class="k">ARCX · AX·014 · 8 days · 7 nights</span><span class="n">Nutmeg &amp; Fire</span><span class="w">The Spice Islands · Banda Sea</span><span class="s" id="stSea">04°31′S 129°54′E</span></a>
+  </div>
+  <div class="half land" data-side="land">
+    <canvas id="cvLand" aria-hidden="true"></canvas>
+    <div class="brandmark"><span class="lgm ty ink draw d2" role="img" aria-label="TERRA Y"></span><span class="cap">Land expeditions</span></div>
+    <a class="tripline" id="tlLand" href="/journeys/tibet-everest-thin-air/"><span class="k">TERRA Y · TY·003 · 11 days</span><span class="n">Thin Air</span><span class="w">Tibet &amp; the North Face of Everest</span><span class="s" id="stLand">29°39′N 091°08′E</span></a>
+  </div>
+
+  <span class="seamline" aria-hidden="true"></span>
+  <canvas class="globe" id="cvGlobe" aria-hidden="true"></canvas>
+
+  <div class="tagbar">
+    <h1><span class="o">Two worlds.</span> <span class="t">One expedition.</span></h1>
+    <div class="acts"><a class="as" href="/journeys/#ocean" data-z="sea">Explore by sea →</a><a class="al" href="/journeys/#land" data-z="land">Explore by land →</a></div>
+    <p class="lede">ARC | TERRA XY plans private <a href="/journeys/#ocean">ocean voyages with ARCX</a> through Indonesia's Banda Islands and Komodo, and <a href="/journeys/#land">overland expeditions with TERRA Y</a> across Tibet and East Africa — every journey charted day by day.</p>
+  </div>
+</section>
+
+<main>
+  <section class="sec g" aria-labelledby="whatH">
+    <div class="wrap">
+      <div class="eyebrow">The short answer</div>
+      <h2 id="whatH">What is ARC | TERRA XY?</h2>
+      <div class="answer">
+        <p class="big">ARC | TERRA XY is a luxury exploration house with two expedition brands. ARCX runs private ocean voyages aboard traditional and expedition yachts; TERRA Y runs overland expeditions by 4×4, bush plane, rail and on foot. Every journey is planned as a coordinate ledger, day by day and place by place.</p>
+        <div class="pill"><h3><i style="background:var(--carbon)"></i>ARCX · by sea</h3><p>Small-ship voyages through remote archipelagos, with diving, snorkelling and island landings. At launch: the Banda Islands (Nutmeg &amp; Fire) and Komodo National Park (Dragons &amp; Corals), aboard the phinisi Dunia Baru.</p></div>
+        <div class="pill"><h3><i style="background:var(--sienna)"></i>TERRA Y · by land</h3><p>Overland expeditions to high plateaus and wild parks, paced for the terrain. At launch: Tibet and the North Face of Everest (Thin Air) and Katavi, Mahale and the Masai Mara (The Crossing).</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec g journeys" aria-labelledby="jH"><style>.jgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
+.jc{display:flex;flex-direction:column;background:#fff;border:1px solid #D3CCBF;text-decoration:none;color:#081A26;transition:transform .25s,box-shadow .25s}
+.jc:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(8,26,38,.14)}
+.jc .m{position:relative;display:block;aspect-ratio:16/10;overflow:hidden;background:#DCE6EC}
+.jc .m img{width:100%;height:100%;object-fit:cover;display:block;-webkit-mask-image:linear-gradient(180deg,#000 88%,transparent);mask-image:linear-gradient(180deg,#000 88%,transparent)}
+.jc .chip{position:absolute;left:10px;top:10px;background:var(--c);color:#fff;font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;padding:6px 8px}
+.jc .live{position:absolute;right:10px;top:10px;background:rgba(246,244,239,.92);color:#081A26;font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;padding:6px 8px}
+.jc .b{display:flex;flex-direction:column;gap:6px;padding:16px 18px 18px}
+.jc .h{font:800 20px/1.05 'Archivo',sans-serif;font-stretch:125%;text-transform:uppercase}
+.jc .w{font-size:13.5px;color:#4F4A44}.jc .p{font-size:14.5px;line-height:1.55;color:#3E3B36}
+.jc .go{margin-top:4px;font:500 12px/1.2 'IBM Plex Mono',monospace;letter-spacing:.1em;color:var(--c)}</style><div class="wrap"><div class="eyebrow">Live charts</div><h2 id="jH">Ten journeys, two worlds</h2><p style="max-width:720px">Every journey opens on its own animated chart. Pick one to follow the route day by day.</p><div class="jgrid"><a class="jc" href="/journeys/banda-nutmeg-and-fire/" style="--c:#1D6F74"><span class="m"><img src="img/maps/banda-nutmeg-and-fire.webp" alt="Animated route chart: Nutmeg &amp; Fire, The Spice Islands, Indonesia" loading="lazy" decoding="async" width="640" height="400"><span class="chip">ARCX · AX·014</span><span class="live">● LIVE CHART</span></span><span class="b"><b class="h">Nutmeg &amp; Fire</b><span class="w">The Spice Islands, Indonesia</span><span class="p">Eight days aboard the phinisi Dunia Baru from Ambon: Run, Banda Neira, Gunung Api, Batu Kapal, Pulau Ai and Nusa Laut.</span><span class="go">8 days · Open the chart →</span></span></a><a class="jc" href="/journeys/komodo-dragons-and-corals/" style="--c:#1D6F74"><span class="m"><img src="img/maps/komodo-dragons-and-corals.webp" alt="Animated route chart: Dragons &amp; Corals, Komodo National Park, Indonesia" loading="lazy" decoding="async" width="640" height="400"><span class="chip">ARCX · AX·011</span><span class="live">● LIVE CHART</span></span><span class="b"><b class="h">Dragons &amp; Corals</b><span class="w">Komodo National Park, Indonesia</span><span class="p">Six days from Labuan Bajo: Rinca dragons, the Padar viewpoint, Gili Lawa reefs and the mantas of Taka Makassar.</span><span class="go">6 days · Open the chart →</span></span></a><a class="jc" href="/journeys/banda-dive-blue-hours/" style="--c:#1D6F74"><span class="m"><img src="img/maps/banda-dive-blue-hours.webp" alt="Animated route chart: Blue Hours, Banda Sea dive liveaboard, Indonesia" loading="lazy" decoding="async" width="640" height="400"><span class="chip">ARCX DIVE · AX·D02</span><span class="live">● LIVE CHART</span></span><span class="b"><b class="h">Blue Hours</b><span class="w">Banda Sea dive liveaboard, Indonesia</span><span class="p">Up to 16 guided dives from Dunia Baru: the Run wall, Banda Neira lava-flow corals and the Batu Kapal pinnacles.</span><span class="go">8 days · Open the chart →</span></span></a><a class="jc" href="/journeys/surf-the-long-left/" style="--c:#1D6F74"><span class="m"><img src="img/maps/surf-the-long-left.webp" alt="Animated route chart: The Long Left, Mentawai Islands, Indonesia" loading="lazy" decoding="async" width="640" height="400"><span class="chip">ARCX SURF · AX·S01</span><span class="live">● LIVE CHART</span></span><span class="b"><b class="h">The Long Left</b><span class="w">Mentawai Islands, Indonesia</span><span class="p">A boat expedition from Padang through the Playgrounds, Siberut, Sipora, Katiet and Pagai Utara, two sessions a day.</span><span class="go">8 days · Open the chart →</span></span></a><a class="jc" href="/journeys/tibet-everest-thin-air/" style="--c:#6E4326"><span class="m"><img src="img/maps/tibet-everest-thin-air.webp" alt="Animated route chart: Thin Air, Tibet &amp; the North Face of Everest" loading="lazy" decoding="async" width="640" height="400"><span class="chip">TERRA Y · TY·003</span><span class="live">● LIVE CHART</span></span><span class="b"><b class="h">Thin Air</b><span class="w">Tibet &amp; the North Face of Everest</span><span class="p">Chengdu to Kathmandu: Lhasa, Yamdrok Tso, passes above 5,000 m and a night below Everest, paced for acclimatisation.</span><span class="go">11 days · Open the chart →</span></span></a><a class="jc" href="/journeys/katavi-mahale-mara-the-crossing/" style="--c:#6E4326"><span class="m"><img src="img/maps/katavi-mahale-mara-the-crossing.webp" alt="Animated route chart: The Crossing, Katavi · Mahale · Masai Mara" loading="lazy" decoding="async" width="640" height="400"><span class="chip">TERRA Y · TY·002</span><span class="live">● LIVE CHART</span></span><span class="b"><b class="h">The Crossing</b><span class="w">Katavi · Mahale · Masai Mara</span><span class="p">Arusha to Nairobi: walking in Katavi, Mahale chimpanzees on Lake Tanganyika and the Mara River in crossing season.</span><span class="go">14 days · Open the chart →</span></span></a><a class="jc" href="/journeys/antarctica-fly-cruise/" style="--c:#3D6C82"><span class="m"><img src="img/maps/antarctica-fly-cruise.webp" alt="Animated route chart: Classic Antarctica Air-Cruise, Antarctic Peninsula from Punta Arenas" loading="lazy" decoding="async" width="640" height="400"><span class="chip">TERRA Y · POLAR CROSSINGS · PC·A21</span><span class="live">● LIVE CHART</span></span><span class="b"><b class="h">Classic Antarctica Air-Cruise</b><span class="w">Antarctic Peninsula from Punta Arenas</span><span class="p">Fly over the Drake to King George Island, then sail the South Shetlands and the Peninsula aboard Magellan Explorer.</span><span class="go">8 days · Open the chart →</span></span></a><a class="jc" href="/journeys/south-georgia-spring-charter-2027/" style="--c:#3D6C82"><span class="m"><img src="img/maps/south-georgia-spring-charter-2027.webp" alt="Animated route chart: South Georgia in Spring, Falklands &amp; South Georgia, 2027" loading="lazy" decoding="async" width="640" height="400"><span class="chip">TERRA Y · POLAR CROSSINGS · PC·SG27</span><span class="live">● LIVE CHART</span></span><span class="b"><b class="h">South Georgia in Spring</b><span class="w">Falklands &amp; South Georgia, 2027</span><span class="p">A full-ship charter of Magellan Explorer: king penguins, elephant seals in battle season and Shackleton’s Grytviken.</span><span class="go">17 days · Open the chart →</span></span></a><a class="jc" href="/eclipse-expeditions/" style="--c:#9A5B1E"><span class="m"><img src="img/maps/eclipse-expeditions.webp" alt="Animated route chart: Eclipse Journeys, Luxor 2027 · Komodo 2028" loading="lazy" decoding="async" width="640" height="400"><span class="chip">SYZYGY · SZ·27/28</span><span class="live">● LIVE CHART</span></span><span class="b"><b class="h">Eclipse Journeys</b><span class="w">Luxor 2027 · Komodo 2028</span><span class="p">Totality at Luxor on 2 August 2027 and a New Year blood moon over Komodo on 31 December 2028.</span><span class="go">8 days · Open the chart →</span></span></a><a class="jc" href="/eclipse-expeditions/egypt-and-amazon/" style="--c:#9A5B1E"><span class="m"><img src="img/maps/egypt-and-amazon.webp" alt="Animated route chart: Solar Journeys: Egypt &amp; Amazon, Luxor 2027 · Rio Negro 2028" loading="lazy" decoding="async" width="640" height="400"><span class="chip">SYZYGY · SZ·SOLAR</span><span class="live">● LIVE CHART</span></span><span class="b"><b class="h">Solar Journeys: Egypt &amp; Amazon</b><span class="w">Luxor 2027 · Rio Negro 2028</span><span class="p">Total eclipse by Red Sea yacht and Nile dahabiya, and the Amazon ring of fire by Rio Negro riverboat.</span><span class="go">8 days · Open the chart →</span></span></a></div><p style="margin-top:18px"><a href="/journeys/">All journeys by ocean, land, polar and eclipse →</a></p></div></section>
+
+  <section class="sec g" aria-labelledby="hH">
+    <div class="wrap">
+      <div class="eyebrow">How we plan</div>
+      <h2 id="hH">Every journey a coordinate</h2>
+      <div class="how">
+        <div><b>01 · THE CHART</b><h3>A living map</h3><p>Each journey opens on an engraved, animated chart that follows the route day by day, by boat, 4×4, bush plane or on foot.</p></div>
+        <div><b>02 · THE LEDGER</b><h3>Day by day</h3><p>Every day is logged with its places, coordinates, timings and what to expect, so you know exactly where you will be.</p></div>
+        <div><b>03 · THE CREW</b><h3>On the ground</h3><p>Partner yachts, camps and guides we have chosen for each region, with 24-hour support throughout the journey.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec g" aria-labelledby="fH" style="padding-top:0">
+    <div class="wrap">
+      <div class="eyebrow">Questions travellers ask</div>
+      <h2 id="fH">FAQ</h2>
+      <details class="q" open><summary>What is the difference between ARCX and TERRA Y?</summary><p>ARCX is the ocean brand: voyages by yacht through remote seas and islands. TERRA Y is the land brand: overland expeditions by vehicle, light aircraft, rail and on foot. Both share the same planning ledger and standards.</p></details>
+      <details class="q"><summary>Where do ARCX voyages go?</summary><p>The launch voyages sail Indonesia: the Banda Islands from Ambon (8 days) and Komodo National Park from Labuan Bajo (6 days), aboard the phinisi Dunia Baru.</p></details>
+      <details class="q"><summary>Where do TERRA Y expeditions go?</summary><p>The launch expeditions cross Tibet to the North Face of Everest (11 days, Chengdu to Kathmandu) and East Africa from Katavi and Mahale in Tanzania to the Masai Mara in Kenya (14 days).</p></details>
+      <details class="q"><summary>Are the journeys private?</summary><p>Most are private: the ARCX voyages charter the whole yacht, and The Crossing runs for 2 to 6 guests. Thin Air also runs as a small group of up to 16 guests on set dates.</p></details>
+      <details class="q"><summary>How do I book?</summary><p>Open a journey and send an enquiry. Dates and prices are confirmed for each departure, and we hold places while the details are agreed.</p></details>
+
+      <details class="report"><summary><span>MARKETING DIRECTOR'S REPORT · HOME PAGE SEO &amp; AEO</span><span>INTERNAL · REMOVE BEFORE LAUNCH</span></summary>
+        <div class="rb">
+          <div><h4>Why the bold design does not cost search</h4><ul>
+            <li>The animation is decoration only: canvases are <code>aria-hidden</code> and every word on the first screen is real HTML text (H1, brand names, trip names, links).</li>
+            <li>The single H1 is the tag line; trip names are links in the hero and again as H3 cards below, so crawlers reach all four journeys from the home page.</li>
+            <li>Largest paint is the H1 text and gradients, not an image: the page renders before the map data arrives (≈180 KB, loaded after first paint).</li>
+            <li>Users who set reduced motion get still charts; no autoplay video, no scroll hijacking.</li>
+          </ul></div>
+          <div><h4>On-page set-up</h4><ul>
+            <li>Title: <code>ARC | TERRA XY — Luxury Ocean &amp; Land Expeditions | ARCX &amp; TERRA Y</code>.</li>
+            <li>Meta description names both brands and the four destinations; canonical and Open Graph tags are in place (add the domain and a 1200×630 share image).</li>
+            <li>Section headings answer real questions: “What is ARC | TERRA XY?”, “Four journeys, two worlds”, FAQ.</li>
+          </ul></div>
+          <div><h4>Structured data (embedded)</h4><ul>
+            <li><code>Organization</code> with <code>brand</code> ARCX and TERRA Y, and <code>WebSite</code>.</li>
+            <li><code>ItemList</code> of four <code>TouristTrip</code> items linking to the journey pages.</li>
+            <li><code>FAQPage</code> with the five questions above. Validate in the Rich Results Test.</li>
+          </ul></div>
+          <div><h4>Answer engines &amp; links</h4><ul>
+            <li>The answer block is written to be quoted: one sentence defines the house, one each defines ARCX and TERRA Y.</li>
+            <li>Use the same entity names everywhere: ARC | TERRA XY, ARCX, TERRA Y, Dunia Baru, the four journey names.</li>
+            <li>Every journey page links back to this home page and to its brand index (<code>/arcx/</code>, <code>/terra-y/</code>).</li>
+            <li>Before launch: replace the Crossing example image, add the share image, submit the sitemap.</li>
+          </ul></div>
+        </div>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer class="g">
+  <div class="in">
+    <div class="marks"><span class="lgm" role="img" aria-label="ARCX"></span><i aria-hidden="true"></i><span class="lgm ty" role="img" aria-label="TERRA Y"></span></div>
+    <nav aria-label="Footer"><a href="/journeys/#ocean">ARCX voyages</a><a href="/journeys/#land">TERRA Y expeditions</a><a href="/journeys/">All journeys</a><a href="/journeys/">The ledger</a><a href="/enquire/">Enquire</a></nav>
+    <small>ARC | TERRA XY · Ocean expeditions | Land expeditions | A more connected world · Est. 2026. Route charts are indicative. Coastlines © OpenStreetMap contributors (ODbL) via geo-maps; lakes, rivers, borders and world map from Natural Earth.</small>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"Organization","@id":"https://[DOMAIN]/#org","name":"ARC | TERRA XY","url":"https://[DOMAIN]/","slogan":"Two worlds. One expedition.","description":"Luxury exploration house with two expedition brands: ARCX ocean voyages and TERRA Y land expeditions.","brand":[{"@type":"Brand","name":"ARCX","description":"Private ocean voyages by yacht"},{"@type":"Brand","name":"TERRA Y","description":"Overland expeditions by 4×4, bush plane, rail and on foot"}]},
+ {"@type":"WebSite","@id":"https://[DOMAIN]/#site","url":"https://[DOMAIN]/","name":"ARC | TERRA XY","publisher":{"@id":"https://[DOMAIN]/#org"}},
+ {"@type":"ItemList","name":"Launch journeys","itemListElement":[
+  {"@type":"ListItem","position":1,"item":{"@type":"TouristTrip","name":"Nutmeg & Fire","description":"8-day ARCX voyage through Indonesia's Banda Islands aboard the phinisi Dunia Baru, Ambon to Ambon.","url":"https://[DOMAIN]/arcx/spice-islands-banda-sea-8-days","provider":{"@id":"https://[DOMAIN]/#org"}}},
+  {"@type":"ListItem","position":2,"item":{"@type":"TouristTrip","name":"Dragons & Corals","description":"6-day ARCX voyage through Komodo National Park aboard Dunia Baru, Labuan Bajo to Labuan Bajo.","url":"https://[DOMAIN]/arcx/komodo-national-park-6-days","provider":{"@id":"https://[DOMAIN]/#org"}}},
+  {"@type":"ListItem","position":3,"item":{"@type":"TouristTrip","name":"Thin Air","description":"11-day TERRA Y expedition across Tibet to the North Face of Everest, Chengdu to Kathmandu.","url":"https://[DOMAIN]/terra-y/tibet-everest-north-face-11-days","provider":{"@id":"https://[DOMAIN]/#org"}}},
+  {"@type":"ListItem","position":4,"item":{"@type":"TouristTrip","name":"The Crossing","description":"14-day TERRA Y safari through Katavi, Mahale and the Masai Mara.","url":"https://[DOMAIN]/terra-y/katavi-mahale-masai-mara-14-days","provider":{"@id":"https://[DOMAIN]/#org"}}}]},
+ {"@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"What is the difference between ARCX and TERRA Y?","acceptedAnswer":{"@type":"Answer","text":"ARCX is the ocean brand: voyages by yacht through remote seas and islands. TERRA Y is the land brand: overland expeditions by vehicle, light aircraft, rail and on foot. Both share the same planning ledger and standards."}},
+  {"@type":"Question","name":"Where do ARCX voyages go?","acceptedAnswer":{"@type":"Answer","text":"The launch voyages sail Indonesia: the Banda Islands from Ambon (8 days) and Komodo National Park from Labuan Bajo (6 days), aboard the phinisi Dunia Baru."}},
+  {"@type":"Question","name":"Where do TERRA Y expeditions go?","acceptedAnswer":{"@type":"Answer","text":"The launch expeditions cross Tibet to the North Face of Everest (11 days, Chengdu to Kathmandu) and East Africa from Katavi and Mahale in Tanzania to the Masai Mara in Kenya (14 days)."}},
+  {"@type":"Question","name":"Are the journeys private?","acceptedAnswer":{"@type":"Answer","text":"Most are private: the ARCX voyages charter the whole yacht, and The Crossing runs for 2 to 6 guests. Thin Air also runs as a small group of up to 16 guests on set dates."}},
+  {"@type":"Question","name":"How do I book?","acceptedAnswer":{"@type":"Answer","text":"Open a journey and send an enquiry. Dates and prices are confirmed for each departure, and we hold places while the details are agreed."}}]}
+]}
+</script>
+<script src="vendor/d3.min.js"></script>
+<script>
+(function(){
+'use strict';
+var D=Math.PI/180,RM=!!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches);
+var split=document.getElementById('split'),sea=split.querySelector('.sea'),land=split.querySelector('.land');
+function $(id){return document.getElementById(id)}
+function clamp(v,a,b){return Math.max(a,Math.min(b,v))}
+function ease(x){return x<.5?2*x*x:1-Math.pow(-2*x+2,2)/2}
+function pad(n,w){var s=String(n);while(s.length<w)s='0'+s;return s}
+function dm(x,p,n,w){var h=x>=0?p:n;x=Math.abs(x);var d=Math.floor(x),m=Math.round((x-d)*60);if(m===60){d++;m=0}return pad(d,w)+'°'+pad(m,2)+'′'+h}
+function coord(c){return dm(c[1],'N','S',2)+' '+dm(c[0],'E','W',3)}
+
+/* ---------- seam tracking ---------- */
+function vertical(){return window.innerWidth<=820}
+function updSeam(){var r=split.getBoundingClientRect(),s=sea.getBoundingClientRect();
+  if(vertical()){split.style.setProperty('--seamy',(s.bottom-r.top)+'px');split.style.setProperty('--seam','50%')}
+  else split.style.setProperty('--seam',(s.right-r.left)+'px')}
+var seamT=0;function seamLoop(){updSeam();if(performance.now()<seamT)requestAnimationFrame(seamLoop)}
+function kickSeam(){seamT=performance.now()+900;requestAnimationFrame(seamLoop)}
+function hover(side){if(vertical())return;split.classList.toggle('h-sea',side==='sea');split.classList.toggle('h-land',side==='land');kickSeam()}
+sea.addEventListener('mouseenter',function(){hover('sea')});land.addEventListener('mouseenter',function(){hover('land')});
+split.addEventListener('mouseleave',function(){hover(null)});
+sea.addEventListener('focusin',function(){hover('sea')});land.addEventListener('focusin',function(){hover('land')});
+document.querySelectorAll('.tagbar [data-z]').forEach(function(a){a.addEventListener('mouseenter',function(){hover(a.dataset.z)})});
+window.addEventListener('resize',function(){updSeam();charts.forEach(function(c){c.resize()});globe.resize()});
+
+/* ---------- planar chart engine ---------- */
+var STY={
+  sea:{grid:'rgba(175,207,209,.07)',ring:'rgba(175,207,209,',landFill:'#16314D',coast:'rgba(226,236,234,.72)',hatch:'rgba(226,236,234,.07)',
+       faint:'rgba(175,207,209,.25)',route:{sail:['#D7E8E8',2.2,[7,4]]},head:'#E6F0EF',label:'#E9EEEC',halo:'rgba(11,26,43,.85)'},
+  land:{grid:'rgba(59,38,24,.09)',lake:'#D2DDD9',lakeHatch:'rgba(78,110,122,.35)',lakeEdge:'#4E6E7A',river:'rgba(78,110,122,.55)',border:'rgba(140,110,80,.55)',
+       faint:'rgba(138,75,36,.22)',route:{drive:['#8A4B24',2.6,[]],walk:['#8A4B24',2.6,[.5,5]],flight:['#3B2618',1.6,[8,6]],boat:['#3F5F6B',2.4,[7,4]],balloon:['#C2894E',2.4,[4,4]],train:['#3B2618',3,[2,3]]},
+       head:'#8A4B24',label:'#2A1E16',halo:'rgba(244,236,222,.92)'}};
+function Chart(cv,trips,side,stampEl,lineEl,opts){
+  this.cv=cv;this.trips=trips;this.side=side;this.st=STY[side];this.stamp=stampEl;this.line=lineEl;this.opts=opts||{};
+  this.i=0;this.t=0;this.alpha=0;this.dpr=1;this.layers={};this.resize()}
+Chart.prototype.resize=function(){var r=this.cv.getBoundingClientRect();if(!r.width)return;this.dpr=Math.min(2,window.devicePixelRatio||1);
+  this.w=r.width;this.h=r.height;this.cv.width=Math.round(r.width*this.dpr);this.cv.height=Math.round(r.height*this.dpr);this.layers={};this.prep(this.i)};
+Chart.prototype.proj=function(tr){var bb=tr.bbox,lat0=(bb[1]+bb[3])/2,k0=Math.cos(lat0*D),sx=(bb[2]-bb[0])*k0,sy=bb[3]-bb[1];
+  var o=this.opts,pw=this.w*(o.padX||.84),ph=this.h*(o.padY||.5),k=Math.min(pw/sx,ph/sy),cx=this.w*(o.cx||.5),cy=this.h*(o.cy||.46),mx=(bb[0]+bb[2])/2,my=(bb[1]+bb[3])/2;
+  return function(p){return [cx+(p[0]-mx)*k0*k,cy-(p[1]-my)*k]}};
+Chart.prototype.prep=function(i){if(this.layers[i])return this.layers[i];var tr=this.trips[i],P=this.proj(tr),st=this.st,dpr=this.dpr;
+  var c=document.createElement('canvas');c.width=this.cv.width;c.height=this.cv.height;var g=c.getContext('2d');g.scale(dpr,dpr);
+  function path(rings,close){g.beginPath();rings.forEach(function(r){r.forEach(function(p,j){var q=P(p);if(j)g.lineTo(q[0],q[1]);else g.moveTo(q[0],q[1])});if(close)g.closePath()})}
+  var bb=tr.bbox,step=(bb[2]-bb[0])>3?1:(bb[2]-bb[0])>1?.25:.1;g.strokeStyle=st.grid;g.lineWidth=1;
+  for(var lo=Math.floor((bb[0]-6)/step)*step;lo<=bb[2]+6;lo+=step){var a=P([lo,bb[1]-6]),b=P([lo,bb[3]+6]);g.beginPath();g.moveTo(a[0],a[1]);g.lineTo(b[0],b[1]);g.stroke()}
+  for(var la=Math.floor((bb[1]-6)/step)*step;la<=bb[3]+6;la+=step){var a2=P([bb[0]-8,la]),b2=P([bb[2]+8,la]);g.beginPath();g.moveTo(a2[0],a2[1]);g.lineTo(b2[0],b2[1]);g.stroke()}
+  if(this.side==='sea'){var L=tr.land||[];g.lineJoin='round';
+    for(var k=5;k>=1;k--){path(L,true);g.strokeStyle=st.ring+(0.035+0.03*(5-k)).toFixed(3)+')';g.lineWidth=k*4.2;g.stroke()}
+    path(L,true);g.fillStyle=st.landFill;g.fill('evenodd');g.save();path(L,true);g.clip('evenodd');g.strokeStyle=st.hatch;g.lineWidth=1;for(var x=-this.h;x<this.w+this.h;x+=5){g.beginPath();g.moveTo(x,0);g.lineTo(x+this.h*.7,this.h);g.stroke()}g.restore();
+    path(L,true);g.strokeStyle=st.coast;g.lineWidth=1.1;g.stroke()}
+  else{g.lineJoin='round';g.setLineDash([6,3,1.5,3]);path(tr.borders||[],false);g.strokeStyle=st.border;g.lineWidth=1;g.stroke();g.setLineDash([]);
+    path(tr.rivers||[],false);g.strokeStyle=st.river;g.lineWidth=1;g.stroke();
+    path(tr.lakes||[],true);g.fillStyle=st.lake;g.fill('evenodd');g.save();path(tr.lakes||[],true);g.clip('evenodd');g.strokeStyle=st.lakeHatch;g.lineWidth=.8;for(var y=0;y<this.h;y+=4){g.beginPath();g.moveTo(0,y);g.lineTo(this.w,y);g.stroke()}g.restore();
+    path(tr.lakes||[],true);g.strokeStyle=st.lakeEdge;g.lineWidth=.9;g.stroke()}
+  // route geometry in screen space, with cumulative length
+  var segs=[],tot=0;tr.routes.forEach(function(r){var q=r.p.map(P),cum=[0];for(var j=1;j<q.length;j++)cum.push(cum[j-1]+Math.hypot(q[j][0]-q[j-1][0],q[j][1]-q[j-1][1]));segs.push({t:r.t,q:q,ll:r.p,cum:cum,l0:tot,len:cum[cum.length-1]});tot+=cum[cum.length-1]});
+  var stops=tr.stops.map(function(s){var q=P(s.c),best=1e9,at=0;segs.forEach(function(sg){sg.q.forEach(function(p,j){var d=Math.hypot(p[0]-q[0],p[1]-q[1]);if(d<best){best=d;at=(sg.l0+sg.cum[j])/(tot||1)}})});return {n:s.n,q:q,at:at}});
+  // full faint route
+  segs.forEach(function(sg){g.beginPath();sg.q.forEach(function(p,j){if(j)g.lineTo(p[0],p[1]);else g.moveTo(p[0],p[1])});g.setLineDash([2,4]);g.strokeStyle=st.faint;g.lineWidth=1.3;g.stroke()});g.setLineDash([]);
+  return (this.layers[i]={c:c,segs:segs,tot:tot,stops:stops,P:P})};
+Chart.prototype.headAt=function(L,f){var d=f*L.tot;for(var s=0;s<L.segs.length;s++){var sg=L.segs[s];if(d<=sg.l0+sg.len||s===L.segs.length-1){var dd=d-sg.l0;for(var j=1;j<sg.q.length;j++){if(sg.cum[j]>=dd||j===sg.q.length-1){var u=clamp((dd-sg.cum[j-1])/((sg.cum[j]-sg.cum[j-1])||1),0,1);
+  return {p:[sg.q[j-1][0]+(sg.q[j][0]-sg.q[j-1][0])*u,sg.q[j-1][1]+(sg.q[j][1]-sg.q[j-1][1])*u],ll:[sg.ll[j-1][0]+(sg.ll[j][0]-sg.ll[j-1][0])*u,sg.ll[j-1][1]+(sg.ll[j][1]-sg.ll[j-1][1])*u],t:sg.t}}}}}return null};
+Chart.prototype.draw=function(now){var L=this.prep(this.i),g=this.cv.getContext('2d'),st=this.st,dpr=this.dpr,DUR=this.opts.dur||9,f=RM?1:ease(clamp(this.t/DUR,0,1));
+  g.setTransform(1,0,0,1,0,0);g.clearRect(0,0,this.cv.width,this.cv.height);g.globalAlpha=this.alpha;g.drawImage(L.c,0,0);g.setTransform(dpr,0,0,dpr,0,0);
+  var lim=f*L.tot,self=this;g.lineCap='round';g.lineJoin='round';
+  L.segs.forEach(function(sg){if(sg.l0>lim)return;var sty=st.route[sg.t]||st.route.drive||st.route.sail;g.beginPath();var started=false;
+    for(var j=0;j<sg.q.length;j++){var d=sg.l0+sg.cum[j];if(d>lim){var u=(lim-(sg.l0+sg.cum[j-1]))/((sg.cum[j]-sg.cum[j-1])||1);g.lineTo(sg.q[j-1][0]+(sg.q[j][0]-sg.q[j-1][0])*u,sg.q[j-1][1]+(sg.q[j][1]-sg.q[j-1][1])*u);break}
+      if(!started){g.moveTo(sg.q[j][0],sg.q[j][1]);started=true}else g.lineTo(sg.q[j][0],sg.q[j][1])}
+    g.setLineDash(sty[2]);g.lineDashOffset=self.side==='sea'?-now*.012:0;g.strokeStyle=sty[0];g.lineWidth=sty[1];g.stroke()});
+  g.setLineDash([]);
+  g.font="600 10.5px 'IBM Plex Mono', monospace";
+  L.stops.forEach(function(s){if(s.at>f+.001)return;var a=RM?1:clamp((f-s.at)*12,0,1);g.globalAlpha=self.alpha*a;g.beginPath();g.arc(s.q[0],s.q[1],3.4,0,6.283);g.fillStyle=st.halo;g.fill();g.lineWidth=1.4;g.strokeStyle=st.label;g.stroke();
+    var tx=s.n.toUpperCase(),left=s.q[0]>self.w*.62;g.textAlign=left?'right':'left';g.lineWidth=3.5;g.strokeStyle=st.halo;g.strokeText(tx,s.q[0]+(left?-9:9),s.q[1]-7);g.fillStyle=st.label;g.fillText(tx,s.q[0]+(left?-9:9),s.q[1]-7)});
+  g.globalAlpha=this.alpha;
+  var h=this.headAt(L,f);if(h&&!RM){var pulse=.5+.5*Math.sin(now*.006);g.beginPath();g.arc(h.p[0],h.p[1],6+pulse*5,0,6.283);g.fillStyle=this.side==='sea'?'rgba(215,232,232,.18)':'rgba(138,75,36,.16)';g.fill();
+    g.beginPath();g.arc(h.p[0],h.p[1],4,0,6.283);g.fillStyle=st.head;g.fill();g.lineWidth=1.5;g.strokeStyle=st.halo;g.stroke();
+    if(this.stamp&&now-(this.ls||0)>120){this.ls=now;this.stamp.textContent=coord(h.ll)+'  ·  '+(h.t==='sail'?'UNDER WAY':h.t.toUpperCase())}}
+  g.globalAlpha=1};
+Chart.prototype.setLine=function(){var tr=this.trips[this.i],el=this.line;if(!el)return;el.classList.add('out');var self=this;setTimeout(function(){
+  el.href=tr.url;el.querySelector('.k').textContent=(tr.brand==='arcx'?'ARCX · ':'TERRA Y · ')+tr.code+' · '+tr.days;el.querySelector('.n').textContent=tr.name;el.querySelector('.w').textContent=tr.where;el.classList.remove('out')},380)};
+Chart.prototype.step=function(dt,now){var DUR=this.opts.dur||9,HOLD=2.2,FADE=.9;this.t+=dt;
+  if(this.t<FADE)this.alpha=clamp(this.t/FADE,0,1);else this.alpha=1;
+  if(this.trips.length>1&&this.t>DUR+HOLD){var o=clamp((this.t-DUR-HOLD)/FADE,0,1);this.alpha=1-o;if(o>=1){this.i=(this.i+1)%this.trips.length;this.t=0;this.setLine()}}
+  this.draw(now)};
+
+/* ---------- seam globe ---------- */
+var globe={cv:$('cvGlobe'),land:null,rot:-60,resize:function(){var r=this.cv.getBoundingClientRect();if(!r.width)return;this.dpr=Math.min(2,window.devicePixelRatio||1);this.R=r.width/2;this.cv.width=Math.round(r.width*this.dpr);this.cv.height=Math.round(r.width*this.dpr)},
+  draw:function(dt){if(!this.land||!this.R)return;var g=this.cv.getContext('2d'),R=this.R,dpr=this.dpr;this.rot+=RM?0:dt*7;
+    var pr=d3.geoOrthographic().scale(R-2).translate([R,R]).clipAngle(90).rotate([this.rot,-14]),path=d3.geoPath(pr,g),grat=d3.geoGraticule10();
+    g.setTransform(dpr,0,0,dpr,0,0);g.clearRect(0,0,2*R,2*R);
+    // left half: ARCX ocean
+    g.save();g.beginPath();g.rect(0,0,R,2*R);g.clip();
+    var gr=g.createRadialGradient(R*.7,R*.7,R*.1,R,R,R);gr.addColorStop(0,'#1E3B5C');gr.addColorStop(1,'#0B1A2B');g.beginPath();path({type:'Sphere'});g.fillStyle=gr;g.fill();
+    g.beginPath();path(grat);g.strokeStyle='rgba(175,207,209,.18)';g.lineWidth=.6;g.stroke();
+    g.beginPath();path(this.land);g.fillStyle='rgba(175,207,209,.16)';g.fill();g.strokeStyle='rgba(226,236,234,.75)';g.lineWidth=.8;g.stroke();g.restore();
+    // right half: TERRA Y land
+    g.save();g.beginPath();g.rect(R,0,R,2*R);g.clip();
+    var gr2=g.createRadialGradient(R*1.3,R*.7,R*.1,R,R,R);gr2.addColorStop(0,'#F7F0E2');gr2.addColorStop(1,'#E2D2B4');g.beginPath();path({type:'Sphere'});g.fillStyle=gr2;g.fill();
+    g.beginPath();path(grat);g.strokeStyle='rgba(59,38,24,.14)';g.lineWidth=.6;g.stroke();
+    g.beginPath();path(this.land);g.fillStyle='#D9BF93';g.fill();g.strokeStyle='#8A4B24';g.lineWidth=.8;g.stroke();g.restore();
+    // trip markers
+    var self=this;TRIPS.forEach(function(t){var c=[(t.bbox[0]+t.bbox[2])/2,(t.bbox[1]+t.bbox[3])/2],dd=d3.geoDistance(c,[-self.rot,14]);if(dd>1.45)return;var q=pr(c);if(!q)return;g.beginPath();g.arc(q[0],q[1],2.6,0,6.283);g.fillStyle='#C9A15A';g.fill();g.strokeStyle=q[0]<R?'#0B1A2B':'#F7F0E2';g.lineWidth=1;g.stroke()});
+    g.beginPath();g.moveTo(R,1);g.lineTo(R,2*R-1);g.strokeStyle='rgba(201,161,90,.85)';g.lineWidth=1;g.stroke();
+    g.beginPath();path({type:'Sphere'});g.strokeStyle='#C9A15A';g.lineWidth=1.6;g.stroke()}};
+
+/* ---------- card chart (Thin Air) ---------- */
+function cardChart(cv,tr){var r=cv.getBoundingClientRect(),dpr=Math.min(2,window.devicePixelRatio||1);cv.width=r.width*dpr;cv.height=r.height*dpr;
+  var c=new Chart(cv,[tr],'land',null,null,{padX:.86,padY:.7,cy:.52});c.alpha=1;c.t=99;c.draw(0)}
+
+/* ---------- boot: text is already painted; data loads after ---------- */
+var charts=[],TRIPS=[],running=true,visible=true,last=0;
+updSeam();
+function frame(now){var dt=Math.min(.05,(now-last)/1000||0);last=now;if(running&&visible){charts.forEach(function(c){c.step(dt,now)});globe.draw(dt)}requestAnimationFrame(frame)}
+Promise.all([fetch('data/trips.json').then(function(r){return r.json()}),fetch('data/land-110m.geo.json').then(function(r){return r.json()})]).then(function(res){
+  TRIPS=res[0];globe.land=res[1];var by={};TRIPS.forEach(function(t){by[t.id]=t});
+  var v=vertical();
+  charts=[new Chart($('cvSea'),[by.nutmeg,by.dragons],'sea',$('stSea'),$('tlSea'),{cy:v?.56:.47,padY:v?.36:.36,padX:v?.84:.8}),
+          new Chart($('cvLand'),[by.thinair,by.crossing],'land',$('stLand'),$('tlLand'),{cy:v?.56:.47,padY:v?.36:.36,padX:v?.84:.8})];
+  charts[1].t=-1.2;globe.resize();
+  document.querySelectorAll('canvas[data-chart]').forEach(function(cv){var t=by[cv.dataset.chart];if(t)cardChart(cv,t)});
+  if(RM){charts.forEach(function(c){c.alpha=1;c.t=99;c.draw(0)});globe.draw(0)}else requestAnimationFrame(frame);
+}).catch(function(){});
+if('IntersectionObserver' in window)new IntersectionObserver(function(e){visible=e[0].isIntersecting}).observe(split);
+document.addEventListener('visibilitychange',function(){running=!document.hidden});
+/* click-through: a short zoom into the chosen half, then go */
+function zoomGo(side,href,ev){if(RM||vertical())return;ev.preventDefault();split.classList.add(side==='sea'?'zoom-sea':'zoom-land');setTimeout(function(){location.href=href},480)}
+$('tlSea').addEventListener('click',function(e){zoomGo('sea',this.href,e)});$('tlLand').addEventListener('click',function(e){zoomGo('land',this.href,e)});
+document.querySelectorAll('.tagbar [data-z]').forEach(function(a){a.addEventListener('click',function(e){zoomGo(a.dataset.z,a.href,e)})});
+})();
+</script>

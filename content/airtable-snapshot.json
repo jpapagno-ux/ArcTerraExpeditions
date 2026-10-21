@@ -1,0 +1,821 @@
+{
+ "_note": "Snapshot of the ArcTerra Expeditions Library base (appXUzePYs6cZrQKx). Used only when AIRTABLE_TOKEN is not set.",
+ "Destinations": [
+  {
+   "id": "rec8MKQq5aw09nPOp",
+   "fields": {
+    "fldO73tffc4yy2g0h": "Arctic",
+    "fldFouMOKeEEO7OT6": "arctic",
+    "fldS43LBvx25JJVug": "Polar Crossings",
+    "fldDxWsXz1tV6Y7kU": "Svalbard & Greenland",
+    "fldaBmef6Lwtotikz": [
+     "Polar",
+     "Wildlife"
+    ],
+    "fldK81GVIuzHFmiwX": "Longyearbyen (LYR)",
+    "fldRatqA7On1pQuNJ": [
+     "Jun",
+     "Jul",
+     "Aug"
+    ],
+    "fldPZZucwwAJE0S2D": "Draft"
+   }
+  },
+  {
+   "id": "rec9FQzaOrrnoArEO",
+   "fields": {
+    "fldO73tffc4yy2g0h": "Komodo",
+    "fldFouMOKeEEO7OT6": "komodo",
+    "fldS43LBvx25JJVug": "ARCX",
+    "fldDxWsXz1tV6Y7kU": "East Nusa Tenggara, Indonesia",
+    "fldaBmef6Lwtotikz": [
+     "Sail & explore",
+     "Dive",
+     "Eclipse"
+    ],
+    "fldK81GVIuzHFmiwX": "Labuan Bajo (LBJ)",
+    "fldRatqA7On1pQuNJ": [
+     "Apr",
+     "May",
+     "Jun",
+     "Jul",
+     "Aug",
+     "Sep",
+     "Oct",
+     "Nov"
+    ],
+    "fldDR9cyzmxiDDKwc": "08°33′S 119°29′E",
+    "fldPZZucwwAJE0S2D": "Live"
+   }
+  },
+  {
+   "id": "recEGKvtP9aGFvhb9",
+   "fields": {
+    "fldO73tffc4yy2g0h": "East Africa",
+    "fldFouMOKeEEO7OT6": "east-africa",
+    "fldS43LBvx25JJVug": "TERRA Y",
+    "fldDxWsXz1tV6Y7kU": "Tanzania & Kenya",
+    "fldaBmef6Lwtotikz": [
+     "Wildlife",
+     "Overland"
+    ],
+    "fldK81GVIuzHFmiwX": "Kilimanjaro (JRO) / Nairobi (NBO)",
+    "fldRatqA7On1pQuNJ": [
+     "Jun",
+     "Jul",
+     "Aug",
+     "Sep",
+     "Oct"
+    ],
+    "fldPZZucwwAJE0S2D": "Live"
+   }
+  },
+  {
+   "id": "recEgQ7euvXY5AyNQ",
+   "fields": {
+    "fldO73tffc4yy2g0h": "Tibet",
+    "fldFouMOKeEEO7OT6": "tibet",
+    "fldS43LBvx25JJVug": "TERRA Y",
+    "fldDxWsXz1tV6Y7kU": "Lhasa to Everest",
+    "fldaBmef6Lwtotikz": [
+     "Overland"
+    ],
+    "fldK81GVIuzHFmiwX": "Lhasa (LXA)",
+    "fldRatqA7On1pQuNJ": [
+     "Apr",
+     "May",
+     "Jun",
+     "Jul",
+     "Aug",
+     "Sep",
+     "Oct"
+    ],
+    "fldDR9cyzmxiDDKwc": "29°39′N 91°07′E",
+    "fldPZZucwwAJE0S2D": "Live"
+   }
+  },
+  {
+   "id": "recFXb13iLWdMQYRm",
+   "fields": {
+    "fldO73tffc4yy2g0h": "Mentawai Islands",
+    "fldFouMOKeEEO7OT6": "mentawai",
+    "fldS43LBvx25JJVug": "ARCX",
+    "fldDxWsXz1tV6Y7kU": "West Sumatra, Indonesia",
+    "fldaBmef6Lwtotikz": [
+     "Surf"
+    ],
+    "fldK81GVIuzHFmiwX": "Padang (PDG)",
+    "fldRatqA7On1pQuNJ": [
+     "Apr",
+     "May",
+     "Jun",
+     "Jul",
+     "Aug",
+     "Sep",
+     "Oct"
+    ],
+    "fldDR9cyzmxiDDKwc": "02°05′S 99°35′E",
+    "fldPZZucwwAJE0S2D": "Live"
+   }
+  },
+  {
+   "id": "recTvl5PMVreiNBKF",
+   "fields": {
+    "fldO73tffc4yy2g0h": "Antarctica",
+    "fldFouMOKeEEO7OT6": "antarctica",
+    "fldS43LBvx25JJVug": "Polar Crossings",
+    "fldDxWsXz1tV6Y7kU": "Antarctic Peninsula & South Shetlands",
+    "fldaBmef6Lwtotikz": [
+     "Polar",
+     "Wildlife"
+    ],
+    "fldK81GVIuzHFmiwX": "Punta Arenas (PUQ)",
+    "fldRatqA7On1pQuNJ": [
+     "Nov",
+     "Dec",
+     "Jan",
+     "Feb",
+     "Mar"
+    ],
+    "fldDR9cyzmxiDDKwc": "64°42′S 62°34′W",
+    "fldPZZucwwAJE0S2D": "Live"
+   }
+  },
+  {
+   "id": "recafV372WcjKXWBK",
+   "fields": {
+    "fldO73tffc4yy2g0h": "Raja Ampat",
+    "fldFouMOKeEEO7OT6": "raja-ampat",
+    "fldS43LBvx25JJVug": "ARCX",
+    "fldDxWsXz1tV6Y7kU": "West Papua, Indonesia",
+    "fldaBmef6Lwtotikz": [
+     "Dive",
+     "Sail & explore"
+    ],
+    "fldK81GVIuzHFmiwX": "Sorong (SOQ)",
+    "fldRatqA7On1pQuNJ": [
+     "Oct",
+     "Nov",
+     "Dec",
+     "Jan",
+     "Feb",
+     "Mar",
+     "Apr"
+    ],
+    "fldDR9cyzmxiDDKwc": "00°14′S 130°31′E",
+    "fldPZZucwwAJE0S2D": "Draft"
+   }
+  },
+  {
+   "id": "recekM01EZ5oBBAfg",
+   "fields": {
+    "fldO73tffc4yy2g0h": "South Georgia & Falklands",
+    "fldFouMOKeEEO7OT6": "south-georgia",
+    "fldS43LBvx25JJVug": "Polar Crossings",
+    "fldDxWsXz1tV6Y7kU": "South Atlantic",
+    "fldaBmef6Lwtotikz": [
+     "Polar",
+     "Wildlife"
+    ],
+    "fldK81GVIuzHFmiwX": "Punta Arenas (PUQ)",
+    "fldRatqA7On1pQuNJ": [
+     "Oct",
+     "Nov",
+     "Dec",
+     "Jan",
+     "Feb",
+     "Mar"
+    ],
+    "fldDR9cyzmxiDDKwc": "54°17′S 36°30′W",
+    "fldPZZucwwAJE0S2D": "Live"
+   }
+  },
+  {
+   "id": "recfu0jMRJtfh6XmE",
+   "fields": {
+    "fldO73tffc4yy2g0h": "Egypt",
+    "fldFouMOKeEEO7OT6": "egypt",
+    "fldS43LBvx25JJVug": "TERRA Y",
+    "fldDxWsXz1tV6Y7kU": "Nile Valley & Western Desert",
+    "fldaBmef6Lwtotikz": [
+     "Overland",
+     "River",
+     "Eclipse"
+    ],
+    "fldK81GVIuzHFmiwX": "Luxor (LXR)",
+    "fldRatqA7On1pQuNJ": [
+     "Oct",
+     "Nov",
+     "Dec",
+     "Jan",
+     "Feb",
+     "Mar",
+     "Apr",
+     "Aug"
+    ],
+    "fldDR9cyzmxiDDKwc": "25°41′N 32°38′E",
+    "fldPZZucwwAJE0S2D": "Live"
+   }
+  },
+  {
+   "id": "reclQWcg9lp1gnjws",
+   "fields": {
+    "fldO73tffc4yy2g0h": "French Polynesia",
+    "fldFouMOKeEEO7OT6": "french-polynesia",
+    "fldS43LBvx25JJVug": "ARCX",
+    "fldDxWsXz1tV6Y7kU": "Society Islands & Tuamotus",
+    "fldaBmef6Lwtotikz": [
+     "Dive",
+     "Surf",
+     "Sail & explore"
+    ],
+    "fldK81GVIuzHFmiwX": "Papeete (PPT)",
+    "fldRatqA7On1pQuNJ": [
+     "May",
+     "Jun",
+     "Jul",
+     "Aug",
+     "Sep",
+     "Oct"
+    ],
+    "fldDR9cyzmxiDDKwc": "16°30′S 151°45′W",
+    "fldPZZucwwAJE0S2D": "Draft"
+   }
+  },
+  {
+   "id": "recmhNyg7M0WtWsFs",
+   "fields": {
+    "fldO73tffc4yy2g0h": "Banda Islands",
+    "fldFouMOKeEEO7OT6": "banda-islands",
+    "fldS43LBvx25JJVug": "ARCX",
+    "fldDxWsXz1tV6Y7kU": "Maluku, Indonesia",
+    "fldaBmef6Lwtotikz": [
+     "Sail & explore",
+     "Dive"
+    ],
+    "fldK81GVIuzHFmiwX": "Ambon (AMQ)",
+    "fldRatqA7On1pQuNJ": [
+     "Mar",
+     "Apr",
+     "Sep",
+     "Oct",
+     "Nov"
+    ],
+    "fldDR9cyzmxiDDKwc": "04°31′S 129°54′E",
+    "fldPZZucwwAJE0S2D": "Live"
+   }
+  },
+  {
+   "id": "recriojgX1SyEgNiA",
+   "fields": {
+    "fldO73tffc4yy2g0h": "Amazon",
+    "fldFouMOKeEEO7OT6": "amazon",
+    "fldS43LBvx25JJVug": "TERRA Y",
+    "fldDxWsXz1tV6Y7kU": "Rio Negro, Brazil",
+    "fldaBmef6Lwtotikz": [
+     "River",
+     "Wildlife",
+     "Eclipse"
+    ],
+    "fldK81GVIuzHFmiwX": "Manaus (MAO)",
+    "fldPZZucwwAJE0S2D": "Live"
+   }
+  }
+ ],
+ "Journeys": [
+  {
+   "id": "reccqGlNKoxRDiKIq",
+   "fields": {
+    "fldiu9LLMLYTpm5zM": "Nutmeg & Fire",
+    "fldrIGZQIlLEHQVZg": "banda-nutmeg-and-fire",
+    "fldbsgA5UKaEuQjhW": "AX·014",
+    "fld905UI9M62Ne5PS": "ARCX",
+    "fldkR3gn2qCjQHLPT": [
+     "Sail & explore"
+    ],
+    "fldVTZFAmfjhs4AOw": 8,
+    "flderiBdT31DH7vCy": [
+     "Dated departure",
+     "Private departure",
+     "Full-vessel charter"
+    ],
+    "fld4JBzlk0QNgMbGw": "Eight days aboard the phinisi Dunia Baru from Ambon: Run, Banda Neira, Gunung Api, Batu Kapal, Pulau Ai and Nusa Laut.",
+    "fldMnLxagWmGIfCQd": "https://arcterra.travel/journeys/banda-nutmeg-and-fire/",
+    "fldEEuEGZhRXYIOO4": "https://arcterra.travel/img/maps/banda-nutmeg-and-fire.webp",
+    "fldiKo9sFsqqF5kcp": "Live",
+    "fldeIZTimf123XaKy": [
+     "recmhNyg7M0WtWsFs"
+    ],
+    "fldPiHBWOimnAC8f6": [
+     "recWS1hIRZOcqyXdA"
+    ]
+   }
+  },
+  {
+   "id": "recEXXgvt2Vidvdcl",
+   "fields": {
+    "fldiu9LLMLYTpm5zM": "Dragons & Corals",
+    "fldrIGZQIlLEHQVZg": "komodo-dragons-and-corals",
+    "fldbsgA5UKaEuQjhW": "AX·011",
+    "fld905UI9M62Ne5PS": "ARCX",
+    "fldkR3gn2qCjQHLPT": [
+     "Sail & explore"
+    ],
+    "fldVTZFAmfjhs4AOw": 6,
+    "flderiBdT31DH7vCy": [
+     "Dated departure",
+     "Private departure",
+     "Full-vessel charter"
+    ],
+    "fld4JBzlk0QNgMbGw": "Six days from Labuan Bajo: Rinca dragons, the Padar viewpoint, Gili Lawa reefs and the mantas of Taka Makassar.",
+    "fldMnLxagWmGIfCQd": "https://arcterra.travel/journeys/komodo-dragons-and-corals/",
+    "fldEEuEGZhRXYIOO4": "https://arcterra.travel/img/maps/komodo-dragons-and-corals.webp",
+    "fldiKo9sFsqqF5kcp": "Live",
+    "fldeIZTimf123XaKy": [
+     "rec9FQzaOrrnoArEO"
+    ],
+    "fldPiHBWOimnAC8f6": [
+     "recWS1hIRZOcqyXdA"
+    ]
+   }
+  },
+  {
+   "id": "recgF33E254HKz0kl",
+   "fields": {
+    "fldiu9LLMLYTpm5zM": "Blue Hours",
+    "fldrIGZQIlLEHQVZg": "banda-dive-blue-hours",
+    "fldbsgA5UKaEuQjhW": "AX·D02",
+    "fld905UI9M62Ne5PS": "ARCX",
+    "fldkR3gn2qCjQHLPT": [
+     "Dive"
+    ],
+    "fldVTZFAmfjhs4AOw": 8,
+    "flderiBdT31DH7vCy": [
+     "Dated departure",
+     "Private departure",
+     "Full-vessel charter"
+    ],
+    "fld4JBzlk0QNgMbGw": "Up to 16 guided dives from Dunia Baru: the Run wall, Banda Neira lava-flow corals and the Batu Kapal pinnacles.",
+    "fldMnLxagWmGIfCQd": "https://arcterra.travel/journeys/banda-dive-blue-hours/",
+    "fldEEuEGZhRXYIOO4": "https://arcterra.travel/img/maps/banda-dive-blue-hours.webp",
+    "fldiKo9sFsqqF5kcp": "Live",
+    "fldeIZTimf123XaKy": [
+     "recmhNyg7M0WtWsFs"
+    ],
+    "fldPiHBWOimnAC8f6": [
+     "recWS1hIRZOcqyXdA"
+    ]
+   }
+  },
+  {
+   "id": "recxIcK7QazmjjnsE",
+   "fields": {
+    "fldiu9LLMLYTpm5zM": "The Long Left",
+    "fldrIGZQIlLEHQVZg": "surf-the-long-left",
+    "fldbsgA5UKaEuQjhW": "AX·S01",
+    "fld905UI9M62Ne5PS": "ARCX",
+    "fldkR3gn2qCjQHLPT": [
+     "Surf"
+    ],
+    "fldVTZFAmfjhs4AOw": 8,
+    "flderiBdT31DH7vCy": [
+     "Dated departure",
+     "Private departure",
+     "Full-vessel charter"
+    ],
+    "fld4JBzlk0QNgMbGw": "A boat expedition from Padang through the Playgrounds, Siberut, Sipora, Katiet and Pagai Utara, two sessions a day.",
+    "fldMnLxagWmGIfCQd": "https://arcterra.travel/journeys/surf-the-long-left/",
+    "fldEEuEGZhRXYIOO4": "https://arcterra.travel/img/maps/surf-the-long-left.webp",
+    "fldiKo9sFsqqF5kcp": "Live",
+    "fldeIZTimf123XaKy": [
+     "recFXb13iLWdMQYRm"
+    ],
+    "fldPiHBWOimnAC8f6": [
+     "recePlf1iEJhrC4ay"
+    ]
+   }
+  },
+  {
+   "id": "recux5hS871LX5n5B",
+   "fields": {
+    "fldiu9LLMLYTpm5zM": "Thin Air",
+    "fldrIGZQIlLEHQVZg": "tibet-everest-thin-air",
+    "fldbsgA5UKaEuQjhW": "TY·003",
+    "fld905UI9M62Ne5PS": "TERRA Y",
+    "fldkR3gn2qCjQHLPT": [
+     "Overland"
+    ],
+    "fldVTZFAmfjhs4AOw": 11,
+    "flderiBdT31DH7vCy": [
+     "Dated departure",
+     "Private departure",
+     "Full-vessel charter"
+    ],
+    "fld4JBzlk0QNgMbGw": "Chengdu to Kathmandu: Lhasa, Yamdrok Tso, passes above 5,000 m and a night below Everest, paced for acclimatisation.",
+    "fldMnLxagWmGIfCQd": "https://arcterra.travel/journeys/tibet-everest-thin-air/",
+    "fldEEuEGZhRXYIOO4": "https://arcterra.travel/img/maps/tibet-everest-thin-air.webp",
+    "fldiKo9sFsqqF5kcp": "Live",
+    "fldeIZTimf123XaKy": [
+     "recEgQ7euvXY5AyNQ"
+    ],
+    "fldPiHBWOimnAC8f6": [
+     "recyuZoiSKQUrVMHb"
+    ]
+   }
+  },
+  {
+   "id": "rec1sAYmAKWnG5zDn",
+   "fields": {
+    "fldiu9LLMLYTpm5zM": "The Crossing",
+    "fldrIGZQIlLEHQVZg": "katavi-mahale-mara-the-crossing",
+    "fldbsgA5UKaEuQjhW": "TY·002",
+    "fld905UI9M62Ne5PS": "TERRA Y",
+    "fldkR3gn2qCjQHLPT": [
+     "Wildlife",
+     "Overland"
+    ],
+    "fldVTZFAmfjhs4AOw": 14,
+    "flderiBdT31DH7vCy": [
+     "Dated departure",
+     "Private departure",
+     "Full-vessel charter"
+    ],
+    "fld4JBzlk0QNgMbGw": "Arusha to Nairobi: walking in Katavi, Mahale chimpanzees on Lake Tanganyika and the Mara River in crossing season.",
+    "fldMnLxagWmGIfCQd": "https://arcterra.travel/journeys/katavi-mahale-mara-the-crossing/",
+    "fldEEuEGZhRXYIOO4": "https://arcterra.travel/img/maps/katavi-mahale-mara-the-crossing.webp",
+    "fldiKo9sFsqqF5kcp": "Live",
+    "fldeIZTimf123XaKy": [
+     "recEGKvtP9aGFvhb9"
+    ],
+    "fldPiHBWOimnAC8f6": [
+     "recyuZoiSKQUrVMHb"
+    ]
+   }
+  },
+  {
+   "id": "recSYEubJkUqcZaMH",
+   "fields": {
+    "fldiu9LLMLYTpm5zM": "Classic Antarctica Air-Cruise",
+    "fldrIGZQIlLEHQVZg": "antarctica-fly-cruise",
+    "fldbsgA5UKaEuQjhW": "PC·A21",
+    "fld905UI9M62Ne5PS": "Polar Crossings",
+    "fldkR3gn2qCjQHLPT": [
+     "Polar"
+    ],
+    "fldVTZFAmfjhs4AOw": 8,
+    "flderiBdT31DH7vCy": [
+     "Dated departure",
+     "Private departure",
+     "Full-vessel charter"
+    ],
+    "fld4JBzlk0QNgMbGw": "Fly over the Drake to King George Island, then sail the South Shetlands and the Peninsula aboard Magellan Explorer.",
+    "fldMnLxagWmGIfCQd": "https://arcterra.travel/journeys/antarctica-fly-cruise/",
+    "fldEEuEGZhRXYIOO4": "https://arcterra.travel/img/maps/antarctica-fly-cruise.webp",
+    "fldiKo9sFsqqF5kcp": "Live",
+    "fldeIZTimf123XaKy": [
+     "recTvl5PMVreiNBKF"
+    ],
+    "fldPiHBWOimnAC8f6": [
+     "reccKCnhDaDFzHRXk"
+    ]
+   }
+  },
+  {
+   "id": "recYLG0dgn2e8p0wY",
+   "fields": {
+    "fldiu9LLMLYTpm5zM": "South Georgia in Spring",
+    "fldrIGZQIlLEHQVZg": "south-georgia-spring-charter-2027",
+    "fldbsgA5UKaEuQjhW": "PC·SG27",
+    "fld905UI9M62Ne5PS": "Polar Crossings",
+    "fldkR3gn2qCjQHLPT": [
+     "Polar",
+     "Wildlife"
+    ],
+    "fldVTZFAmfjhs4AOw": 17,
+    "flderiBdT31DH7vCy": [
+     "Full-vessel charter"
+    ],
+    "fld4JBzlk0QNgMbGw": "A full-ship charter of Magellan Explorer: king penguins, elephant seals in battle season and Shackleton’s Grytviken.",
+    "fldMnLxagWmGIfCQd": "https://arcterra.travel/journeys/south-georgia-spring-charter-2027/",
+    "fldEEuEGZhRXYIOO4": "https://arcterra.travel/img/maps/south-georgia-spring-charter-2027.webp",
+    "fldiKo9sFsqqF5kcp": "Live",
+    "fldeIZTimf123XaKy": [
+     "recekM01EZ5oBBAfg"
+    ],
+    "fldPiHBWOimnAC8f6": [
+     "reccKCnhDaDFzHRXk"
+    ]
+   }
+  },
+  {
+   "id": "reckzOqyI0zSLUPoF",
+   "fields": {
+    "fldiu9LLMLYTpm5zM": "Eclipse Journeys",
+    "fldrIGZQIlLEHQVZg": "eclipse-expeditions",
+    "fldbsgA5UKaEuQjhW": "SZ·27/28",
+    "fld905UI9M62Ne5PS": "SYZYGY",
+    "fldkR3gn2qCjQHLPT": [
+     "Eclipse"
+    ],
+    "fldVTZFAmfjhs4AOw": 8,
+    "flderiBdT31DH7vCy": [
+     "Dated departure",
+     "Private departure",
+     "Full-vessel charter"
+    ],
+    "fld4JBzlk0QNgMbGw": "Totality at Luxor on 2 August 2027 and a New Year blood moon over Komodo on 31 December 2028.",
+    "fldMnLxagWmGIfCQd": "https://arcterra.travel/eclipse-expeditions/",
+    "fldEEuEGZhRXYIOO4": "https://arcterra.travel/img/maps/eclipse-expeditions.webp",
+    "fldiKo9sFsqqF5kcp": "Live",
+    "fldeIZTimf123XaKy": [
+     "recfu0jMRJtfh6XmE",
+     "rec9FQzaOrrnoArEO"
+    ],
+    "fldPiHBWOimnAC8f6": [
+     "rectiKcpCmNVcCDRM",
+     "recWS1hIRZOcqyXdA"
+    ]
+   }
+  },
+  {
+   "id": "rec5CqEsY4grrLgMz",
+   "fields": {
+    "fldiu9LLMLYTpm5zM": "Solar Journeys: Egypt & Amazon",
+    "fldrIGZQIlLEHQVZg": "egypt-and-amazon",
+    "fldbsgA5UKaEuQjhW": "SZ·SOLAR",
+    "fld905UI9M62Ne5PS": "SYZYGY",
+    "fldkR3gn2qCjQHLPT": [
+     "Eclipse",
+     "River"
+    ],
+    "fldVTZFAmfjhs4AOw": 8,
+    "flderiBdT31DH7vCy": [
+     "Dated departure",
+     "Private departure",
+     "Full-vessel charter"
+    ],
+    "fld4JBzlk0QNgMbGw": "Total eclipse by Red Sea yacht and Nile dahabiya, and the Amazon ring of fire by Rio Negro riverboat.",
+    "fldMnLxagWmGIfCQd": "https://arcterra.travel/eclipse-expeditions/egypt-and-amazon/",
+    "fldEEuEGZhRXYIOO4": "https://arcterra.travel/img/maps/egypt-and-amazon.webp",
+    "fldiKo9sFsqqF5kcp": "Live",
+    "fldeIZTimf123XaKy": [
+     "recfu0jMRJtfh6XmE",
+     "recriojgX1SyEgNiA"
+    ],
+    "fldPiHBWOimnAC8f6": [
+     "rectiKcpCmNVcCDRM",
+     "reczBC8geroaxf1P2"
+    ]
+   }
+  }
+ ],
+ "Departures": [],
+ "Vessels": [
+  {
+   "id": "recWS1hIRZOcqyXdA",
+   "fields": {
+    "fldmUjdCycIduywuL": "Dunia Baru",
+    "fldE5TE7zmXwQBrcH": "dunia-baru",
+    "fldSK4VEm5gfyi2eb": "ARCX",
+    "fldOvM8uvyfArcJsP": "Phinisi",
+    "fldIaHwHoFqm6m9pH": 14,
+    "fldjMRX97d2PS186M": "Hand-built Indonesian phinisi for dive and island voyages. [Confirm length, cabins and year built.]",
+    "fld8Ug0n0RgEu93lx": "Live"
+   }
+  },
+  {
+   "id": "reccKCnhDaDFzHRXk",
+   "fields": {
+    "fldmUjdCycIduywuL": "Magellan Explorer",
+    "fldE5TE7zmXwQBrcH": "magellan-explorer",
+    "fldSK4VEm5gfyi2eb": "Polar Crossings",
+    "fldOvM8uvyfArcJsP": "Polar ship",
+    "fldIaHwHoFqm6m9pH": 88,
+    "fldHDil5e9ftmhSJU": 91,
+    "fldehipli8DjaIw4E": 2019,
+    "fldAXewq3zfq60sbb": "PC6",
+    "fldjMRX97d2PS186M": "Polar-class small ship for Antarctic fly-cruises and the South Georgia charter. [Confirm cabins.]",
+    "fld8Ug0n0RgEu93lx": "Live"
+   }
+  },
+  {
+   "id": "recePlf1iEJhrC4ay",
+   "fields": {
+    "fldmUjdCycIduywuL": "[Surf charter boat]",
+    "fldE5TE7zmXwQBrcH": "mentawai-surf-boat",
+    "fldSK4VEm5gfyi2eb": "ARCX",
+    "fldOvM8uvyfArcJsP": "Surf boat",
+    "fldIaHwHoFqm6m9pH": 10,
+    "fld8Ug0n0RgEu93lx": "Draft"
+   }
+  },
+  {
+   "id": "recraAHIbdfO6HAdx",
+   "fields": {
+    "fldmUjdCycIduywuL": "MS Roald Amundsen",
+    "fldE5TE7zmXwQBrcH": "roald-amundsen",
+    "fldSK4VEm5gfyi2eb": "Polar Crossings",
+    "fldOvM8uvyfArcJsP": "Polar ship",
+    "fldehipli8DjaIw4E": 2019,
+    "fldjMRX97d2PS186M": "HX hybrid expedition ship. [Confirm specs.]",
+    "fld8Ug0n0RgEu93lx": "Draft"
+   }
+  },
+  {
+   "id": "rectiKcpCmNVcCDRM",
+   "fields": {
+    "fldmUjdCycIduywuL": "[Nile dahabiya]",
+    "fldE5TE7zmXwQBrcH": "nile-dahabiya",
+    "fldSK4VEm5gfyi2eb": "TERRA Y",
+    "fldOvM8uvyfArcJsP": "Dahabiya",
+    "fld8Ug0n0RgEu93lx": "Draft"
+   }
+  },
+  {
+   "id": "recygeo0bEuUXBKPZ",
+   "fields": {
+    "fldmUjdCycIduywuL": "Aliikai",
+    "fldE5TE7zmXwQBrcH": "aliikai",
+    "fldSK4VEm5gfyi2eb": "ARCX",
+    "fldOvM8uvyfArcJsP": "Expedition yacht",
+    "fldjMRX97d2PS186M": "Raja Ampat yacht. [Confirm specs.]",
+    "fld8Ug0n0RgEu93lx": "Draft"
+   }
+  },
+  {
+   "id": "recyuZoiSKQUrVMHb",
+   "fields": {
+    "fldmUjdCycIduywuL": "Expedition 4x4 convoy",
+    "fldE5TE7zmXwQBrcH": "expedition-4x4",
+    "fldSK4VEm5gfyi2eb": "TERRA Y",
+    "fldOvM8uvyfArcJsP": "4x4 convoy",
+    "fld8Ug0n0RgEu93lx": "Draft"
+   }
+  },
+  {
+   "id": "reczBC8geroaxf1P2",
+   "fields": {
+    "fldmUjdCycIduywuL": "[Amazon riverboat]",
+    "fldE5TE7zmXwQBrcH": "amazon-riverboat",
+    "fldSK4VEm5gfyi2eb": "TERRA Y",
+    "fldOvM8uvyfArcJsP": "Riverboat",
+    "fld8Ug0n0RgEu93lx": "Draft"
+   }
+  }
+ ],
+ "Crew": [],
+ "Team": [
+  {
+   "id": "recoQuT0y75DryHeN",
+   "fields": {
+    "fldEWNcDoHh5Mxa9q": "James Papagno",
+    "fldtiROyXkYBGdcUy": "Founder & Chief Expedition Officer",
+    "fldWXha63CenYltW3": "Designing journeys since 1983, when friends asked him to take them surfing on Eleuthera. Sailing since 1989, surfing and diving the reefs along the way; 44 years on the road across the oceans, Antarctica and Africa.",
+    "fldgNc3tENTKmRUKg": "Ocean voyages, polar, safari, surf & dive",
+    "fld4Z3lbuKJbU76Uj": 1,
+    "fldjuCTZ4hPyZAP9m": true,
+    "fldK7GaZ8fbLbaN6F": true,
+    "fld4fuPZn0OHjDJ0L": "## It started with a surfboard on Eleuthera\n\nIn 1983 a group of friends asked James Papagno to take them surfing on Eleuthera in the Bahamas. He planned the boats, the breaks and the days around the tide, and a friend met them in North Eleuthera. That first trip set the pattern he has followed ever since: go yourself first, learn the water and the people, then design the journey around what the place does best.\n\n## Forty-four years on the road\n\nJames has been sailing since 1989, surfing and diving the reefs along the way. He has surfed, dived and explored Tahiti since 1996, sailed Raja Ampat with his son aboard the yacht Aliikai, and crossed the Antarctic Peninsula aboard HX's MS Roald Amundsen, where he was stranded during the 2020 shutdown and spent the extra weeks photographing the ice. On land he has walked and driven the safari country of East and Southern Africa, inspecting the camps he recommends in person.\n\n## Why ARC | TERRA XY\n\nArcTerra brings those two worlds under one ledger. **ARCX** is the ocean line: phinisi and yacht voyages, dive liveaboards and surf boats. **TERRA Y** is the land line: overland expeditions by 4x4, rail, bush plane and on foot, with **Polar Crossings** for Antarctica and the Arctic. Every journey is charted day by day, as a coordinate, so you know exactly where you will be and why.\n\n## How James works\n\n- He travels the routes, vessels and camps before they go on the site.\n- He keeps groups small and pairs each journey with guides he trusts.\n- He designs for the season: swell windows, visibility, migrations and light.\n\n_[Draft for James to edit: add a favourite moment, a photo from Antarctica, and a line on what comes next.]_\n"
+   }
+  }
+ ],
+ "Guides": [
+  {
+   "id": "recL50NBfi6HzudsZ",
+   "fields": {
+    "fldQnlnuJFiikoi56": "South Georgia & Falklands Field Guide",
+    "fldJMvkjI3WXwuptk": "Draft",
+    "fldl3pK2N2QkUqT92": [
+     "recekM01EZ5oBBAfg"
+    ]
+   }
+  },
+  {
+   "id": "recTr5mI7UdApvVLf",
+   "fields": {
+    "fldQnlnuJFiikoi56": "Antarctica Field Guide",
+    "fldJMvkjI3WXwuptk": "Draft",
+    "fldl3pK2N2QkUqT92": [
+     "recTvl5PMVreiNBKF"
+    ]
+   }
+  },
+  {
+   "id": "recc7zIhiTXYBYcAn",
+   "fields": {
+    "fldQnlnuJFiikoi56": "Mentawai Surf Guide",
+    "fldJMvkjI3WXwuptk": "Draft",
+    "fldl3pK2N2QkUqT92": [
+     "recFXb13iLWdMQYRm"
+    ]
+   }
+  },
+  {
+   "id": "reccBdPi4F02vNk74",
+   "fields": {
+    "fldQnlnuJFiikoi56": "Komodo Field Guide",
+    "fldJMvkjI3WXwuptk": "Draft",
+    "fldl3pK2N2QkUqT92": [
+     "rec9FQzaOrrnoArEO"
+    ]
+   }
+  },
+  {
+   "id": "recg9TpAl0sf49DUK",
+   "fields": {
+    "fldQnlnuJFiikoi56": "Banda Islands Field Guide",
+    "fldJMvkjI3WXwuptk": "Draft",
+    "fldl3pK2N2QkUqT92": [
+     "recmhNyg7M0WtWsFs"
+    ]
+   }
+  },
+  {
+   "id": "recnOMBKtkeR1NQug",
+   "fields": {
+    "fldQnlnuJFiikoi56": "Tibet Field Guide",
+    "fldJMvkjI3WXwuptk": "Draft",
+    "fldl3pK2N2QkUqT92": [
+     "recEgQ7euvXY5AyNQ"
+    ]
+   }
+  },
+  {
+   "id": "recp2av3KtohVvLTy",
+   "fields": {
+    "fldQnlnuJFiikoi56": "East Africa Field Guide",
+    "fldJMvkjI3WXwuptk": "Draft",
+    "fldl3pK2N2QkUqT92": [
+     "recEGKvtP9aGFvhb9"
+    ]
+   }
+  },
+  {
+   "id": "recsAIktsat6j2PV2",
+   "fields": {
+    "fldQnlnuJFiikoi56": "Egypt & Eclipse 2027 Guide",
+    "fldJMvkjI3WXwuptk": "Draft",
+    "fldl3pK2N2QkUqT92": [
+     "recfu0jMRJtfh6XmE"
+    ]
+   }
+  }
+ ],
+ "Posts": [
+  {
+   "id": "recUoZM3qNanvW31u",
+   "fields": {
+    "fldnoHDYOgcci2Z7C": "Banda Islands: The Spice Islands of Indonesia",
+    "fldkps52JAYBVB2rx": "banda-islands-spice-islands-guide",
+    "fldsalCsuiGEvYvnq": "The Banda Islands were once the only place on earth where nutmeg grew. Here is when to go, how to get there from Ambon, and why Banda's history, volcano and reefs reward the journey.",
+    "fldNl5Xvn4JZSepeY": "The Banda Islands are a tiny volcanic archipelago in Indonesia's Banda Sea, once the only place on earth where nutmeg grew. The best time to go is March–April or September–November, when the sea is calmest, and you reach them by flying to Ambon and sailing south overnight.\n\n**At a glance**\n- **Best months:** March–April and September–November\n- **Gateway:** Ambon (AMQ), Maluku\n- **Journey length:** 8 days, round trip from Ambon aboard the phinisi Dunia Baru\n- **Suits:** curious travellers, snorkellers and divers, history lovers, families with older children\n\n## Where are the Banda Islands?\n\nBanda sits roughly in the middle of the Banda Sea, south of Seram and east of the main Indonesian chain. It is a cluster of about ten small islands: Banda Neira, the main town; Banda Besar, the great curved island of nutmeg groves; the volcano Gunung Api; and the outliers Run, Ai and Hatta.\n\nThe islands are small enough to cross in a morning by boat, yet remote enough that the sea around them stays deep, clear and full of life.\n\n## Why were the Banda Islands so important?\n\nFor centuries, nutmeg and mace grew wild here and almost nowhere else. In Europe the spice was worth more than its weight in gold, and the race to control Banda shaped empires.\n\nThe Dutch East India Company fought for a monopoly through the 1600s; their stone forts, Fort Belgica above all, still stand on Banda Neira. The English held tiny Run Island. In 1667 the Treaty of Breda settled the dispute: England gave up its claim to Run, and the Dutch recognised English control of a trading post on another island, Manhattan.\n\nWalk through a nutmeg grove on Banda Besar today and you can still see the fruit split open on the branch, the red mace wrapped around the seed, drying on racks beside the paths.\n\n## What is there to see and do?\n\n**Gunung Api.** The \"fire mountain\" rises straight out of the harbour opposite Banda Neira. Its 1988 eruption sent lava into the sea, and the coral that has regrown over that flow is one of the most striking examples of reef recovery anywhere.\n\n**The reefs.** Banda's walls drop into deep water close to shore. Expect hard coral gardens, schooling fish, turtles and, in season, pelagics passing in the blue.\n\n**Run and Ai.** Quiet islands with white sand, small villages and some of the finest snorkelling in the group.\n\n**Banda Neira town.** Colonial houses, the old governor's mansion, Fort Belgica and a harbour that comes alive at dusk.\n\n| | Nutmeg & Fire | Blue Hours |\n|---|---|---|\n| Style | Ocean exploration (ARCX) | Dive liveaboard (ARCX Dive) |\n| Length | 8 days from Ambon | 8 days from Ambon |\n| Vessel | Phinisi Dunia Baru | Phinisi Dunia Baru |\n| Best for | Islands, history, snorkelling | Certified divers, up to 16 guided dives |\n\n## When is the best time to visit Banda?\n\nBanda sits between two monsoons. The transition months, March–April and September–November, bring the calmest seas and the best visibility, which is why our voyages sail then. Mid-year the southeast monsoon can make the crossing from Ambon rough; around December–February the northwest monsoon brings more rain.\n\n## How do you get to the Banda Islands?\n\nFly to Ambon, usually via Jakarta or Makassar. From Ambon the journey continues by sea: aboard Dunia Baru the crossing is an overnight passage, so you go to sleep in Ambon Bay and wake to Gunung Api on the horizon.\n\n## Is Banda right for you?\n\nChoose Banda if you want somewhere that still feels discovered rather than developed: few visitors, no crowds at the dive sites, and a story at every landing. It suits confident snorkellers and divers, but non-divers will find plenty: walks through the groves, village visits and climbs with views across the whole archipelago.\n\n**Plan it with us:** see the day-by-day chart for [Nutmeg & Fire](/journeys/banda-nutmeg-and-fire/), or dive it on [Blue Hours](/journeys/banda-dive-blue-hours/).\n\n## Questions travellers ask\n\n**Do I need to be a diver to enjoy Banda?**\nNo. Nutmeg & Fire is built around landings, walks, history and snorkelling, and much of Banda's reef life sits in the shallows. Divers who want more time underwater should choose Blue Hours, our dive liveaboard on the same phinisi, with up to sixteen guided dives across the week.\n\n**How remote are the Banda Islands?**\nBanda lies in the middle of the Banda Sea, an overnight sail south of Ambon. There are a few small guesthouses on Banda Neira but no large resorts, and visitor numbers stay low. That remoteness is the point: clear water, quiet reefs and villages where nutmeg is still harvested by hand.\n\n**Is the Banda Sea crossing rough?**\nIn the transition months we sail, March–April and September–November, the sea is usually calm. The crossing from Ambon is made overnight, so most guests sleep through it. Mid-year, when the southeast monsoon blows, conditions can be rougher, which is one reason we do not schedule voyages then.\n\n**Can families travel to Banda?**\nYes, with older children who are comfortable on boats and in the water. Snorkelling, beach time, fort visits and the story of the spice trade work well for curious young travellers. For a family group, a private departure or full charter of Dunia Baru lets you set the pace and the cabin plan.\n",
+    "fldMJnYoevM9GpOyi": "Banda Islands Travel Guide: When to Go & How to Get There",
+    "fldeJQGCCuNC63AdH": "The Banda Islands, Indonesia's original Spice Islands: when to go, how to get there from Ambon, nutmeg history, Gunung Api and the coral reefs.",
+    "fldtgO4a6ocBRQ0Zb": "Draft",
+    "fldxxO1WaKmDBKtdK": [
+     "recoQuT0y75DryHeN"
+    ],
+    "fldVUjNmQc4ynxuVz": [
+     "recmhNyg7M0WtWsFs"
+    ]
+   }
+  },
+  {
+   "id": "rec4uIFUqMKa50Fku",
+   "fields": {
+    "fldnoHDYOgcci2Z7C": "17 Days Aboard Magellan Explorer: South Georgia & the Falklands in Spring",
+    "fldkps52JAYBVB2rx": "south-georgia-falklands-magellan-explorer-spring",
+    "fldsalCsuiGEvYvnq": "A day-by-day look at our 17-day spring charter of Magellan Explorer from Punta Arenas: the Falklands, the Southern Ocean, and South Georgia's king penguins, elephant seals and Grytviken.",
+    "fldNl5Xvn4JZSepeY": "A spring voyage to South Georgia and the Falklands aboard Magellan Explorer is a 17-day, full-ship expedition from Punta Arenas, timed for the start of the southern breeding season. You land among king penguin colonies and elephant seals at their most dramatic, visit Shackleton's grave at Grytviken, and spend the days between at sea with the expedition team.\n\n**At a glance**\n- **Season:** southern spring; our charter sails October 2027\n- **Gateway:** Punta Arenas (PUQ), Chile\n- **Length:** 17 days\n- **Vessel:** Magellan Explorer, a polar-class expedition ship\n- **Suits:** wildlife photographers, first-time and returning polar travellers, groups taking the whole ship\n\n## What is a South Georgia and Falklands voyage like?\n\nIt is three experiences in one. The Falkland Islands bring windswept settlements, rockhopper and gentoo penguins and albatross nesting on the cliffs. Then come the sea days, crossing the Southern Ocean with seabirds following the wake. And then South Georgia itself: glaciers, jagged peaks and beaches crowded with more wildlife than almost anywhere else on earth.\n\nThis voyage is offered by Polar Crossings by TERRA Y, our polar line.\n\n## How does the 17-day itinerary unfold?\n\nEvery expedition is led by the weather and the ice, so landings are chosen day by day. The shape is consistent:\n\n**Days 1–2 · Punta Arenas and the Strait of Magellan.** Embark in Punta Arenas and sail east through the Strait of Magellan into the South Atlantic.\n\n**Days 3–5 · The Falkland Islands.** Landings on the outer islands for penguin and albatross colonies, and a visit to Stanley, the islands' small capital.\n\n**Days 6–7 · At sea towards South Georgia.** Lectures on wildlife, history and glaciology; time on the bridge and the open decks watching for albatross, petrels and whales.\n\n**Days 8–13 · South Georgia.** The heart of the voyage. Typical landings include Salisbury Plain and St Andrews Bay, home to some of the largest king penguin colonies anywhere; Gold Harbour, beneath hanging glaciers; and Grytviken, the old whaling station where Sir Ernest Shackleton is buried, with its museum and church.\n\n**Days 14–17 · Return across the Southern Ocean.** Sea days back to Punta Arenas, with time to edit photographs, share stories and see the last of the seabirds.\n\n| Leg | What to expect |\n|---|---|\n| Falklands | Rockhoppers, gentoos, black-browed albatross, island settlements |\n| Sea days | Lectures, birding, bridge visits, whale watching |\n| South Georgia | King penguins, elephant and fur seals, glaciers, Grytviken |\n\n## Why go in spring?\n\nSpring is the start of the season. Male elephant seals have hauled out to hold their beaches, and this is when the great bulls contest territory, one of the most powerful wildlife spectacles anywhere. King penguins gather in vast numbers. The mountains still carry winter snow down to the shoreline, which makes for the cleanest, most dramatic light of the year for photography.\n\n## What is life aboard Magellan Explorer like?\n\nMagellan Explorer is a small expedition ship built for polar waters. Days follow a rhythm: an early briefing, a Zodiac landing in the morning, lunch aboard while the ship repositions, a second landing or a Zodiac cruise along the ice in the afternoon, then a recap with the expedition team before dinner.\n\nBecause this departure is a full-ship charter, the whole vessel, from the cabins to the lecture lounge to the landing schedule, is shaped around one group.\n\nLearn more about [Magellan Explorer](/vessels/magellan-explorer/).\n\n## How hard is a South Georgia expedition?\n\nYou need to be able to climb in and out of a Zodiac with help from the crew and walk on uneven beaches, sometimes in snow. There is no technical hiking. The open-ocean days can be rough, so bring seasickness remedies and talk to your doctor before you travel.\n\n**Plan it with us:** follow the animated chart for [South Georgia in Spring](/journeys/south-georgia-spring-charter-2027/), or ask us about cabins and charter terms.\n\n## Questions travellers ask\n\n**Why choose South Georgia over Antarctica?**\nSouth Georgia offers wildlife density Antarctica rarely matches: king penguin colonies in the hundreds of thousands, elephant and fur seals on nearly every beach, and Shackleton's story at Grytviken. Many travellers who have seen the Peninsula call South Georgia the highlight of the Southern Ocean. This voyage combines it with the Falklands.\n\n**What is the weather like in South Georgia in spring?**\nExpect cold, changeable conditions: temperatures around freezing, wind, snow showers and bright spells within the same day. Layered clothing, waterproof outer layers and good boots make landings comfortable. The ship provides expedition parkas and boots on many polar voyages; confirm what is included before you pack.\n\n**Can we charter the whole ship?**\nYes. This October 2027 departure is a full-ship charter of Magellan Explorer, ideal for private groups, companies, clubs or extended families. A charter lets you shape the onboard programme, choose speakers and set the photography focus. Contact us early, because polar charters are booked well ahead.\n\n**Do I need to be fit for Zodiac landings?**\nYou need reasonable mobility: stepping into a Zodiac with the crew's help, sitting through short rides and walking on pebble or snowy beaches. There is no climbing. The expedition team manages every landing carefully, and guests can choose a Zodiac cruise instead of going ashore whenever they prefer.\n",
+    "fldMJnYoevM9GpOyi": "South Georgia & Falklands: 17 Days on Magellan Explorer",
+    "fldeJQGCCuNC63AdH": "A day-by-day look at a 17-day spring voyage to South Georgia and the Falklands aboard Magellan Explorer: king penguins, elephant seals, Grytviken.",
+    "fldtgO4a6ocBRQ0Zb": "Draft",
+    "fldxxO1WaKmDBKtdK": [
+     "recoQuT0y75DryHeN"
+    ],
+    "fldVUjNmQc4ynxuVz": [
+     "recekM01EZ5oBBAfg"
+    ]
+   }
+  },
+  {
+   "id": "recNRVl7lRbIolhfg",
+   "fields": {
+    "fldnoHDYOgcci2Z7C": "Thin Air: Crossing Tibet from Lhasa to Everest's North Face",
+    "fldkps52JAYBVB2rx": "thin-air-tibet-lhasa-to-everest",
+    "fldsalCsuiGEvYvnq": "Our 11-day Thin Air expedition crosses Tibet from Lhasa to Everest's north face. Here is how the route paces altitude, what you see along the way and what permits you need.",
+    "fldNl5Xvn4JZSepeY": "Crossing Tibet from Lhasa to the north face of Everest takes careful pacing: our Thin Air expedition runs 11 days from Chengdu to Kathmandu, climbing gradually so your body adjusts to altitude. You see the Potala Palace, the turquoise Yamdrok Tso, high passes above 5,000 metres and a night beneath Everest's north face.\n\n**At a glance**\n- **Best months:** April–October, with clearest mountain views in spring and autumn\n- **Gateway:** Chengdu in, Kathmandu out; flights into Lhasa (LXA)\n- **Length:** 11 days\n- **Style:** overland by expedition 4x4, TERRA Y\n- **Suits:** travellers in good health who want culture, landscape and the world's highest mountain, without technical climbing\n\n## What is the Thin Air expedition?\n\nThin Air is a TERRA Y overland journey across the Tibetan Plateau. It begins in Chengdu, flies up to Lhasa, then travels west by road through monasteries, lakes and passes to the Everest region, before descending to Nepal and ending in Kathmandu.\n\nThe route is designed around acclimatisation rather than speed.\n\n## How do you acclimatise for Tibet?\n\nLhasa sits at about 3,650 metres. Arriving by air means your body has had no time to adapt, so the first days are deliberately gentle: short walks, plenty of water, early nights.\n\nFrom there the route climbs in stages, sleeping at moderate heights before the highest nights near Everest. Your guides watch for symptoms of altitude sickness throughout, and supplementary oxygen is carried.\n\n| Stage | Approximate altitude | Focus |\n|---|---|---|\n| Lhasa | 3,650 m | Rest and acclimatise; Potala, Jokhang |\n| Yamdrok Tso and passes | 4,400–5,000 m+ | Lakes, glaciers, high passes |\n| Everest north side | about 5,000 m | Rongbuk, base camp views |\n| Descent to Nepal | falling steadily | Gorges, forest, Kathmandu |\n\nAltitudes are approximate. Talk to your doctor before booking, especially if you have heart or lung conditions.\n\n## What do you see in Lhasa?\n\nThe Potala Palace rises above the city, once the winter residence of the Dalai Lamas and the defining image of Tibet. Below it, the Jokhang Temple is the spiritual heart of Tibetan Buddhism, circled day and night by pilgrims walking the Barkhor. Days in Lhasa are unhurried by design.\n\n## What is the road from Lhasa to Everest like?\n\nThe drive is one of the great road journeys. Beyond the Kamba La pass you look down on Yamdrok Tso, a sacred lake of startling turquoise. The road continues past glaciers that reach close to the roadside, over passes above 5,000 metres strung with prayer flags, and through the monastery towns of the plateau.\n\nThen, on a clear day, the first view of Everest's north face appears: a vast wall of rock and ice at the end of the Rongbuk valley.\n\n## Can you visit Everest Base Camp from Tibet?\n\nYes. The north side of Everest is reached by road, so you can stand beneath the mountain without trekking. Visitor access is managed and rules can change, so we confirm the latest arrangements before every departure. The night near Rongbuk, with the north face lit by evening light, is the emotional centre of the journey.\n\n## What permits do you need for Tibet?\n\nForeign travellers need a Chinese visa or entry arrangement plus Tibet-specific permits, which must be arranged through a licensed operator; independent travel is not permitted. Rules change, sometimes at short notice. We handle the permits and keep you updated, but please allow plenty of time.\n\n**Plan it with us:** open the animated chart for [Thin Air](/journeys/tibet-everest-thin-air/) and follow the route day by day.\n\n## Questions travellers ask\n\n**How fit do I need to be for Thin Air?**\nYou do not need climbing experience, but you should be in good general health and comfortable walking at a slow pace for an hour or two. The real challenge is altitude, not distance. The itinerary builds height gradually, and your guides adjust the pace. A medical check before booking is strongly advised.\n\n**What is the best time of year to visit Tibet?**\nApril to October is the main travel season. Spring and autumn usually give the clearest views of Everest and the high Himalaya, while summer brings greener valleys and occasional cloud. Winter is cold and some services close. Permit availability can also vary by season, which we track for every departure.\n\n**Do I need a special permit to visit Tibet?**\nYes. In addition to entry documents for China, travellers need Tibet permits arranged through a licensed agency, and areas near Everest require further permissions. You cannot travel independently. We apply on your behalf once you book and keep you informed if regulations change before departure.\n\n**What happens if I feel altitude sickness?**\nMild headache and breathlessness are common in the first days. Guides monitor every guest, carry supplementary oxygen and know when to slow down or descend. Serious symptoms mean going lower, which the route makes possible. Drink plenty of water, rest on arrival in Lhasa and follow your guide's advice.\n",
+    "fldMJnYoevM9GpOyi": "Tibet Overland: Lhasa to Everest North Face in 11 Days",
+    "fldeJQGCCuNC63AdH": "How to cross Tibet overland from Lhasa to Everest's north face: acclimatisation, the Potala, Yamdrok Tso, high passes, base camp and permits.",
+    "fldtgO4a6ocBRQ0Zb": "Draft",
+    "fldxxO1WaKmDBKtdK": [
+     "recoQuT0y75DryHeN"
+    ],
+    "fldVUjNmQc4ynxuVz": [
+     "recEgQ7euvXY5AyNQ"
+    ]
+   }
+  }
+ ],
+ "Media": []
+}

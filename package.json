@@ -1,0 +1,12 @@
+{
+  "name": "arcterra-expeditions",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/build.mjs && npx --yes serve dist"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
