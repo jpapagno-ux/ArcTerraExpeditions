@@ -13,7 +13,9 @@ a{color:inherit}img{max-width:100%}
 .skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:10px 14px;z-index:200}.skip:focus{left:8px}
 
 /* header + dropdowns */
-.top{position:sticky;top:0;z-index:100;background:rgba(246,244,239,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top{position:sticky;top:0;z-index:100;background:rgba(246,244,239,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+/* Journey map heroes: the logo and coordinate panel is a light veil, so the chart shows through */
+.hero .ui .top{position:relative;background:linear-gradient(180deg,rgba(246,244,239,.58) 0%,rgba(246,244,239,.32) 100%);-webkit-backdrop-filter:blur(1.5px) saturate(1.05);backdrop-filter:blur(1.5px) saturate(1.05);border-bottom:1px solid rgba(8,26,38,.10)}
 .top .bar{display:flex;align-items:center;gap:14px;min-height:64px}
 .logos{display:flex;gap:16px;align-items:center;margin-right:auto;text-decoration:none}.logos img{height:30px;width:auto;display:block}
 #nav{display:flex;align-items:center;gap:2px}
