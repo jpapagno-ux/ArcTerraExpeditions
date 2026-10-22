@@ -24,8 +24,11 @@ const byId = (list, id) => list.find(x => x.id === id);
 const jUrl = j => (j.page || '').replace(/^https?:\/\/[^/]+/, '') || `/journeys/${j.slug}/`;
 const deps = j => X.filter(x => (x.journey || []).includes(j.id));
 const fromPrice = j => { const p = deps(j).map(x => x.pp).filter(Boolean); return p.length ? Math.min(...p) : 0; };
-const mapImg = j => `/img/maps/${j.slug}.webp`;
-const poster = j => `/img/maps/${j.slug}-poster.webp`;
+// route charts: crisp 960x600 card loops and 1600x700 hero loops (MP4), each with a sharp JPEG still
+const mapImg = j => `/img/maps/${j.slug}-card.mp4`;
+const poster = j => `/img/maps/${j.slug}-card.jpg`;
+const heroVid = j => `/img/maps/${j.slug}-hero.mp4`;
+const heroPoster = j => `/img/maps/${j.slug}-hero.jpg`;
 const destJourneys = d => J.filter(j => (j.dest || []).includes(d.id));
 const destVessels = d => V.filter(v => destJourneys(d).some(j => (j.vessel || []).includes(v.id)));
 
@@ -78,7 +81,7 @@ function footer() {
 }
 function page({ path: p, title, desc, body, cur, schema = [], noindex = false, og, extraHead = '' }) {
   const url = DOMAIN + p;
-  const img = og || DOMAIN + '/img/maps/banda-nutmeg-and-fire.webp';
+  const img = og || DOMAIN + '/img/maps/banda-nutmeg-and-fire-card.jpg';
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>${e(title)}</title><meta name="description" content="${e(desc)}"><link rel="canonical" href="${url}">${noindex ? '<meta name="robots" content="noindex">' : ''}
 <meta property="og:type" content="website"><meta property="og:site_name" content="${e(SITE.name)}"><meta property="og:title" content="${e(title)}"><meta property="og:description" content="${e(desc)}"><meta property="og:url" content="${url}"><meta property="og:image" content="${img}"><meta name="twitter:card" content="summary_large_image">
@@ -92,13 +95,13 @@ const faqHtml = qs => qs.map(x => `<details class="q"><summary>${e(x.q)}</summar
 const draftBadge = r => isDraft(r) ? '<span class="draft">DRAFT · preview only</span>' : '';
 function jCard(j) {
   const c = cls(j.brand), d = byId(D, (j.dest || [])[0]), fp = fromPrice(j), nx = deps(j)[0];
-  return `<a class="card ${c}" href="${jUrl(j)}" data-dest="${e(j.slug)}"><span class="m ${c}"><img src="${poster(j)}" data-anim="${mapImg(j)}" alt="Animated route chart: ${e(j.name)}" loading="lazy" decoding="async" width="640" height="400"><span class="tag ${c}">${e(j.brand)} · ${e(j.code || '')}</span><span class="live">● LIVE CHART</span></span>
+  return `<a class="card ${c}" href="${jUrl(j)}" data-dest="${e(j.slug)}"><span class="m ${c}"><img src="${poster(j)}" data-anim="${mapImg(j)}" alt="Animated route chart: ${e(j.name)}" loading="lazy" decoding="async" width="960" height="600"><span class="tag ${c}">${e(j.brand)} · ${e(j.code || '')}</span><span class="live">● LIVE CHART</span></span>
 <span class="b"><h3>${e(j.name)}</h3><span class="muted" style="font-size:13.5px">${e(d ? d.name : '')} · ${e(j.days)} days</span><p>${e(j.summary)}</p>
 <span class="price">${fp ? `From <b>${money(fp)}</b> pp` : 'Dates and prices on request'}${nx ? ` · next ${fdate(nx.start)}` : ''}</span><span class="go">Open the chart →</span></span></a>`;
 }
 function dCard(d) {
   const c = cls(d.brand), j = destJourneys(d)[0];
-  const img = d.hero ? `<img src="${cld(d.hero, 720)}" alt="${e(d.name)}" loading="lazy" decoding="async">` : j ? `<img src="${poster(j)}" data-anim="${mapImg(j)}" alt="Route chart in ${e(d.name)}" loading="lazy" decoding="async" width="640" height="400">` : `<img class="mark" src="${d.brand === 'ARCX' ? '/brand/arcx/arcx-bleed-white.png' : '/brand/terray/terray-bleed-white.png'}" alt="">`;
+  const img = d.hero ? `<img src="${cld(d.hero, 720)}" alt="${e(d.name)}" loading="lazy" decoding="async">` : j ? `<img src="${poster(j)}" data-anim="${mapImg(j)}" alt="Route chart in ${e(d.name)}" loading="lazy" decoding="async" width="960" height="600">` : `<img class="mark" src="${d.brand === 'ARCX' ? '/brand/arcx/arcx-bleed-white.png' : '/brand/terray/terray-bleed-white.png'}" alt="">`;
   return `<a class="card ${c}" href="/destinations/${d.slug}/" data-dest="${e(d.slug)}" data-path="${pathOf(d.brand)}" data-styles="${e((d.styles || []).join(' '))}" data-months="${e((d.months || []).join(' '))}"><span class="m ${c}">${img}<span class="tag ${c}">${e(d.brand)}</span></span>
 <span class="b"><span class="eyebrow">${e(d.coord || d.region)}</span><h3>${e(d.name)}</h3><p>${e(d.region)}</p><span class="price"><b>Best:</b> ${e(monthRanges(d.months || []) || 'ask us')} · <b>Fly to:</b> ${e(d.gw)}</span>${draftBadge(d)}<span class="go">Destination guide →</span></span></a>`;
 }
@@ -134,7 +137,7 @@ function destPage(d) {
   const c = cls(d.brand), js = destJourneys(d), vs = destVessels(d), qs = destFaqs(d), quick = destQuick(d);
   const posts = P.filter(p => (p.dest || []).includes(d.id));
   const items = [['Home', '/'], ['Destinations', '/destinations/'], [d.name, `/destinations/${d.slug}/`]];
-  const heroImg = d.hero ? `<img src="${cld(d.hero, 1600)}" alt="${e(d.name)}" style="width:100%;aspect-ratio:21/9;object-fit:cover;display:block">` : js[0] ? `<img src="${mapImg(js[0])}" alt="Animated route chart: ${e(js[0].name)} in ${e(d.name)}" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block" width="640" height="400">` : '';
+  const heroImg = d.hero ? `<img src="${cld(d.hero, 1600)}" alt="${e(d.name)}" style="width:100%;aspect-ratio:21/9;object-fit:cover;display:block">` : js[0] ? `<video class="mapvid" src="${heroVid(js[0])}" poster="${heroPoster(js[0])}" autoplay muted loop playsinline preload="auto" aria-label="Animated route chart: ${e(js[0].name)} in ${e(d.name)}" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block;background:#DDE6E4" width="1600" height="700"></video>` : '';
   const body = `<div class="hero">${crumbs(items)}<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><span class="tag ${c}">${e(d.brand)}</span>${draftBadge(d)}<span class="eyebrow">${e(d.coord || '')}</span></div>
 <h1>${e(d.name)}</h1><p class="lead">${e(d.region)}</p></div>
 ${heroImg ? `<div class="card ${c}" style="padding:0;overflow:hidden">${heroImg}</div>` : ''}
@@ -272,7 +275,7 @@ ${M.length ? `<div class="grid">${M.map(x => `<a class="card" href="${e(x.link |
 }
 
 /* ---------- journal ---------- */
-function pImg(p) { if (p.cover) return cld(p.cover, 800); const d = byId(D, (p.dest || [])[0]); const j = d && destJourneys(d)[0]; return j ? mapImg(j) : ''; }
+function pImg(p) { if (p.cover) return cld(p.cover, 800); const d = byId(D, (p.dest || [])[0]); const j = d && destJourneys(d)[0]; return j ? poster(j) : ''; }
 function pCard(p) {
   const d = byId(D, (p.dest || [])[0]), c = d ? cls(d.brand) : '';
   return `<a class="card ${c}" href="/journal/${p.slug}/"><span class="m ${c}">${pImg(p) ? `<img src="${pImg(p)}" alt="" loading="lazy" decoding="async">` : ''}<span class="tag ${c}">${e(d ? d.brand : SITE.journalName)}</span></span><span class="b"><span class="eyebrow">${e(d ? d.name : '')}${p.date ? ' · ' + fdate(p.date) : ''}</span><h3>${e(p.title)}</h3><p>${e(p.excerpt)}</p>${draftBadge(p)}<span class="go">Read →</span></span></a>`;
@@ -485,14 +488,14 @@ function polishStatic() {
   // every page: still poster first, animation when on screen
   const walk = d => { for (const x of fs.readdirSync(d, { withFileTypes: true })) { const p = path.join(d, x.name);
     if (x.isDirectory()) { if (!['brand', 'vendor', 'img', 'data', 'assets'].includes(x.name)) walk(p); continue; } if (!x.name.endsWith('.html')) continue;
-    let s = fs.readFileSync(p, 'utf8'); const s2 = s.replace(/<img src="\/?img\/maps\/([a-z0-9-]+)\.webp"(?![^>]*data-anim)/g, '<img src="/img/maps/$1-poster.webp" data-anim="/img/maps/$1.webp"');
+    let s = fs.readFileSync(p, 'utf8'); const s2 = s.replace(/<img src="\/?img\/maps\/([a-z0-9-]+)\.webp"(?![^>]*data-anim)/g, (m, slug) => { slug = slug.replace(/-poster$/, ''); return `<img src="/img/maps/${slug}-card.jpg" data-anim="/img/maps/${slug}-card.mp4"`; }).replace(/(<img src="\/img\/maps\/[a-z0-9-]+-card\.jpg"[^>]*?) width="640" height="400"/g, '$1 width="960" height="600"');
     const s3 = s2.replace(/<meta name="description" content="([^"]{1,69})">/, (m, d) => `<meta name="description" content="${d.replace(/\.?$/, '.')} Small-ship expeditions by ArcTerra: ARCX ocean voyages and TERRA Y land journeys.">`);
     if (s3 !== s) fs.writeFileSync(p, s3); } };
   walk(OUT);
   // eclipse pages: clearer titles
   for (const [rel, t] of [['eclipse-expeditions/index.html', 'SYZYGY Eclipse Journeys 2027–2028: Luxor & Komodo | ArcTerra'], ['eclipse-expeditions/egypt-and-amazon/index.html', 'Solar Eclipse Journeys: Egypt 2027 & Amazon 2028 | ArcTerra']]) {
     const f = path.join(OUT, rel); if (!fs.existsSync(f)) continue; let s = fs.readFileSync(f, 'utf8'); const m = s.match(/<meta name="description" content="([^"]*)"/);
-    s = headTags(s, DOMAIN + '/' + rel.replace('index.html', ''), t, trimDesc(m ? m[1].replace(/&amp;/g, '&') : t), DOMAIN + '/img/maps/' + (rel.includes('amazon') ? 'egypt-and-amazon' : 'eclipse-expeditions') + '-poster.webp');
+    s = headTags(s, DOMAIN + '/' + rel.replace('index.html', ''), t, trimDesc(m ? m[1].replace(/&amp;/g, '&') : t), DOMAIN + '/img/maps/' + (rel.includes('amazon') ? 'egypt-and-amazon' : 'eclipse-expeditions') + '-card.jpg');
     s = s.replace(/<nav aria-label="Site">[\s\S]*?<\/nav>/, NAV_STATIC); s = fillGaps(outline(stripInternal(s))); fs.writeFileSync(f, s); n++;
   }
   return n;

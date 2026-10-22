@@ -41,8 +41,12 @@
   // animated route previews: show a still poster, play the animation only when the card is on screen
   var anims=$$('img[data-anim]');
   if(anims.length&&'IntersectionObserver' in window&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches&&!(navigator.connection&&navigator.connection.saveData)){
-    var io2=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.src=e.target.dataset.anim;io2.unobserve(e.target)}})},{rootMargin:'120px 0px',threshold:.3});
+    var toVid=function(i){var v=document.createElement('video');v.muted=true;v.defaultMuted=true;v.loop=true;v.autoplay=true;v.playsInline=true;v.setAttribute('playsinline','');v.setAttribute('muted','');v.poster=i.currentSrc||i.src;v.className=i.className;v.style.cssText='width:100%;height:100%;object-fit:cover;display:block;'+i.style.cssText;v.setAttribute('aria-label',i.alt||'Animated route chart');v.width=i.width;v.height=i.height;v.src=i.dataset.anim;
+      v.addEventListener('loadeddata',function(){if(i.parentNode)i.parentNode.replaceChild(v,i);var p=v.play();if(p&&p.catch)p.catch(function(){})},{once:true});v.load()};
+    var io2=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var t=e.target;if(/\.mp4$/.test(t.dataset.anim))toVid(t);else t.src=t.dataset.anim;io2.unobserve(t)}})},{rootMargin:'160px 0px',threshold:.2});
     anims.forEach(function(i){io2.observe(i)})}
+  // respect reduced motion on the hero route charts
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)$$('video.mapvid').forEach(function(v){v.removeAttribute('autoplay');v.pause()});
   // reading progress + back to top
   var pr=$('.progress'),tt=$('.totop');
   if(pr||tt){var art=$('.prose');window.addEventListener('scroll',function(){var y=window.scrollY;if(tt)tt.classList.toggle('on',y>900);
