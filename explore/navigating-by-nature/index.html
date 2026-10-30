@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Navigating by Nature: How Polynesian Wayfinders Read the Ocean | ARCX</title>
+<meta name="description" content="How Pacific navigators cross thousands of miles with no instruments: the 32-house star compass, the hand held to the horizon, swell and wind, the wake. An ARCX exploration, told by a sailor of 37 years.">
+<link rel="canonical" href="https://[DOMAIN]/explore/navigating-by-nature/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="ARC | TERRA XY">
+<meta property="og:title" content="Navigating by Nature: How Polynesian Wayfinders Read the Ocean">
+<meta property="og:description" content="The star compass, the hand, swell and wind, the wake. An immersive ARCX exploration of where ocean exploration began.">
+<meta property="og:image" content="https://[DOMAIN]/img/og-arc-terra-xy.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#06090f">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Article","@id":"https://[DOMAIN]/explore/navigating-by-nature/#article","headline":"Navigating by Nature: How Polynesian Wayfinders Read the Ocean","description":"How Pacific navigators cross thousands of miles with no instruments: the 32-house star compass, the hand held to the horizon, swell and wind, the wake.","author":{"@type":"Person","name":"James Papagno","jobTitle":"Founder, ARCX"},"publisher":{"@type":"Organization","name":"ARC | TERRA XY","url":"https://[DOMAIN]/"},"mainEntityOfPage":"https://[DOMAIN]/explore/navigating-by-nature/","datePublished":"2026-10-30","inLanguage":"en","about":["Polynesian wayfinding","Hawaiian star compass","Celestial navigation"],"citation":{"@type":"Organization","name":"Polynesian Voyaging Society","url":"https://www.hokulea.com/"}},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How does the Hawaiian star compass work?","acceptedAnswer":{"@type":"Answer","text":"The navigator divides the whole horizon into 32 equal sections called houses. The sun, moon and every star rise in a fixed house on the eastern horizon and set in the mirror house on the western horizon, so watching where a body rises tells the navigator the direction it will set, and holds a course."}},
+{"@type":"Question","name":"How do Polynesian navigators find latitude with their hand?","acceptedAnswer":{"@type":"Answer","text":"With the arm straight, the hand becomes a ruler against the horizon. A navigator knows the angular width of each finger and measures a star's altitude in finger widths; a fixed star's altitude above the horizon is the observer's latitude. Hōkūleʻa (Arcturus) passes directly overhead at the latitude of Hawaiʻi."}},
+{"@type":"Question","name":"How do wayfinders navigate when clouds hide the stars?","acceptedAnswer":{"@type":"Answer","text":"They read the ocean. Long swells travel in straight lines for days from one compass house to its opposite, and the trade wind holds a steady house. A navigator feels each swell through the hull as a pitch or a roll and keeps the angle between them to hold the course."}},
+{"@type":"Question","name":"How did Polynesians measure speed and distance at sea?","acceptedAnswer":{"@type":"Answer","text":"By counting the wake: timing how long foam takes to pass from bow to stern gives boat speed. Speed, heading, point of origin and elapsed time together give position by dead reckoning, carried in the navigator's head over thousands of miles."}},
+{"@type":"Question","name":"What is the Polynesian Voyaging Society?","acceptedAnswer":{"@type":"Answer","text":"The Honolulu-based nonprofit founded in 1973 that built the voyaging canoe Hōkūleʻa and revived non-instrument wayfinding. Its president, navigator Nainoa Thompson, developed the Hawaiian star compass. ARCX works with Hōkūleʻa voyages and credits PVS as the source of the wayfinding knowledge on this page."}}]},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://[DOMAIN]/"},{"@type":"ListItem","position":2,"name":"Ocean expeditions","item":"https://[DOMAIN]/ocean-expeditions/"},{"@type":"ListItem","position":3,"name":"Navigating by Nature","item":"https://[DOMAIN]/explore/navigating-by-nature/"}]}
+]}
+</script>
+<style>
+/* Layout: five scroll-driven chapters, each a sticky full-screen canvas scene with fixed captions, followed by a short crawlable text panel; a chapter rail on the right; ARCX close. Single committed dark look. */
+:root{
+  --ink:#06090f; --deep:#0b1a2e; --line:#9fd3ea; --line-dim:rgba(159,211,234,.35);
+  --paper:#eef3f6; --gold:#d9b25a;
+  --display:"Bebas Neue",Impact,"Arial Narrow",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --serif:"Cormorant Garamond",Georgia,serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--ink);color:var(--paper);font-family:var(--serif);overflow-x:hidden}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.g{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.grain{position:fixed;inset:0;pointer-events:none;opacity:.07;mix-blend-mode:screen;z-index:1;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='160' height='160' filter='url(%23n)' opacity='.9'/></svg>")}
+/* top bar */
+.top{position:fixed;top:0;left:0;right:0;z-index:6;display:flex;justify-content:space-between;align-items:center;gap:12px;
+  padding:calc(env(safe-area-inset-top,0px) + 12px) max(16px,env(safe-area-inset-right,0px)) 10px max(16px,env(safe-area-inset-left,0px));
+  background:linear-gradient(180deg,rgba(6,9,15,.85),rgba(6,9,15,0));pointer-events:none}
+.top a,.top span{pointer-events:auto}
+.top .home{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--line-dim);text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.top .home:hover{color:var(--line)}
+.top .eb{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--line-dim);text-align:center;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.brand{font-family:var(--display);font-size:22px;letter-spacing:.14em;color:var(--paper);text-decoration:none}
+.brand b{color:var(--line);font-weight:400}
+/* chapter rail */
+.rail{position:fixed;right:max(10px,env(safe-area-inset-right,0px));top:50%;transform:translateY(-50%);z-index:6;display:flex;flex-direction:column;gap:14px;margin:0;padding:0;list-style:none}
+.rail a{display:flex;align-items:center;justify-content:flex-end;gap:8px;text-decoration:none;color:var(--line-dim);font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;min-height:24px}
+.rail a span{opacity:0;transition:opacity .3s}
+.rail a i{width:6px;height:6px;border:1px solid var(--line-dim);border-radius:50%;transition:all .3s}
+.rail a:hover span{opacity:1}
+.rail a[aria-current="true"] i{background:var(--gold);border-color:var(--gold);box-shadow:0 0 10px var(--gold)}
+.rail a[aria-current="true"]{color:var(--paper)}
+@media (max-width:640px){.rail a span{display:none}}
+/* chapters */
+.ch{position:relative;height:var(--len,800vh)}
+.ch .stick{position:sticky;top:0;height:100svh;overflow:hidden}
+.ch canvas{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:pan-y}
+.ch canvas.grab{touch-action:none}
+.ov{position:absolute;pointer-events:none;z-index:3}
+.cap{left:max(16px,env(safe-area-inset-left,0px));right:max(16px,env(safe-area-inset-right,0px));bottom:calc(env(safe-area-inset-bottom,0px) + 34px);max-width:36ch;
+  font-size:clamp(19px,2.6vw,27px);line-height:1.25;font-style:italic;opacity:0;transition:opacity .9s ease;text-wrap:balance;margin:0}
+.cap.on{opacity:.94}
+.ro{right:max(16px,env(safe-area-inset-right,0px));top:calc(env(safe-area-inset-top,0px) + 64px);text-align:right;opacity:0;transition:opacity .6s;
+  font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--paper);font-variant-numeric:tabular-nums;line-height:1.7;max-width:60vw}
+.ro.on{opacity:1}
+.ro .lab{font-size:11px;letter-spacing:.22em;color:var(--line-dim);display:block;line-height:1.4}
+.ro .big{font-family:var(--display);font-size:clamp(26px,5.5vw,56px);letter-spacing:.08em;color:var(--gold);line-height:1;display:block}
+.ro .big small{display:block;font-size:.42em;color:var(--paper);letter-spacing:.14em;margin-top:4px}
+.ro b{color:var(--gold);font-weight:500}
+.title{inset:0;display:grid;place-items:center;text-align:center;opacity:0;transition:opacity 1.2s ease}
+.title.on{opacity:1}
+.title h1{font-family:var(--display);font-size:clamp(40px,9vw,112px);letter-spacing:.12em;margin:0;line-height:.95;text-wrap:balance}
+.title p{font-family:var(--mono);font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--line-dim);margin:14px 0 0}
+.title p b{color:var(--line);font-weight:500}
+.hint{left:50%;transform:translateX(-50%);bottom:calc(env(safe-area-inset-bottom,0px) + 12px);font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--line-dim);opacity:0;transition:opacity .8s;white-space:nowrap}
+.hint.on{opacity:1;animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.35}}
+@media (prefers-reduced-motion:reduce){.hint.on{animation:none}}
+.ctl{position:absolute;z-index:4;left:50%;transform:translateX(-50%);bottom:calc(env(safe-area-inset-bottom,0px) + 12px);width:min(520px,calc(100% - 32px));
+  display:grid;grid-template-columns:1fr auto;gap:10px 12px;align-items:center;opacity:0;pointer-events:none;transition:opacity .8s;
+  font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--line-dim);
+  background:rgba(6,9,15,.78);border:1px solid var(--line-dim);padding:12px 14px;backdrop-filter:blur(6px)}
+.ctl.on{opacity:1;pointer-events:auto}
+.ctl.two{grid-template-columns:1fr 1fr}
+.ctl label{display:flex;flex-direction:column;gap:5px;min-width:0}
+.ctl .t{grid-column:1/-1;display:flex;align-items:center;gap:10px}
+.ctl input[type=range]{min-width:0;accent-color:var(--gold);height:28px;width:100%;flex:1}
+.ctl select,.ctl input[type=date]{background:var(--ink);color:var(--paper);border:1px solid var(--line-dim);font-family:var(--mono);font-size:13px;padding:7px 8px;min-width:0;letter-spacing:.04em;width:100%}
+.ctl button{background:none;border:1px solid var(--line-dim);color:var(--line);font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;padding:10px 14px;cursor:pointer;white-space:nowrap;min-height:44px}
+.ctl button[aria-pressed=true]{background:var(--line);color:var(--ink)}
+/* text panels */
+.panel{position:relative;z-index:4;background:var(--ink);padding-block:64px 72px;border-top:1px solid var(--line-dim)}
+.panel .in{max-width:68ch;margin:0 auto}
+.panel .k{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0 0 10px}
+.panel h2{font-family:var(--display);font-size:clamp(28px,5vw,44px);letter-spacing:.08em;margin:0 0 14px;line-height:1;text-wrap:balance}
+.panel p{font-size:19px;line-height:1.45;margin:0 0 16px}
+.panel .ans{font-size:21px;color:var(--paper)}
+.panel .src{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--line-dim);margin:18px 0 0}
+.panel .src a{color:var(--line)}
+table{border-collapse:collapse;width:100%;font-family:var(--mono);font-size:13px;margin-top:8px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid rgba(159,211,234,.18);vertical-align:top}
+th{font-weight:500;letter-spacing:.16em;text-transform:uppercase;font-size:11px;color:var(--line-dim)}
+td:first-child{color:var(--gold)}
+.tw{overflow-x:auto}
+/* close */
+.end{position:relative;z-index:4;background:var(--ink);display:grid;place-items:center;text-align:center;padding-block:120px 110px;border-top:1px solid var(--line-dim)}
+.end h2{font-family:var(--display);font-size:clamp(64px,16vw,160px);letter-spacing:.12em;margin:0;line-height:.9}
+.end h2 span{color:var(--line)}
+.end .tag{font-family:var(--mono);font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--line-dim);margin:16px 0 0;max-width:30ch;text-wrap:balance}
+.end blockquote{font-style:italic;font-size:clamp(20px,2.8vw,28px);color:var(--paper);max-width:30ch;margin:30px auto 0;line-height:1.3}
+.end blockquote footer{font-family:var(--mono);font-style:normal;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--line-dim);margin-top:12px}
+.end .cta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:36px}
+.end .cta a{border:1px solid var(--line-dim);color:var(--line);font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;padding:12px 20px;text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.end .cta a.g{border-color:var(--gold);color:var(--gold)}
+.end .cr{margin-top:44px;font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--line-dim);max-width:52ch;line-height:1.8}
+.end .cr a{color:var(--line)}
+.lead{position:relative;z-index:4;background:var(--ink);padding-block:56px 40px}
+.lead .in{max-width:68ch;margin:0 auto}
+.lead p{font-size:20px;line-height:1.45;margin:0 0 14px}
+.lead .eb{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--line-dim);margin:0 0 12px}
+</style>
+</head>
+<body>
+<a class="vh" href="#read">Skip to the written version</a>
+<div class="grain" aria-hidden="true"></div>
+<header class="top"><a class="home" href="/ocean-expeditions/">← ARCX ocean</a><span class="eb" id="eb">Navigating by Nature</span><a class="brand" href="/">ARC<b>X</b></a></header>
+<nav aria-label="Chapters"><ul class="rail" id="rail">
+  <li><a href="#prologue"><span>Prologue</span><i></i></a></li>
+  <li><a href="#horizon"><span>Horizon</span><i></i></a></li>
+  <li><a href="#stars"><span>Stars</span><i></i></a></li>
+  <li><a href="#hand"><span>Hand</span><i></i></a></li>
+  <li><a href="#swell"><span>Swell</span><i></i></a></li>
+  <li><a href="#wake"><span>Wake</span><i></i></a></li>
+</ul></nav>
+<main id="main">
+
+<!-- PROLOGUE + CH1 HORIZON -->
+<section class="ch" id="prologue" data-ch="horizon" style="--len:1000vh" aria-label="Prologue and Chapter 1, The Horizon">
+  <div class="stick">
+    <canvas aria-label="A voyaging canoe at the centre of a ring of thirty-two compass houses; the sun rises in one house and sets in its mirror"></canvas>
+    <div class="ov title" data-title><div><h1>Navigating<br>by Nature</h1><p>An <b>ARCX</b> exploration · where we began</p></div></div>
+    <div class="ov ro" data-ro></div>
+    <p class="ov cap" data-cap></p>
+    <div class="ov hint" data-hint>Scroll</div>
+    <div class="ctl" data-ctl><span>North</span><input type="range" data-rise min="-80" max="80" value="-13" step="1" aria-label="Sun rise house, degrees from east"><span>South</span></div>
+  </div>
+  <span id="horizon" style="position:absolute;top:30%"></span>
+</section>
+<section class="panel g" id="read"><div class="in">
+  <p class="k">Chapter 1 · The Horizon</p>
+  <h2>How does the Hawaiian star compass work?</h2>
+  <p class="ans">The navigator divides the whole horizon into 32 equal sections called houses. The sun, moon and every star rise in a fixed house on the eastern horizon and set in the mirror house on the western horizon, so watching where a body rises tells you where it will set, and that alone holds a course for a day.</p>
+  <p>Four cardinal houses stand alone: north, east, south and west. Each quarter between them is split again and again into seven more houses, and the four quarters carry the names of their winds. The compass is not a thing the navigator holds; it is a thing the canoe stands inside, with the navigator reading it against the rising and setting of the sky.</p>
+  <h3 style="font-family:var(--display);letter-spacing:.08em;font-size:22px;margin:28px 0 8px">The Hawaiian names, for reference</h3>
+  <div class="tw"><table>
+    <tr><th>Hawaiian</th><th>Meaning on the ring</th></tr>
+    <tr><td>Hikina</td><td>East, where the sun and stars come up</td></tr>
+    <tr><td>Komohana</td><td>West, where they go down</td></tr>
+    <tr><td>ʻĀkau</td><td>North</td></tr>
+    <tr><td>Hema</td><td>South</td></tr>
+    <tr><td>Koʻolau · Malanai · Kona · Hoʻolua</td><td>The four quadrants, named for their winds: northeast, southeast, southwest, northwest</td></tr>
+    <tr><td>Lā · ʻĀina · Noio · Manu · Nālani · Nā Leo · Haka</td><td>The seven houses between a cardinal point and the next quadrant: sun, land, tern, bird, heavens, voices, empty</td></tr>
+  </table></div>
+  <p class="src">Wayfinding knowledge · <a href="https://www.hokulea.com/" rel="noopener">Polynesian Voyaging Society</a> · the star compass of Nainoa Thompson. The ring above uses English names; the Hawaiian names are shown as credited reference.</p>
+</div></section>
+
+<!-- CH2 STARS -->
+<section class="ch" id="stars" data-ch="stars" style="--len:900vh" aria-label="Chapter 2, The Stars">
+  <div class="stick">
+    <canvas aria-label="The dome of night sky seen from a canoe, with the thirty-two compass houses around the horizon; stars rise in the east and set in the west through one night"></canvas>
+    <div class="ov ro" data-ro></div>
+    <p class="ov cap" data-cap></p>
+    <div class="ov hint" data-hint>Scroll</div>
+    <div class="ctl two" data-ctl>
+      <label>Place<select data-place></select></label>
+      <label>Date<input type="date" data-date value="2026-06-15"></label>
+      <div class="t"><span>Dusk</span><input type="range" data-hour min="19" max="29" step="0.1" value="22" aria-label="Local hour"><span>Dawn</span></div>
+    </div>
+  </div>
+</section>
+<section class="panel g"><div class="in">
+  <p class="k">Chapter 2 · The Stars</p>
+  <h2>Which star tells a navigator they have reached Hawaiʻi?</h2>
+  <p class="ans">Hōkūleʻa, the star Western astronomy calls Arcturus, passes directly overhead at the latitude of Hawaiʻi. Every star rises in its own compass house and sets in the mirror house, night after night; a fixed star's height above the horizon tells the navigator how far north or south they have come.</p>
+  <p>In the northern sky Polaris holds its place while everything wheels around it. In the south the Cross stands low and turns through the night. Between the two, the whole sky reports latitude. The sky in the scene above is computed for the date and place you set, from the positions of the brightest stars; change the place to Tahiti and Polaris drops below the horizon while the Cross climbs.</p>
+  <p class="src">Star positions · Yale Bright Star Catalogue · wayfinding knowledge · <a href="https://www.hokulea.com/" rel="noopener">Polynesian Voyaging Society</a></p>
+</div></section>
+
+<!-- CH3 HAND -->
+<section class="ch" id="hand" data-ch="hand" style="--len:700vh" aria-label="Chapter 3, The Hand">
+  <div class="stick">
+    <canvas aria-label="A hand held against the night horizon, measuring a star's altitude in finger widths"></canvas>
+    <div class="ov ro" data-ro></div>
+    <p class="ov cap" data-cap></p>
+    <div class="ov hint" data-hint>Scroll</div>
+    <div class="ctl" data-ctl><span>Drag the star to a finger, or</span><button type="button" data-tilt>Use tilt</button></div>
+  </div>
+</section>
+<section class="panel g"><div class="in">
+  <p class="k">Chapter 3 · The Hand</p>
+  <h2>How do Polynesian navigators find latitude with their hand?</h2>
+  <p class="ans">With the arm held straight, the hand becomes a ruler against the horizon. A navigator knows the angular width of each finger and reads a star's altitude in finger widths; a fixed star's altitude above the horizon is the observer's latitude. No sextant, no instrument at all.</p>
+  <p>Hold the same star at the same height night after night and the canoe is sailing a line across the ocean. Every navigator learns the measure of their own hand, and that measure travels with them.</p>
+  <p class="src">Wayfinding knowledge · <a href="https://www.hokulea.com/" rel="noopener">Polynesian Voyaging Society</a></p>
+</div></section>
+
+<!-- CH4 SWELL -->
+<section class="ch" id="swell" data-ch="swell" style="--len:900vh" aria-label="Chapter 4, Swell and Wind">
+  <div class="stick">
+    <canvas aria-label="Overhead view of a voyaging canoe inside the compass ring as long swell lines roll through from one house to its mirror and wind arrows stream across"></canvas>
+    <div class="ov ro" data-ro></div>
+    <p class="ov cap" data-cap></p>
+    <div class="ov hint" data-hint>Scroll</div>
+    <div class="ctl" data-ctl><label>Swell house<input type="range" data-sw min="0" max="31" step="1" value="4" aria-label="Swell house, counted clockwise from north"></label><button type="button" data-feel aria-pressed="false">Feel it</button></div>
+  </div>
+</section>
+<section class="panel g"><div class="in">
+  <p class="k">Chapter 4 · Swell and Wind</p>
+  <h2>How do wayfinders navigate when clouds hide the stars?</h2>
+  <p class="ans">They read the ocean. A long swell is born in a storm far over the horizon and travels in a straight line for days, from one compass house to its opposite. The trade wind holds a steady house for days at a time. A navigator feels each swell through the hull as a pitch or a roll and keeps the angle between them to hold the course.</p>
+  <p>Two swells crossing give two directions to hold. The wind on the cheek gives a third. And at dusk seabirds fly home: follow them, and there is land.</p>
+  <p class="src">Wayfinding knowledge · <a href="https://www.hokulea.com/" rel="noopener">Polynesian Voyaging Society</a></p>
+</div></section>
+
+<!-- CH5 WAKE -->
+<section class="ch" id="wake" data-ch="wake" style="--len:900vh" aria-label="Chapter 5, The Wake">
+  <div class="stick">
+    <canvas aria-label="Foam streaks along the hull from bow to stern; then the whole system of ring, sky and swell around the canoe; then a chart to sail across by dead reckoning"></canvas>
+    <div class="ov ro" data-ro></div>
+    <p class="ov cap" data-cap></p>
+    <div class="ov hint" data-hint>Scroll</div>
+  </div>
+</section>
+<section class="panel g"><div class="in">
+  <p class="k">Chapter 5 · The Wake</p>
+  <h2>How did Polynesians measure speed and distance at sea?</h2>
+  <p class="ans">By counting the wake. Timing how long foam takes to pass from bow to stern gives the canoe's speed. Speed, heading, point of origin and elapsed time together give position by dead reckoning, carried in the navigator's head across three thousand miles of open ocean.</p>
+  <p>Where you started. Which way you are pointed. How fast. How long. That is the whole sum, and it is still how a navigator on Hōkūleʻa finds an island today.</p>
+  <p class="src">Wayfinding knowledge · <a href="https://www.hokulea.com/" rel="noopener">Polynesian Voyaging Society</a></p>
+</div></section>
+
+<section class="end g" id="close"><div>
+  <h2>ARC<span>X</span></h2>
+  <p class="tag">Ocean exploration · by the cues that were here first</p>
+  <blockquote>Nothing out here is empty. It is all information, if you have learned to read it.<footer>James Papagno · founder, ARCX · sailing since 1989</footer></blockquote>
+  <div class="cta"><a class="g" href="/ocean-expeditions/">Explore ARCX voyages</a><a href="/journeys/raja-ampat-karst-and-mantas/">Raja Ampat</a><a href="/journeys/">Every journey, charted</a></div>
+  <p class="cr">Wayfinding knowledge · <a href="https://www.hokulea.com/" rel="noopener">Polynesian Voyaging Society</a> · ARCX works with Hōkūleʻa voyages · Narration James Papagno · Original art and animation for ARCX · Star positions from the Yale Bright Star Catalogue</p>
+</div></section>
+</main>
+
+<script>
+(()=>{
+'use strict';
+const D2R=Math.PI/180;
+const ease=v=>v<0?0:v>1?1:1-Math.pow(1-v,3);const seg=(p,a,b)=>ease((p-a)/(b-a));
+const LINE='#9fd3ea',GOLD='#d9b25a',PAPER='#eef3f6';
+const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function mkStars(n,yMax){const s=[];for(let i=0;i<n;i++)s.push({x:Math.random()*1000,y:Math.random()*yMax,r:Math.random()*1.3+.3,t:Math.random()*6.28});return s;}
+function drawStars(x,stars,a,t,yMax){if(a<=0)return;x.save();x.globalAlpha=a;stars.forEach(s=>{if(s.y>yMax)return;const tw=.55+.45*Math.sin(t*.0012+s.t);x.fillStyle=`rgba(238,243,246,${tw})`;x.beginPath();x.arc(s.x,s.y,s.r,0,6.283);x.fill();});x.restore();}
+function canoeTop(x,a,cx,cy,ang=0,k=1){x.save();x.globalAlpha=a;x.translate(cx,cy);x.rotate(ang);x.scale(k,k);x.strokeStyle=LINE;x.lineWidth=1.7;x.lineCap='round';x.shadowColor=LINE;x.shadowBlur=10;
+  const h=dy=>{x.beginPath();x.moveTo(-34,dy);x.quadraticCurveTo(0,dy-4,34,dy);x.quadraticCurveTo(0,dy+4,-34,dy);x.stroke();};h(-7);h(7);[-18,0,18].forEach(dx=>{x.beginPath();x.moveTo(dx,-7);x.lineTo(dx,7);x.stroke();});x.restore();}
+function ringFlat(x,a,CX,CY,R,N=32){if(a<=0)return;x.save();x.globalAlpha=a;x.strokeStyle=LINE;x.lineWidth=1.3;x.shadowColor=LINE;x.shadowBlur=8;x.beginPath();x.arc(CX,CY,R,0,6.283);x.stroke();x.shadowBlur=0;
+  for(let i=0;i<N;i++){const t=i*2*Math.PI/N;const card=i%8===0;x.strokeStyle=card?PAPER:LINE;x.lineWidth=card?2.2:1;x.beginPath();x.moveTo(CX+Math.sin(t)*(R-6),CY-Math.cos(t)*(R-6));x.lineTo(CX+Math.sin(t)*(R+8),CY-Math.cos(t)*(R+8));x.stroke();}
+  x.font='500 13px "IBM Plex Mono",monospace';x.fillStyle=PAPER;x.textAlign='center';x.textBaseline='middle';
+  ['NORTH','EAST','SOUTH','WEST'].forEach((l,i)=>{const t=i*Math.PI/2;x.fillText(l,CX+Math.sin(t)*(R+30),CY-Math.cos(t)*(R+30));});x.restore();}
+const NAMES=['NORTH','EAST','SOUTH','WEST'],QN=['NORTHEAST','SOUTHEAST','SOUTHWEST','NORTHWEST'];
+function houseName(i,N=32){i=((i%N)+N)%N;if(i%8===0)return [NAMES[i/8],''];const q=Math.floor(i/8),w=i%8;const off=w<=4?w:8-w;const from=w<=4?NAMES[q]:NAMES[(q+1)%4];return [`${off} HOUSE${off>1?'S':''} FROM ${from}`,QN[q]+' QUARTER'];}
+function capCtl(sec){const cap=sec.querySelector('[data-cap]');let idx=-1;return (CAPS,p,force)=>{const i=CAPS.findIndex(s=>p>=s[0]&&p<s[1]);if(i!==idx||force!==undefined){idx=i;const s=force!==undefined?force:(i>=0?CAPS[i][2]:'');cap.classList.remove('on');setTimeout(()=>{cap.textContent=s;if(s)cap.classList.add('on');},200);}};}
+function setup(sec){const c=sec.querySelector('canvas'),x=c.getContext('2d');const S={c,x,sec,W:0,H:0,dpr:1,scale:1,ox:0,oy:0};
+  S.resize=(fit=1)=>{S.dpr=Math.min(devicePixelRatio||1,2);S.W=c.clientWidth;S.H=c.clientHeight;c.width=S.W*S.dpr;c.height=S.H*S.dpr;S.scale=Math.min(S.W/1000,S.H/1000)*fit;S.ox=S.W/2-500*S.scale;S.oy=S.H/2-500*S.scale;};
+  S.begin=()=>{x.setTransform(S.dpr,0,0,S.dpr,0,0);x.clearRect(0,0,S.W,S.H);};
+  S.bg=(cx,cy)=>{const g=x.createRadialGradient(S.W*cx,S.H*cy,0,S.W*cx,S.H*cy,Math.max(S.W,S.H)*.75);g.addColorStop(0,'#0e2340');g.addColorStop(.45,'#0b1a2e');g.addColorStop(1,'#06090f');x.fillStyle=g;x.fillRect(0,0,S.W,S.H);};
+  S.world=()=>x.setTransform(S.dpr*S.scale,0,0,S.dpr*S.scale,S.ox*S.dpr,S.oy*S.dpr);
+  S.toD=e=>{const r=c.getBoundingClientRect();return [(e.clientX-r.left-S.ox)/S.scale,(e.clientY-r.top-S.oy)/S.scale];};
+  return S;}
+
+/* ===================== PROLOGUE + HORIZON ===================== */
+function chHorizon(sec){const S=setup(sec),x=S.x;const mob=()=>S.W<600;S.resize(1);
+  const ro=sec.querySelector('[data-ro]'),title=sec.querySelector('[data-title]'),hint=sec.querySelector('[data-hint]'),ctl=sec.querySelector('[data-ctl]'),rise=sec.querySelector('[data-rise]');
+  const stars=mkStars(220,1000),setCap=capCtl(sec);
+  const CX=500,CY=560,RX=430,RY=160,N=32;const pt=(a,k=1)=>[CX+Math.cos(a)*RX*k,CY+Math.sin(a)*RY*k];
+  const CARD=[[-Math.PI/2,'NORTH'],[0,'EAST'],[Math.PI/2,'SOUTH'],[Math.PI,'WEST']],WINDS=[[-Math.PI/4,'NORTHEAST WIND'],[Math.PI/4,'SOUTHEAST WIND'],[3*Math.PI/4,'SOUTHWEST WIND'],[-3*Math.PI/4,'NORTHWEST WIND']];
+  let riseA=-0.22,arcT=0,arcPlaying=false,interactive=false,drag=false;
+  function hName(a){let i=Math.round(((a+Math.PI/2)/(2*Math.PI))*N);return houseName(i);}
+  function deck(p,t){const a1=seg(p,0,.05),a2=seg(p,.05,.12),a3=seg(p,.12,.2);
+    x.save();x.globalAlpha=a1;x.fillStyle=PAPER;x.shadowColor=PAPER;x.shadowBlur=18;x.beginPath();x.arc(500,220,2.4,0,6.28);x.fill();x.restore();
+    drawStars(x,stars,a3,t,600);
+    x.save();x.globalAlpha=a3;const g=x.createLinearGradient(0,620,0,1000);g.addColorStop(0,'#0c1f3a');g.addColorStop(1,'#06090f');x.fillStyle=g;x.fillRect(-300,620,1600,500);x.strokeStyle='rgba(159,211,234,.5)';x.lineWidth=1;x.beginPath();x.moveTo(-300,620);x.lineTo(1300,620);x.stroke();x.restore();
+    x.save();x.globalAlpha=a2;x.strokeStyle=LINE;x.lineWidth=2;x.shadowColor=LINE;x.shadowBlur=10;x.lineCap='round';x.beginPath();x.moveTo(-100,900);x.quadraticCurveTo(500,780,1100,900);x.setLineDash([1800]);x.lineDashOffset=1800*(1-a2);x.stroke();x.setLineDash([]);x.beginPath();x.moveTo(500,810);x.lineTo(500,300);x.globalAlpha=a2*.5;x.lineWidth=1.2;x.stroke();x.restore();}
+  function canoe(a){x.save();x.globalAlpha=a;x.strokeStyle=LINE;x.lineWidth=1.8;x.lineJoin='round';x.lineCap='round';x.shadowColor=LINE;x.shadowBlur=8;
+    const hull=dy=>{x.beginPath();x.moveTo(CX-70,CY+dy);x.quadraticCurveTo(CX,CY+dy-7,CX+70,CY+dy);x.quadraticCurveTo(CX,CY+dy+7,CX-70,CY+dy);x.stroke();};hull(-14);hull(14);[-40,-14,14,40].forEach(dx=>{x.beginPath();x.moveTo(CX+dx,CY-14);x.lineTo(CX+dx,CY+14);x.stroke();});
+    x.beginPath();x.moveTo(CX-8,CY);x.lineTo(CX+28,CY-26);x.lineTo(CX+30,CY+4);x.closePath();x.stroke();x.restore();}
+  function ring(p){const r1=seg(p,.4,.48),r2=seg(p,.48,.6),w=seg(p,.8,.9);x.save();x.lineCap='round';
+    x.strokeStyle=LINE;x.lineWidth=1.6;x.shadowColor=LINE;x.shadowBlur=10;x.beginPath();x.ellipse(CX,CY,RX,RY,0,-Math.PI/2,-Math.PI/2+6.2832*r1);x.stroke();x.shadowBlur=0;
+    if(r2>0){x.strokeStyle='rgba(159,211,234,.08)';x.lineWidth=1;for(let i=0;i<N;i++){if(i/N>r2)break;const a=-Math.PI/2+i*2*Math.PI/N;const [px,py]=pt(a);x.beginPath();x.moveTo(CX,CY);x.lineTo(px,py);x.stroke();}}
+    for(let i=0;i<N;i++){const isCard=i%8===0;const show=isCard?r1:r2*1.02-i/N;if(show<=0)continue;x.globalAlpha=Math.min(1,show*(isCard?1:4));const a=-Math.PI/2+i*2*Math.PI/N;const [ax,ay]=pt(a,.965),[bx,by]=pt(a,1.035);x.strokeStyle=isCard?PAPER:LINE;x.lineWidth=isCard?2.4:1.2;x.beginPath();x.moveTo(ax,ay);x.lineTo(bx,by);x.stroke();}
+    x.globalAlpha=1;x.font='500 14px "IBM Plex Mono",monospace';x.fillStyle=PAPER;x.textAlign='center';x.textBaseline='middle';CARD.forEach(([a,l])=>{x.globalAlpha=r1;const [px,py]=pt(a,1.13);x.fillText(l,px,py);});
+    x.font='500 11px "IBM Plex Mono",monospace';x.fillStyle='rgba(159,211,234,.8)';WINDS.forEach(([a,l])=>{x.globalAlpha=w;const [px,py]=pt(a,1.22);x.fillText(l,px,py);});x.restore();}
+  function sunPos(u){const [rx,ry]=pt(riseA);const [sx,sy]=pt(Math.PI-riseA);return [rx+(sx-rx)*u,ry+(sy-ry)*u-Math.sin(u*Math.PI)*300];}
+  function sun(p){const a=seg(p,.6,.64);if(a<=0)return;x.save();const setA=Math.PI-riseA;
+    const hi=(ang,al)=>{x.globalAlpha=al;x.strokeStyle=GOLD;x.lineWidth=4;x.shadowColor=GOLD;x.shadowBlur=14;const d=Math.PI/N;x.beginPath();x.ellipse(CX,CY,RX,RY,0,ang-d,ang+d);x.stroke();};
+    hi(riseA,a);hi(setA,a*(interactive?1:Math.min(1,arcT*1.2)));
+    x.globalAlpha=a*.45;x.shadowBlur=0;x.strokeStyle='rgba(217,178,90,.6)';x.lineWidth=1;x.setLineDash([3,6]);x.beginPath();for(let i=0;i<=40;i++){const [px,py]=sunPos(i/40*arcT);i?x.lineTo(px,py):x.moveTo(px,py);}x.stroke();x.setLineDash([]);
+    const [sx,sy]=sunPos(arcT);x.globalAlpha=a;x.fillStyle=GOLD;x.shadowColor=GOLD;x.shadowBlur=28;x.beginPath();x.arc(sx,sy,8,0,6.28);x.fill();x.restore();}
+  const CAPS=[[0,.05,''],[.05,.12,'Before charts. Before compasses. Before anyone wrote any of it down.'],[.12,.2,'People crossed the largest ocean on Earth by reading it.'],[.2,.3,''],[.3,.4,'The first instrument is the horizon.'],[.4,.48,'Four directions.'],[.48,.6,'Then each quarter is split again, and again, until there are thirty-two. They are called houses.'],[.6,.8,'The sun rises in one house and sets in its mirror on the other side. Watch where it comes up and you know where it will go down.'],[.8,.92,'The quarters carry the names of the winds. The compass is not a thing you hold. It is a thing you stand inside.'],[.92,1.01,'Set your own course: choose where the sun rises on the eastern rim.']];
+  return {resize(){S.resize(mob()?1.25:1);},frame(p,now){S.begin();S.bg(.5,1);S.world();
+    const toRing=seg(p,.3,.4);if(toRing<1){x.save();x.globalAlpha=1-toRing;deck(p,now);x.restore();}
+    if(toRing>0){x.save();x.globalAlpha=toRing;drawStars(x,stars,.5,now,1000);canoe(toRing);ring(p);sun(p);x.restore();}
+    if(!interactive){arcT=seg(p,.64,.8);if(p>.93){interactive=true;ctl.classList.add('on');hint.classList.remove('on');}}else if(arcPlaying){arcT=Math.min(1,arcT+.012);if(arcT>=1)arcPlaying=false;}
+    title.classList.toggle('on',p>.2&&p<.3);ro.classList.toggle('on',p>.6);if(p>.6){const [n,q]=hName(riseA);ro.innerHTML='<span class="lab">Sun rises in</span><span class="big">'+n+(q?'<small>'+q+'</small>':'')+'</span>';}
+    if(p<.02)hint.classList.add('on');else if(!interactive)hint.classList.remove('on');setCap(CAPS,p);
+    return p<.3?'Prologue':'Ch. 1 · The Horizon';},
+  init(){rise.addEventListener('input',()=>{riseA=rise.value*Math.PI/180;arcPlaying=false;arcT=0;});const go=()=>{arcPlaying=true;};rise.addEventListener('change',go);rise.addEventListener('pointerup',go);
+    const angFrom=e=>{const [px,py]=S.toD(e);let a=Math.atan2((py-CY)/RY,(px-CX)/RX);return Math.max(-Math.PI/2+.1,Math.min(Math.PI/2-.1,a));};
+    S.c.addEventListener('pointerdown',e=>{if(!interactive||mob())return;const [px]=S.toD(e);if(px<CX)return;drag=true;S.c.setPointerCapture(e.pointerId);arcPlaying=false;arcT=0;riseA=angFrom(e);});
+    S.c.addEventListener('pointermove',e=>{if(drag)riseA=angFrom(e);});const rel=()=>{if(!drag)return;drag=false;arcPlaying=true;};S.c.addEventListener('pointerup',rel);S.c.addEventListener('pointercancel',rel);}};}
+
+/* ===================== STARS ===================== */
+function chStars(sec){const S=setup(sec),x=S.x;S.resize(1);
+  const ro=sec.querySelector('[data-ro]'),hint=sec.querySelector('[data-hint]'),ctl=sec.querySelector('[data-ctl]'),placeSel=sec.querySelector('[data-place]'),dateIn=sec.querySelector('[data-date]'),hourIn=sec.querySelector('[data-hour]');
+  const CAT=[[6.752,-16.716,-1.46,'Sirius'],[6.399,-52.696,-0.74,'Canopus'],[14.261,19.182,-0.05,'Arcturus'],[18.616,38.784,0.03,'Vega'],[5.278,45.998,0.08,'Capella'],[5.242,-8.202,0.13,'Rigel'],[7.655,5.225,0.34,'Procyon'],[1.629,-57.237,0.46,'Achernar'],[5.919,7.407,0.5,'Betelgeuse'],[14.064,-60.373,0.61,'Hadar'],[19.846,8.868,0.76,'Altair'],[12.443,-63.099,0.76,'Acrux'],[4.599,16.509,0.86,'Aldebaran'],[16.490,-26.432,0.96,'Antares'],[13.420,-11.161,0.97,'Spica'],[7.755,28.026,1.14,'Pollux'],[22.961,-29.622,1.16,'Fomalhaut'],[20.690,45.280,1.25,'Deneb'],[12.795,-59.689,1.25,'Mimosa'],[10.140,11.967,1.4,'Regulus'],[6.977,-28.972,1.5,'Adhara'],[7.577,31.888,1.58,'Castor'],[12.519,-57.113,1.63,'Gacrux'],[17.560,-37.104,1.62,'Shaula'],[5.419,6.350,1.64,'Bellatrix'],[5.438,28.608,1.65,'Elnath'],[9.220,-69.717,1.68,'Miaplacidus'],[5.604,-1.202,1.69,'Alnilam'],[22.137,-46.961,1.74,'Alnair'],[5.679,-1.943,1.77,'Alnitak'],[12.900,55.960,1.77,'Alioth'],[11.062,61.751,1.79,'Dubhe'],[3.405,49.861,1.79,'Mirfak'],[7.140,-26.393,1.84,'Wezen'],[18.403,-34.384,1.85,'Kaus Australis'],[13.792,49.313,1.86,'Alkaid'],[17.622,-42.998,1.87,'Sargas'],[8.375,-59.509,1.86,'Avior'],[5.992,44.948,1.90,'Menkalinan'],[16.811,-69.028,1.91,'Atria'],[6.629,16.399,1.93,'Alhena'],[20.427,-56.735,1.94,'Peacock'],[2.530,89.264,1.98,'Polaris'],[6.378,-17.956,1.98,'Mirzam'],[9.460,-8.659,1.98,'Alphard'],[2.120,23.462,2.0,'Hamal'],[10.333,19.842,2.08,'Algieba'],[0.727,-17.987,2.04,'Diphda'],[18.921,-26.297,2.05,'Nunki'],[14.111,-36.370,2.06,'Menkent'],[0.140,29.091,2.06,'Alpheratz'],[5.796,-9.670,2.06,'Saiph'],[1.162,35.620,2.05,'Mirach'],[14.845,74.156,2.08,'Kochab'],[17.582,12.560,2.08,'Rasalhague'],[3.136,40.956,2.12,'Algol'],[2.065,42.330,2.17,'Almach'],[11.818,14.572,2.14,'Denebola'],[12.253,-58.749,2.79,'Delta Crucis'],[11.031,56.382,2.37,'Merak'],[11.897,53.695,2.44,'Phecda'],[12.257,57.033,3.31,'Megrez'],[13.399,54.925,2.23,'Mizar'],[21.310,62.586,2.45,'Alderamin'],[21.736,9.875,2.38,'Enif'],[23.063,28.083,2.44,'Scheat'],[23.079,15.205,2.49,'Markab'],[0.220,15.183,2.83,'Algenib'],[20.370,40.257,2.23,'Sadr'],[8.060,-40.003,2.21,'Naos'],[9.133,-43.433,2.23,'Suhail'],[17.943,51.489,2.24,'Etamin'],[0.675,56.537,2.24,'Schedar'],[0.153,59.150,2.28,'Caph'],[0.945,60.717,2.15,'Gamma Cas'],[8.745,-54.709,1.96,'Alsephina'],[0.438,-42.306,2.40,'Ankaa'],[12.263,-17.542,2.59,'Gienah'],[16.005,-22.622,2.29,'Dschubba'],[16.836,-34.293,2.29,'Wei'],[17.708,-39.030,2.39,'Girtab'],[13.665,-53.466,2.30,'Epsilon Cen'],[12.692,-48.960,2.60,'Gamma Cen'],[15.585,-41.167,2.30,'Beta Lup'],[14.699,-47.388,2.33,'Alpha Lup'],[16.329,-25.593,2.62,'Alniyat'],[17.793,-40.127,2.69,'Lesath'],[18.350,-29.828,2.70,'Kaus Media'],[19.116,-21.023,2.89,'Ascella'],[7.822,-24.304,2.45,'Aludra'],[10.779,-49.420,2.69,'Mu Vel'],[9.368,-55.011,2.47,'Kappa Vel'],[8.158,-47.337,1.78,'Regor'],[10.716,-64.394,2.76,'Theta Car'],[10.229,-70.038,2.97,'Omega Car'],[9.785,-65.072,3.3,'Upsilon Car'],[11.350,-54.491,3.11,'Lambda Cen'],[4.950,-5.091,2.78,'Mintaka'],[3.787,24.105,2.87,'Alcyone'],[4.477,19.180,3.53,'Hyadum'],[5.627,21.143,3.03,'Zeta Tau'],[1.911,20.808,2.64,'Sheratan'],[23.657,77.632,3.21,'Errai'],[20.925,-5.571,2.9,'Sadalsuud'],[22.096,-0.320,2.95,'Sadalmelik'],[19.512,27.960,3.08,'Albireo'],[19.771,10.613,2.72,'Tarazed'],[18.982,15.068,3.36,'Zeta Aql'],[15.578,26.715,2.22,'Alphecca'],[13.911,18.398,2.68,'Muphrid']];
+  const DUST=[];for(let i=0;i<650;i++){const dec=Math.asin(Math.random()*2-1)*180/Math.PI;DUST.push([Math.random()*24,dec,3.6+Math.random()*1.6,'']);}
+  const PLACES=[['Hawaiʻi · Honolulu',21.31,-157.86,-10],['Tahiti · Papeete',-17.54,-149.57,-10],['Raja Ampat · Waisai',-0.43,130.81,9],['Eleuthera · Bahamas',25.15,-76.14,-4],['Miami',25.77,-80.19,-4],['Cape Town',-33.93,18.42,2]];
+  PLACES.forEach((p,i)=>{const o=document.createElement('option');o.value=i;o.textContent=p[0];placeSel.appendChild(o);});
+  const CX=500,CY=500,R=390;const setCap=capCtl(sec);
+  function altaz(ra,dec,lat,lon,jd){const d=jd-2451545.0;let gmst=(280.46061837+360.98564736629*d)%360;const lst=(gmst+lon+360)%360;let ha=(lst-ra*15)*D2R;const sl=Math.sin(lat*D2R),cl=Math.cos(lat*D2R),sd=Math.sin(dec*D2R),cd=Math.cos(dec*D2R);const alt=Math.asin(sl*sd+cl*cd*Math.cos(ha));const az=Math.atan2(Math.sin(ha),Math.cos(ha)*sl-Math.tan(dec*D2R)*cl)+Math.PI;return [alt/D2R,az];}
+  function jdOf(dateStr,localHour,tz){const [Y,M,D]=dateStr.split('-').map(Number);const ut=localHour-tz;const a=Math.floor((14-M)/12),y=Y+4800-a,m=M+12*a-3;const jdn=D+Math.floor((153*m+2)/5)+365*y+Math.floor(y/4)-Math.floor(y/100)+Math.floor(y/400)-32045;return jdn-0.5+ut/24;}
+  const proj=(alt,az)=>{const r=R*(90-alt)/90;return [CX+r*Math.sin(az),CY-r*Math.cos(az)];};
+  let place=0,dateStr='2026-06-15',hour=22,interactive=false,named={};
+  function ring(a){ringFlat(x,a,CX,CY,R);x.save();x.globalAlpha=a;x.strokeStyle='rgba(159,211,234,.35)';x.lineWidth=1;x.setLineDash([2,5]);[R*2/3,R/3].forEach(r=>{x.beginPath();x.arc(CX,CY,r,0,6.283);x.stroke();});x.setLineDash([]);x.restore();}
+  function sky(a,jd,lat,lon,focus){named={};x.save();x.globalAlpha=a;x.beginPath();x.arc(CX,CY,R,0,6.283);x.clip();
+    const draw=(s,dust)=>{const [alt,az]=altaz(s[0],s[1],lat,lon,jd);if(alt<0)return;const [px,py]=proj(alt,az);const m=s[2];const r=dust?.55:Math.max(.9,3.4-m*.9);const al=dust?.28:Math.min(1,.45+(2.6-m)*.3);x.fillStyle=`rgba(238,243,246,${al})`;x.beginPath();x.arc(px,py,r,0,6.283);x.fill();if(s[3])named[s[3]]=[px,py,alt,az];};
+    DUST.forEach(s=>draw(s,true));CAT.forEach(s=>draw(s,false));
+    const sc=['Acrux','Gacrux','Mimosa','Delta Crucis'];if(sc.every(n=>named[n])){x.strokeStyle=`rgba(159,211,234,${focus.cross||.25})`;x.lineWidth=1;x.beginPath();x.moveTo(...named.Acrux.slice(0,2));x.lineTo(...named.Gacrux.slice(0,2));x.moveTo(...named.Mimosa.slice(0,2));x.lineTo(...named['Delta Crucis'].slice(0,2));x.stroke();}
+    const hi=(n,col,glow,label,ga)=>{const s=named[n];if(!s)return;x.save();x.globalAlpha=ga;x.fillStyle=col;x.shadowColor=col;x.shadowBlur=glow;x.beginPath();x.arc(s[0],s[1],4.6,0,6.283);x.fill();x.shadowBlur=0;x.strokeStyle=col;x.lineWidth=1;[[0,-14,0,-8],[0,8,0,14],[-14,0,-8,0],[8,0,14,0]].forEach(l=>{x.beginPath();x.moveTo(s[0]+l[0],s[1]+l[1]);x.lineTo(s[0]+l[2],s[1]+l[3]);x.stroke();});x.font='500 12px "IBM Plex Mono",monospace';x.fillStyle=col;x.textAlign='left';x.textBaseline='middle';x.fillText(label,s[0]+18,s[1]);x.restore();};
+    hi('Arcturus',GOLD,26,'HŌKŪLEʻA · ARCTURUS',1);if(focus.polaris)hi('Polaris',PAPER,16,'POLARIS',focus.polaris);
+    if(focus.cross){const s=named.Acrux;if(s){x.save();x.globalAlpha=focus.cross;x.font='500 12px "IBM Plex Mono",monospace';x.fillStyle=PAPER;x.textAlign='left';x.fillText('SOUTHERN CROSS',s[0]+14,s[1]+16);x.restore();}}
+    if(named.Arcturus&&focus.zenith>0){const s=named.Arcturus;x.save();x.globalAlpha=focus.zenith;x.strokeStyle='rgba(217,178,90,.7)';x.setLineDash([3,6]);x.beginPath();x.moveTo(CX,CY);x.lineTo(s[0],s[1]);x.stroke();x.font='500 11px "IBM Plex Mono",monospace';x.fillStyle=GOLD;x.textAlign='center';x.fillText('ALTITUDE '+Math.round(s[2])+'°',CX,CY+R/3+16);x.restore();}
+    x.restore();}
+  const CAPS=[[0,.06,''],[.06,.16,'At night the sky becomes the second compass.'],[.16,.34,'Every star has its own house. It rises there and keeps it, night after night, year after year.'],[.34,.52,'This one is Hōkūleʻa. Arcturus. When it stands straight over your head, you are on the latitude of Hawaiʻi.'],[.52,.66,'In the north, Polaris never moves. The whole sky wheels around it.'],[.66,.8,'In the south, the Cross. Between the two, the sky tells you how far north or south you have come.'],[.8,.9,'The sky gives you direction. Something else gives you distance.'],[.9,1.01,'Your own sky: set a date and a place. Stars will rise in the same houses wherever you stand.']];
+  const fmt=h=>{h=((h%24)+24)%24;const hh=Math.floor(h),mm=Math.floor((h-hh)*60);return `${String(hh).padStart(2,'0')}:${String(mm).padStart(2,'0')}`;};
+  return {resize(){S.resize(S.W<600?1.02:.92);},frame(p,now){S.begin();S.bg(.5,.5);S.world();const open=seg(p,0,.12);
+    if(!interactive){hour=20+seg(p,.12,.86)*8;if(p>.9){interactive=true;ctl.classList.add('on');hint.classList.remove('on');}}
+    const P=PLACES[place];const jd=jdOf(dateStr,hour,P[3]);
+    const focus={zenith:p>.34&&p<.52?seg(p,.34,.38):(interactive?1:0),polaris:p>.52&&p<.66?seg(p,.52,.56):(interactive?.6:0),cross:p>.66&&p<.8?seg(p,.66,.7):(interactive?.6:0)};
+    ring(open);sky(open,jd,P[1],P[2],focus);canoeTop(x,open,CX,CY);
+    ro.classList.toggle('on',p>.12);ro.innerHTML='<span class="lab">Local time</span><span class="big">'+fmt(hour)+'<small>'+P[0].toUpperCase()+' · '+dateStr+'</small></span>';if(interactive)hourIn.value=hour;
+    if(p<.02)hint.classList.add('on');else if(!interactive)hint.classList.remove('on');setCap(CAPS,p);return 'Ch. 2 · The Stars';},
+  init(){placeSel.addEventListener('change',()=>{place=+placeSel.value;});dateIn.addEventListener('change',()=>{if(dateIn.value)dateStr=dateIn.value;});hourIn.addEventListener('input',()=>{hour=+hourIn.value;});}};}
+
+/* ===================== HAND ===================== */
+function chHand(sec){const S=setup(sec),x=S.x;S.resize(1);
+  const ro=sec.querySelector('[data-ro]'),hint=sec.querySelector('[data-hint]'),ctl=sec.querySelector('[data-ctl]'),tiltBtn=sec.querySelector('[data-tilt]');
+  const stars=mkStars(140,640),setCap=capCtl(sec);const horizonY=640,DEG_PX=22;const RULES=[12,15,18,20,22,23].map(d=>({d,y:horizonY-d*DEG_PX}));
+  let drag=null,starY=-40,targetY=null,locked=false,interactive=false,tilt=false,tiltDeg=null;
+  function fingerPath(y0,y1,x0,x1,tip){const r=(y1-y0)/2;x.beginPath();x.moveTo(x0,y0);x.lineTo(x1-r,y0);x.quadraticCurveTo(x1+tip,y0+r,x1-r,y1);x.lineTo(x0,y1);}
+  function hand(p,glow){const T=t=>Math.max(0,Math.min(1,(p-t)/.22));x.save();x.lineCap='round';x.lineJoin='round';x.strokeStyle=LINE;x.lineWidth=2.2;x.shadowColor=LINE;x.shadowBlur=glow?14:0;
+    let q=T(0);if(q>0){x.beginPath();x.moveTo(300,RULES[5].y-10);x.lineTo(300,horizonY+120);x.bezierCurveTo(300,horizonY+160,380,horizonY+150,420,horizonY+100);x.setLineDash([2000]);x.lineDashOffset=2000*(1-q);x.stroke();}
+    const F=[[RULES[5].y,RULES[4].y,540,6],[RULES[4].y,RULES[3].y,610,8],[RULES[3].y,RULES[2].y,640,8],[RULES[2].y,RULES[1].y,600,8]];
+    F.forEach((f,i)=>{q=T(.18+i*.14);if(q<=0)return;fingerPath(f[0],f[1],300,f[2],f[3]);x.setLineDash([1200]);x.lineDashOffset=1200*(1-q);x.stroke();});
+    q=T(.72);if(q>0){x.beginPath();x.moveTo(330,horizonY+40);x.bezierCurveTo(400,horizonY+10,470,RULES[0].y+40,520,RULES[0].y+6);x.quadraticCurveTo(540,RULES[0].y-6,500,RULES[0].y-12);x.bezierCurveTo(440,RULES[0].y,380,RULES[1].y+30,330,RULES[1].y+40);x.setLineDash([1200]);x.lineDashOffset=1200*(1-q);x.stroke();}
+    q=T(.9);if(q>0){x.globalAlpha=q*.5;x.setLineDash([]);x.lineWidth=1.2;[420,470].forEach(cx=>{F.forEach(f=>{x.beginPath();x.moveTo(cx,f[0]+4);x.lineTo(cx+4,f[1]-4);x.stroke();});});}x.restore();}
+  function rules(a){if(a<=0)return;x.save();x.globalAlpha=a;x.strokeStyle='rgba(159,211,234,.35)';x.lineWidth=1;x.setLineDash([4,6]);x.font='500 13px "IBM Plex Mono",monospace';x.fillStyle='rgba(238,243,246,.75)';x.textBaseline='middle';x.textAlign='left';RULES.forEach(r=>{x.beginPath();x.moveTo(560,r.y);x.lineTo(760,r.y);x.stroke();x.fillText(r.d+'°',772,r.y);});x.restore();}
+  function horizon(a){x.save();x.globalAlpha=a;const g=x.createLinearGradient(0,horizonY,0,horizonY+400);g.addColorStop(0,'#0c1f3a');g.addColorStop(1,'#06090f');x.fillStyle=g;x.fillRect(-300,horizonY,1600,600);x.strokeStyle='rgba(159,211,234,.55)';x.lineWidth=1;x.beginPath();x.moveTo(-300,horizonY);x.lineTo(1300,horizonY);x.stroke();
+    x.strokeStyle='rgba(159,211,234,.10)';for(let i=1;i<9;i++){x.beginPath();const yy=horizonY+i*i*4+10;for(let xx=-300;xx<=1300;xx+=20){x.lineTo(xx,yy+Math.sin((xx/90)+i)*3);}x.stroke();}x.restore();}
+  function star(y,a,lk){x.save();x.globalAlpha=a;x.shadowColor=GOLD;x.shadowBlur=lk?30:18;x.fillStyle=GOLD;x.beginPath();x.arc(700,y,lk?5:4,0,6.28);x.fill();x.shadowBlur=0;x.strokeStyle='rgba(217,178,90,.9)';x.lineWidth=1;[[0,-14,0,-8],[0,8,0,14],[-14,0,-8,0],[8,0,14,0]].forEach(l=>{x.beginPath();x.moveTo(700+l[0],y+l[1]);x.lineTo(700+l[2],y+l[3]);x.stroke();});
+    if(lk){x.setLineDash([3,5]);x.strokeStyle='rgba(217,178,90,.5)';x.beginPath();x.moveTo(560,y);x.lineTo(700,y);x.stroke();}x.restore();}
+  const nearest=y=>RULES.reduce((b,r)=>Math.abs(r.y-y)<Math.abs(b.y-y)?r:b);
+  const readout=d=>{ro.innerHTML='<span class="lab">Altitude above horizon</span><span class="big">'+d+'°<small>Latitude '+d+'° N</small></span>';ro.classList.add('on');};
+  const CAPS=[[0,.08,''],[.08,.28,'No sextant. No instrument at all.'],[.28,.42,'Just this.'],[.42,.6,'Arm straight. The hand becomes a ruler. Every navigator knows their own hand’s measure.'],[.6,.78,'Find your star. Read its height.'],[.78,.9,'That number is your latitude. Hold it there night after night and you are sailing a line across the ocean.'],[.9,1.01,'Your turn. Drag the star to a finger, or tilt the phone to raise it.']];
+  return {resize(){S.resize(S.W<600?1.35:1.05);},frame(p,now){S.begin();S.bg(.5,1);S.world();
+    const sa=seg(p,0,.1),ha=seg(p,.1,.56),ra=seg(p,.42,.6);drawStars(x,stars,sa,now,640);horizon(sa);
+    if(reduced){hand(1,true);rules(1);}else{hand(ha,ha>=1);rules(ra);}
+    if(!interactive){if(p>.6){if(targetY===null)targetY=RULES[2].y;starY+=(targetY-starY)*(reduced?1:.06);if(Math.abs(targetY-starY)<.6&&!locked){locked=true;starY=targetY;readout(18);}}
+      if(p>.6)star(starY,seg(p,.6,.64),locked);if(p>.92){interactive=true;ctl.classList.add('on');hint.classList.remove('on');}}
+    else{if(tilt&&tiltDeg!==null&&drag===null){const y=Math.max(RULES[5].y-60,Math.min(horizonY-4,horizonY-tiltDeg*DEG_PX));starY=y;const r=nearest(y);const lk=Math.abs(r.y-y)<6;locked=lk;ro.classList.add('on');ro.innerHTML='<span class="lab">Altitude above horizon</span><span class="big">'+Math.round(tiltDeg)+'°<small>'+(lk?'Latitude '+r.d+'° N':'tilt to a finger')+'</small></span>';}
+      else if(drag!==null){starY=drag;locked=false;ro.classList.add('on');ro.innerHTML='<span class="lab">Altitude above horizon</span><span class="big">'+Math.round((horizonY-starY)/DEG_PX)+'°</span>';}
+      else if(targetY!==null){starY+=(targetY-starY)*.18;if(Math.abs(targetY-starY)<.5&&!locked){locked=true;starY=targetY;readout(nearest(starY).d);}}
+      star(starY,1,locked);}
+    if(p<.02)hint.classList.add('on');else if(!interactive)hint.classList.remove('on');setCap(CAPS,p);return 'Ch. 3 · The Hand';},
+  init(){const toY=e=>S.toD(e)[1];S.c.classList.add('grab');
+    S.c.addEventListener('pointerdown',e=>{if(!interactive)return;const [px,py]=S.toD(e);if(Math.abs(px-700)>160)return;S.c.setPointerCapture(e.pointerId);drag=Math.max(RULES[5].y-60,Math.min(horizonY-4,py));e.preventDefault();});
+    S.c.addEventListener('pointermove',e=>{if(drag===null)return;drag=Math.max(RULES[5].y-60,Math.min(horizonY-4,toY(e)));e.preventDefault();});
+    const rel=()=>{if(drag===null)return;targetY=nearest(drag).y;drag=null;locked=false;};S.c.addEventListener('pointerup',rel);S.c.addEventListener('pointercancel',rel);
+    const onOri=ev=>{if(ev.beta===null)return;tiltDeg=Math.max(0,Math.min(30,ev.beta-60));};
+    tiltBtn.addEventListener('click',async()=>{if(tilt){tilt=false;tiltBtn.textContent='Use tilt';removeEventListener('deviceorientation',onOri);return;}
+      try{if(window.DeviceOrientationEvent&&typeof DeviceOrientationEvent.requestPermission==='function'){const r=await DeviceOrientationEvent.requestPermission();if(r!=='granted')throw 0;}
+        addEventListener('deviceorientation',onOri);tilt=true;tiltBtn.textContent='Tilt on';}catch(e){tiltBtn.textContent='Tilt unavailable';}});}};}
+
+/* ===================== SWELL ===================== */
+function chSwell(sec){const S=setup(sec),x=S.x;S.resize(1);
+  const ro=sec.querySelector('[data-ro]'),hint=sec.querySelector('[data-hint]'),ctl=sec.querySelector('[data-ctl]'),sw=sec.querySelector('[data-sw]'),feel=sec.querySelector('[data-feel]');
+  const CX=500,CY=500,R=400,N=32;const setCap=capCtl(sec);let swellA=4,swellB=20,windH=5,interactive=false,feelOn=false,lastBuzz=0;
+  const hiHouse=(i,col,a)=>{x.save();x.globalAlpha=a;const t=i*Math.PI/16,d=Math.PI/N;x.strokeStyle=col;x.lineWidth=4;x.shadowColor=col;x.shadowBlur=14;x.beginPath();x.arc(CX,CY,R,t-Math.PI/2-d,t-Math.PI/2+d);x.stroke();x.restore();};
+  function canoe(a,roll,pitch){x.save();x.globalAlpha=a;x.translate(CX,CY);x.rotate(roll*.06);x.scale(1+pitch*.04,1-pitch*.04);x.strokeStyle=LINE;x.lineWidth=1.8;x.lineCap='round';x.shadowColor=LINE;x.shadowBlur=10;const h=dy=>{x.beginPath();x.moveTo(-48,dy);x.quadraticCurveTo(0,dy-5,48,dy);x.quadraticCurveTo(0,dy+5,-48,dy);x.stroke();};h(-10);h(10);[-26,-9,9,26].forEach(dx=>{x.beginPath();x.moveTo(dx,-10);x.lineTo(dx,10);x.stroke();});x.restore();}
+  function swell(house,a,t,speed,col,amp){if(a<=0)return;x.save();x.globalAlpha=a;x.beginPath();x.arc(CX,CY,R-2,0,6.283);x.clip();const dir=house*Math.PI/16;const dx=-Math.sin(dir),dy=Math.cos(dir),px=-dy,py=dx;x.strokeStyle=col;x.lineWidth=1.1;const sp=46,off=(t*speed)%sp;
+    for(let k=-14;k<=14;k++){const d=k*sp+off;const bx=CX+dx*d,by=CY+dy*d;x.beginPath();for(let s=-460;s<=460;s+=14){const wob=Math.sin(s/70+k*1.3)*amp;x.lineTo(bx+px*s+dx*wob,by+py*s+dy*wob);}x.stroke();}
+    x.lineWidth=1.6;for(let k=-1;k<=1;k++){const bx=CX+px*k*140,by=CY+py*k*140;const ax=bx-dx*300,ay=by-dy*300,ex=bx-dx*240,ey=by-dy*240;x.beginPath();x.moveTo(ax,ay);x.lineTo(ex,ey);x.lineTo(ex-dx*12-px*7,ey-dy*12-py*7);x.moveTo(ex,ey);x.lineTo(ex-dx*12+px*7,ey-dy*12+py*7);x.stroke();}x.restore();}
+  function wind(house,a,t){if(a<=0)return;x.save();x.globalAlpha=a;x.beginPath();x.arc(CX,CY,R-2,0,6.283);x.clip();const dir=house*Math.PI/16;const dx=-Math.sin(dir),dy=Math.cos(dir),px=-dy,py=dx;x.strokeStyle='rgba(238,243,246,.55)';x.lineWidth=1.2;const L=44,gap=120,off=(t*.09)%gap;
+    for(let i=-5;i<=5;i++)for(let j=-5;j<=5;j++){const s=i*gap+(j%2?gap/2:0),d=j*gap+off;const bx=CX+px*s+dx*d,by=CY+py*s+dy*d;const ex=bx+dx*L,ey=by+dy*L;x.beginPath();x.moveTo(bx,by);x.lineTo(ex,ey);x.lineTo(ex-dx*8-px*5,ey-dy*8-py*5);x.moveTo(ex,ey);x.lineTo(ex-dx*8+px*5,ey-dy*8+py*5);x.stroke();}x.restore();}
+  function bird(a,t){if(a<=0)return;x.save();x.globalAlpha=a;const u=(t*.00012)%1.2;const bx=CX+R*.9-u*R*1.9,by=CY+R*.55+Math.sin(u*9)*8;const f=Math.sin(t*.012)*6;x.strokeStyle=PAPER;x.lineWidth=1.4;x.lineCap='round';x.beginPath();x.moveTo(bx-14,by-f);x.quadraticCurveTo(bx-6,by+2,bx,by);x.quadraticCurveTo(bx+6,by+2,bx+14,by-f);x.stroke();x.restore();}
+  function deck(a,t,roll,pitch){if(a<=0)return;x.save();x.globalAlpha=a;x.translate(500,540);x.rotate(roll*.09);x.translate(0,pitch*14);const g=x.createLinearGradient(0,0,0,500);g.addColorStop(0,'#0c1f3a');g.addColorStop(1,'#06090f');x.fillStyle=g;x.fillRect(-900,0,1800,900);x.strokeStyle='rgba(159,211,234,.6)';x.lineWidth=1;x.beginPath();x.moveTo(-900,0);x.lineTo(900,0);x.stroke();
+    x.strokeStyle='rgba(159,211,234,.12)';for(let i=1;i<10;i++){const yy=i*i*4+8;x.beginPath();for(let xx=-900;xx<=900;xx+=18){x.lineTo(xx,yy+Math.sin(xx/90+i+t*.002)*3);}x.stroke();}x.restore();
+    x.save();x.globalAlpha=a;x.strokeStyle=LINE;x.lineWidth=2;x.shadowColor=LINE;x.shadowBlur=10;x.beginPath();x.moveTo(-100,960);x.quadraticCurveTo(500,840,1100,960);x.stroke();x.restore();}
+  const CAPS=[[0,.06,''],[.06,.16,'Some nights there are no stars. The ocean remembers the course for you.'],[.16,.34,'A swell is born in a storm a thousand miles away. It travels in a straight line, for days. It comes from one house and goes to its opposite.'],[.34,.52,'Two swells, two directions. You feel each one in the hull, the pitch and the roll, and you hold the angle between them.'],[.52,.7,'The trade wind keeps its house for days at a time. Lose the stars and you still have the wind on your cheek.'],[.7,.84,'And at dusk, the birds fly home. Follow them and there is land.'],[.84,1.01,'Set the swell house yourself. Then feel it from the deck.']];
+  return {resize(){S.resize(S.W<600?1.05:.95);},frame(p,now){S.begin();S.bg(.5,.5);S.world();
+    const open=seg(p,0,.1),s1=interactive?1:seg(p,.16,.2),s2=interactive?.7:seg(p,.34,.38),wd=interactive?.6:seg(p,.52,.56),bd=interactive?0:(p>.7&&p<.84?seg(p,.7,.72):0);
+    const roll=Math.sin(now*.0011)*s1+Math.sin(now*.0017+1)*.6*s2,pitch=Math.cos(now*.0009)*s1*.8+Math.cos(now*.0014)*.5*s2;
+    if(!interactive&&p>.88){interactive=true;ctl.classList.add('on');hint.classList.remove('on');}
+    if(!feelOn){ringFlat(x,open,CX,CY,R);swell(swellA,s1,now,.035,'rgba(159,211,234,.55)',6);swell(swellB,s2,now,.022,'rgba(217,178,90,.45)',4);hiHouse(swellA,LINE,s1);hiHouse(swellA+16,LINE,s1*.7);if(s2>0){hiHouse(swellB,GOLD,s2);hiHouse(swellB+16,GOLD,s2*.7);}wind(windH,wd,now);bird(bd,now);canoe(open,roll*(p>.34||interactive?1:0),pitch*(p>.34||interactive?1:0));}
+    else deck(1,now,roll,pitch);
+    ro.classList.toggle('on',p>.16);if(p>.52&&p<.7&&!interactive){const [n,q]=houseName(windH);ro.innerHTML='<span class="lab">Wind from</span><span class="big">'+n+(q?'<small>'+q+'</small>':'')+'</span>';}else{const [n,q]=houseName(swellA);ro.innerHTML='<span class="lab">Swell from</span><span class="big">'+n+(q?'<small>'+q+'</small>':'')+'</span>';}
+    if(p<.02)hint.classList.add('on');else if(!interactive)hint.classList.remove('on');setCap(CAPS,p);
+    if(feelOn&&navigator.vibrate){const ph=Math.sin(now*.0011);if(ph>.98&&now-lastBuzz>800){lastBuzz=now;try{navigator.vibrate(18);}catch(e){}}}
+    return 'Ch. 4 · Swell and Wind';},
+  init(){sw.addEventListener('input',()=>{swellA=+sw.value;});feel.addEventListener('click',()=>{feelOn=!feelOn;feel.setAttribute('aria-pressed',String(feelOn));feel.textContent=feelOn?'Overhead':'Feel it';});}};}
+
+/* ===================== WAKE ===================== */
+function chWake(sec){const S=setup(sec),x=S.x;S.resize(1);
+  const ro=sec.querySelector('[data-ro]'),hint=sec.querySelector('[data-hint]');const stars=mkStars(180,1000),setCap=capCtl(sec);
+  const bub=[];for(let i=0;i<70;i++)bub.push({u:Math.random(),o:Math.random()*40-20,s:.6+Math.random()*.8,r:1+Math.random()*2});
+  const hullPt=u=>[160+u*640,220+u*620];const CX=500,CY=500,R=380;const TAHITI=[560,860],HAWAII=[380,120];
+  let sail={on:false,pos:[...TAHITI],trail:[[...TAHITI]],drag:false,t0:0,dist:0,hdg:0,done:false};
+  function wake(a,t,count){if(a<=0)return;x.save();x.globalAlpha=a;const g=x.createLinearGradient(0,0,0,1000);g.addColorStop(0,'#0c1f3a');g.addColorStop(1,'#06090f');x.fillStyle=g;x.fillRect(-300,-300,1600,1600);drawStars(x,stars,.5,t,300);
+    x.strokeStyle=LINE;x.lineWidth=3;x.lineCap='round';x.shadowColor=LINE;x.shadowBlur=14;x.beginPath();x.moveTo(120,180);x.quadraticCurveTo(500,520,840,860);x.stroke();x.shadowBlur=0;x.strokeStyle='rgba(159,211,234,.35)';x.lineWidth=1;x.beginPath();x.moveTo(80,230);x.quadraticCurveTo(470,560,800,900);x.stroke();
+    x.setLineDash([3,6]);x.strokeStyle='rgba(217,178,90,.6)';[.08,.92].forEach(u=>{const [px,py]=hullPt(u);x.beginPath();x.moveTo(px-50,py+50);x.lineTo(px+50,py-50);x.stroke();});x.setLineDash([]);
+    x.font='500 11px "IBM Plex Mono",monospace';x.fillStyle=GOLD;x.textAlign='center';x.fillText('BOW',hullPt(.08)[0]+60,hullPt(.08)[1]-40);x.fillText('STERN',hullPt(.92)[0]+60,hullPt(.92)[1]-40);
+    bub.forEach(b=>{const u=(b.u+t*.00018*b.s)%1;const [px,py]=hullPt(u);const al=Math.sin(u*Math.PI);x.fillStyle=`rgba(238,243,246,${.25+.55*al})`;x.beginPath();x.arc(px+b.o+20,py-b.o+40,b.r,0,6.283);x.fill();});
+    x.strokeStyle='rgba(238,243,246,.12)';for(let k=0;k<6;k++){x.beginPath();for(let u=0;u<=1;u+=.02){const [px,py]=hullPt(u);const w=Math.sin(u*14+k+t*.003)*4;x.lineTo(px+40+k*16+w,py+20+k*16-w);}x.stroke();}
+    if(count>0){const u=(t*.00018)%1;const [px,py]=hullPt(u);x.fillStyle=GOLD;x.shadowColor=GOLD;x.shadowBlur=18;x.beginPath();x.arc(px+20,py+40,4,0,6.283);x.fill();x.shadowBlur=0;x.globalAlpha=a*count;x.font='500 13px "IBM Plex Mono",monospace';x.fillStyle=PAPER;x.textAlign='left';x.fillText((u*5.6).toFixed(1)+' s',px+40,py+40);}x.restore();}
+  function system(a,t){if(a<=0)return;x.save();x.globalAlpha=a;drawStars(x,stars,.6,t,1000);ringFlat(x,1,CX,CY,R);x.setLineDash([2,5]);x.strokeStyle='rgba(159,211,234,.25)';[R*2/3,R/3].forEach(r=>{x.beginPath();x.arc(CX,CY,r,0,6.283);x.stroke();});x.setLineDash([]);
+    x.save();x.beginPath();x.arc(CX,CY,R-2,0,6.283);x.clip();x.strokeStyle='rgba(159,211,234,.18)';x.lineWidth=1;const dir=Math.PI/4;const dx=-Math.sin(dir),dy=Math.cos(dir),px=-dy,py=dx;const sp=50,off=(t*.03)%sp;for(let k=-12;k<=12;k++){const d=k*sp+off;x.beginPath();for(let s=-460;s<=460;s+=16){x.lineTo(CX+dx*d+px*s+dx*Math.sin(s/70+k)*5,CY+dy*d+py*s+dy*Math.sin(s/70+k)*5);}x.stroke();}x.restore();
+    x.fillStyle=GOLD;x.shadowColor=GOLD;x.shadowBlur=20;x.beginPath();x.arc(CX+60,CY-150,4,0,6.283);x.fill();x.shadowBlur=0;x.setLineDash([3,6]);x.strokeStyle='rgba(217,178,90,.5)';x.beginPath();x.moveTo(CX,CY);x.lineTo(CX+60,CY-150);x.stroke();x.setLineDash([]);
+    x.strokeStyle='rgba(238,243,246,.4)';x.lineWidth=1;x.setLineDash([2,4]);x.beginPath();x.moveTo(CX,CY);x.lineTo(CX-120,CY+120);x.stroke();x.setLineDash([]);canoeTop(x,1,CX,CY);x.restore();}
+  function chart(a,t){if(a<=0)return;x.save();x.globalAlpha=a;x.strokeStyle='rgba(159,211,234,.12)';x.lineWidth=1;for(let i=0;i<=10;i++){x.beginPath();x.moveTo(50,50+i*90);x.lineTo(950,50+i*90);x.stroke();x.beginPath();x.moveTo(50+i*90,50);x.lineTo(50+i*90,950);x.stroke();}
+    x.font='500 10px "IBM Plex Mono",monospace';x.fillStyle='rgba(159,211,234,.5)';x.textAlign='left';[['20° N',140],['10° N',320],['EQUATOR',500],['10° S',680],['20° S',860]].forEach(([l,y])=>x.fillText(l,56,y-6));
+    x.strokeStyle='rgba(159,211,234,.5)';x.beginPath();x.arc(880,120,34,0,6.283);x.stroke();for(let i=0;i<32;i++){const th=i*Math.PI/16;x.beginPath();x.moveTo(880+Math.sin(th)*30,120-Math.cos(th)*30);x.lineTo(880+Math.sin(th)*(i%8?34:40),120-Math.cos(th)*(i%8?34:40));x.stroke();}x.fillStyle=PAPER;x.textAlign='center';x.fillText('N',880,72);
+    x.fillStyle=GOLD;x.beginPath();x.arc(TAHITI[0],TAHITI[1],4,0,6.283);x.fill();x.fillText('TAHITI',TAHITI[0],TAHITI[1]+20);
+    x.strokeStyle='rgba(217,178,90,.7)';x.lineWidth=1.4;x.setLineDash([3,5]);x.beginPath();sail.trail.forEach((p,i)=>i?x.lineTo(p[0],p[1]):x.moveTo(p[0],p[1]));x.stroke();x.setLineDash([]);
+    canoeTop(x,1,sail.pos[0],sail.pos[1],sail.hdg);
+    if(sail.done){x.globalAlpha=a*Math.min(1,(t-sail.t0)/1500);x.strokeStyle=LINE;x.lineWidth=1.5;x.beginPath();x.arc(HAWAII[0],HAWAII[1],14,0,6.283);x.stroke();x.fillStyle=LINE;x.beginPath();x.arc(HAWAII[0],HAWAII[1],3,0,6.283);x.fill();x.fillStyle=PAPER;x.fillText('HAWAIʻI',HAWAII[0],HAWAII[1]-22);x.setLineDash([2,4]);x.strokeStyle='rgba(238,243,246,.5)';x.beginPath();x.moveTo(sail.pos[0],sail.pos[1]);x.lineTo(HAWAII[0],HAWAII[1]);x.stroke();x.setLineDash([]);}x.restore();}
+  const CAPS=[[0,.06,''],[.06,.18,'The last thing is speed. You count the wake.'],[.18,.34,'How long for the foam to pass from bow to stern. Do it a hundred times and you know your speed in your bones.'],[.34,.56,'Where you started. Which way you are pointed. How fast. How long. That is the whole sum. They carried it in their heads for three thousand miles.'],[.56,.7,'Nothing out here is empty. It is all information, if you have learned to read it.'],[.7,1.01,'Your turn. Sail the canoe from Tahiti toward Hawaiʻi by feel. Release when you think you have arrived.']];
+  return {resize(){S.resize(S.W<600?1.15:1);},frame(p,now){S.begin();S.bg(.5,.5);S.world();const wk=1-seg(p,.34,.4),sys=seg(p,.34,.4)*(1-seg(p,.68,.74)),ch=seg(p,.68,.74);
+    if(wk>0)wake(wk*seg(p,0,.08),now,seg(p,.18,.22));if(sys>0)system(sys,now);if(ch>0){chart(ch,now);S.c.classList.add('grab');sail.on=true;}else{S.c.classList.remove('grab');sail.on=false;}
+    if(p>.18&&p<.34){ro.classList.add('on');ro.innerHTML='Bow to stern <b>5.6 s</b><br>Hull 20 m<br><span class="big">7 KN</span>';}
+    else if(ch>0){ro.classList.add('on');const km=Math.round(sail.dist*4.4);const hrs=km/(7*1.852);const days=Math.floor(hrs/24),h=Math.round(hrs%24);const deg=Math.round(((sail.hdg*180/Math.PI)+90+360)%360);ro.innerHTML=`Heading <b>${String(deg).padStart(3,'0')}°</b><br>Speed <b>7 kn</b><br>Run <b>${km} km</b><br><span class="big">${days}D ${h}H</span>`;}
+    else ro.classList.remove('on');
+    if(p<.02)hint.classList.add('on');else if(ch<1)hint.classList.remove('on');if(ch>=1&&!sail.drag&&!sail.done){hint.textContent='Drag the canoe';hint.classList.add('on');}
+    setCap(CAPS,p);return 'Ch. 5 · The Wake';},
+  init(){S.c.addEventListener('pointerdown',e=>{if(!sail.on||sail.done)return;const [px,py]=S.toD(e);if(Math.hypot(px-sail.pos[0],py-sail.pos[1])>80)return;sail.drag=true;S.c.setPointerCapture(e.pointerId);hint.classList.remove('on');e.preventDefault();});
+    S.c.addEventListener('pointermove',e=>{if(!sail.drag)return;const [px,py]=S.toD(e);const nx=Math.max(60,Math.min(940,px)),ny=Math.max(60,Math.min(940,py));const dx=nx-sail.pos[0],dy=ny-sail.pos[1];const d=Math.hypot(dx,dy);if(d>2){sail.hdg=Math.atan2(dy,dx);sail.dist+=d;sail.pos=[nx,ny];sail.trail.push([nx,ny]);}e.preventDefault();});
+    const rel=()=>{if(!sail.drag)return;sail.drag=false;sail.done=true;sail.t0=performance.now();};S.c.addEventListener('pointerup',rel);S.c.addEventListener('pointercancel',rel);}};}
+
+/* ===================== DRIVER ===================== */
+const MAKE={horizon:chHorizon,stars:chStars,hand:chHand,swell:chSwell,wake:chWake};
+const secs=[...document.querySelectorAll('.ch')].map(sec=>{const ch=MAKE[sec.dataset.ch](sec);ch.init();ch.resize();return {sec,ch};});
+addEventListener('resize',()=>secs.forEach(s=>s.ch.resize()));
+const eb=document.getElementById('eb'),rail=[...document.querySelectorAll('#rail a')];
+const railIds=['prologue','horizon','stars','hand','swell','wake'];
+function loop(now){const vh=innerHeight;let cur=null,curP=0,label='Navigating by Nature';
+  secs.forEach(({sec,ch})=>{const r=sec.getBoundingClientRect();if(r.bottom<-vh||r.top>vh*2)return;const p=Math.max(0,Math.min(1,-r.top/(r.height-vh)));const l=ch.frame(p,now);if(r.top<=1&&r.bottom>=vh-1){cur=sec;curP=p;label=l;}});
+  eb.textContent=label;
+  let active='prologue';if(cur){active=cur.id;if(cur.id==='prologue'&&curP>.3)active='horizon';}else{const y=scrollY+vh/2;for(const id of railIds){const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top+scrollY<=y)active=id;}}
+  rail.forEach(a=>a.setAttribute('aria-current',a.getAttribute('href')==='#'+active?'true':'false'));
+  requestAnimationFrame(loop);}
+requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>
