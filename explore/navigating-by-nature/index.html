@@ -129,6 +129,35 @@ td:first-child{color:var(--gold)}
 .end .cta a.g{border-color:var(--gold);color:var(--gold)}
 .end .cr{margin-top:44px;font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--line-dim);max-width:52ch;line-height:1.8}
 .end .cr a{color:var(--line)}
+/* guide overlay */
+.guide{position:fixed;inset:0;z-index:20;background:rgba(6,9,15,.92);backdrop-filter:blur(8px);display:grid;place-items:center;padding:24px max(16px,env(safe-area-inset-right,0px)) 24px max(16px,env(safe-area-inset-left,0px));overflow:auto}
+.guide[hidden]{display:none}
+.guide .box{max-width:720px;width:100%;border:1px solid var(--line-dim);padding:28px 24px 24px;background:rgba(11,26,46,.6)}
+.guide h2{font-family:var(--display);font-size:clamp(32px,6vw,52px);letter-spacing:.1em;margin:0 0 6px;line-height:1}
+.guide .sub{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--line-dim);margin:0 0 22px}
+.guide .how{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 0 22px}
+@media (max-width:560px){.guide .how{grid-template-columns:1fr}}
+.guide .h{border:1px solid rgba(159,211,234,.18);padding:14px 12px;display:flex;flex-direction:column;gap:10px;align-items:flex-start;min-width:0}
+.guide .h svg{width:64px;height:64px;display:block}
+.guide .h b{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.guide .h p{margin:0;font-size:17px;line-height:1.35}
+.guide .btns{display:flex;gap:10px;flex-wrap:wrap}
+.guide button,.bar button{background:none;border:1px solid var(--line-dim);color:var(--line);font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;padding:12px 18px;cursor:pointer;min-height:44px}
+.guide button.g{border-color:var(--gold);color:var(--gold)}
+.guide .note{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--line-dim);margin:16px 0 0;line-height:1.6}
+@keyframes gscroll{0%,100%{transform:translateY(0);opacity:1}50%{transform:translateY(14px);opacity:.3}}
+@keyframes gdrag{0%{transform:translateX(0)}50%{transform:translateX(22px)}100%{transform:translateX(0)}}
+@keyframes gtilt{0%,100%{transform:rotate(-14deg)}50%{transform:rotate(14deg)}}
+.guide .a1{animation:gscroll 1.8s ease-in-out infinite}.guide .a2{animation:gdrag 2s ease-in-out infinite}.guide .a3{transform-origin:50% 90%;animation:gtilt 2.4s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.guide .a1,.guide .a2,.guide .a3{animation:none}}
+/* control bar */
+.bar{position:fixed;left:max(16px,env(safe-area-inset-left,0px));bottom:calc(env(safe-area-inset-bottom,0px) + 12px);z-index:7;display:flex;gap:6px}
+.bar button{padding:0 12px;min-width:44px;font-size:14px;letter-spacing:0}
+.bar button[aria-pressed=true]{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+.bar .lbl{display:none}
+@media (min-width:700px){.bar .lbl{display:inline;margin-left:8px;font-size:11px;letter-spacing:.2em}}
+.tour{position:fixed;left:50%;transform:translateX(-50%);top:calc(env(safe-area-inset-top,0px) + 52px);z-index:7;font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);background:var(--gold);padding:6px 12px;opacity:0;transition:opacity .4s;pointer-events:none;white-space:nowrap}
+.tour.on{opacity:1}
 .lead{position:relative;z-index:4;background:var(--ink);padding-block:56px 40px}
 .lead .in{max-width:68ch;margin:0 auto}
 .lead p{font-size:20px;line-height:1.45;margin:0 0 14px}
@@ -147,6 +176,19 @@ td:first-child{color:var(--gold)}
   <li><a href="#swell"><span>Swell</span><i></i></a></li>
   <li><a href="#wake"><span>Wake</span><i></i></a></li>
 </ul></nav>
+<div class="guide" id="guide" role="dialog" aria-labelledby="gh" aria-modal="true"><div class="box">
+  <h2 id="gh">How to explore</h2>
+  <p class="sub">Five chapters · about six minutes · best on a phone, held upright</p>
+  <div class="how">
+    <div class="h"><svg viewBox="0 0 64 64" fill="none" stroke="#9fd3ea" stroke-width="2" aria-hidden="true"><rect x="22" y="6" width="20" height="36" rx="10"/><circle class="a1" cx="32" cy="18" r="3" fill="#d9b25a" stroke="none"/><path d="M26 54l6 6 6-6" opacity=".6"/></svg><b>Scroll</b><p>Every chapter is drawn as you scroll. Go slowly; nothing happens until you move.</p></div>
+    <div class="h"><svg viewBox="0 0 64 64" fill="none" stroke="#9fd3ea" stroke-width="2" aria-hidden="true"><path d="M8 40h48" opacity=".4" stroke-dasharray="3 4"/><g class="a2"><circle cx="20" cy="40" r="6" fill="#d9b25a" stroke="none"/><path d="M20 24c0-4 8-4 8 0v6" /></g></svg><b>Drag</b><p>At the end of each chapter the scene is yours: move the sun, the star, the swell or the canoe.</p></div>
+    <div class="h"><svg viewBox="0 0 64 64" fill="none" stroke="#9fd3ea" stroke-width="2" aria-hidden="true"><rect class="a3" x="22" y="8" width="20" height="40" rx="4"/><circle cx="32" cy="18" r="2.5" fill="#d9b25a" stroke="none"/></svg><b>Tilt</b><p>In The Hand, tap <em>Use tilt</em> and raise the phone to lift the star against the horizon.</p></div>
+  </div>
+  <div class="btns"><button type="button" class="g" id="gBegin">Begin · I'll scroll</button><button type="button" id="gTour">Play the tour for me</button></div>
+  <p class="note">The tour scrolls the piece at reading pace and demonstrates each interaction. Pause or take over at any time with the controls bottom left. Press ? to see this again.</p>
+</div></div>
+<div class="bar" aria-label="Viewer controls"><button type="button" id="bPlay" aria-pressed="false" aria-label="Play the tour" title="Play / pause tour">▶<span class="lbl">Tour</span></button><button type="button" id="bReplay" aria-label="Replay this chapter" title="Replay chapter">↺</button><button type="button" id="bHelp" aria-label="How to explore" title="Help">?</button></div>
+<div class="tour" id="tourMsg" aria-live="polite"></div>
 <main id="main">
 
 <!-- PROLOGUE + CH1 HORIZON -->
@@ -325,6 +367,7 @@ function chHorizon(sec){const S=setup(sec),x=S.x;const mob=()=>S.W<600;S.resize(
     title.classList.toggle('on',p>.2&&p<.3);ro.classList.toggle('on',p>.6);if(p>.6){const [n,q]=hName(riseA);ro.innerHTML='<span class="lab">Sun rises in</span><span class="big">'+n+(q?'<small>'+q+'</small>':'')+'</span>';}
     if(p<.02)hint.classList.add('on');else if(!interactive)hint.classList.remove('on');setCap(CAPS,p);
     return p<.3?'Prologue':'Ch. 1 · The Horizon';},
+  demo(){rise.value=38;riseA=38*Math.PI/180;arcT=0;setTimeout(()=>{arcPlaying=true;},400);return 'Setting the sun to rise south of east; watch it set in the mirror house';},
   init(){rise.addEventListener('input',()=>{riseA=rise.value*Math.PI/180;arcPlaying=false;arcT=0;});const go=()=>{arcPlaying=true;};rise.addEventListener('change',go);rise.addEventListener('pointerup',go);
     const angFrom=e=>{const [px,py]=S.toD(e);let a=Math.atan2((py-CY)/RY,(px-CX)/RX);return Math.max(-Math.PI/2+.1,Math.min(Math.PI/2-.1,a));};
     S.c.addEventListener('pointerdown',e=>{if(!interactive||mob())return;const [px]=S.toD(e);if(px<CX)return;drag=true;S.c.setPointerCapture(e.pointerId);arcPlaying=false;arcT=0;riseA=angFrom(e);});
@@ -361,6 +404,7 @@ function chStars(sec){const S=setup(sec),x=S.x;S.resize(1);
     ring(open);sky(open,jd,P[1],P[2],focus);canoeTop(x,open,CX,CY);
     ro.classList.toggle('on',p>.12);ro.innerHTML='<span class="lab">Local time</span><span class="big">'+fmt(hour)+'<small>'+P[0].toUpperCase()+' · '+dateStr+'</small></span>';if(interactive)hourIn.value=hour;
     if(p<.02)hint.classList.add('on');else if(!interactive)hint.classList.remove('on');setCap(CAPS,p);return 'Ch. 2 · The Stars';},
+  demo(){placeSel.value='1';place=1;return 'Same night, seen from Tahiti: Polaris drops below the horizon, the Cross climbs';},
   init(){placeSel.addEventListener('change',()=>{place=+placeSel.value;});dateIn.addEventListener('change',()=>{if(dateIn.value)dateStr=dateIn.value;});hourIn.addEventListener('input',()=>{hour=+hourIn.value;});}};}
 
 /* ===================== HAND ===================== */
@@ -393,6 +437,7 @@ function chHand(sec){const S=setup(sec),x=S.x;S.resize(1);
       else if(targetY!==null){starY+=(targetY-starY)*.18;if(Math.abs(targetY-starY)<.5&&!locked){locked=true;starY=targetY;readout(nearest(starY).d);}}
       star(starY,1,locked);}
     if(p<.02)hint.classList.add('on');else if(!interactive)hint.classList.remove('on');setCap(CAPS,p);return 'Ch. 3 · The Hand';},
+  demo(){targetY=RULES[4].y;locked=false;setTimeout(()=>{targetY=RULES[0].y;locked=false;},2600);return 'Moving the star to another finger: a new altitude, a new latitude';},
   init(){const toY=e=>S.toD(e)[1];S.c.classList.add('grab');
     S.c.addEventListener('pointerdown',e=>{if(!interactive)return;const [px,py]=S.toD(e);if(Math.abs(px-700)>160)return;S.c.setPointerCapture(e.pointerId);drag=Math.max(RULES[5].y-60,Math.min(horizonY-4,py));e.preventDefault();});
     S.c.addEventListener('pointermove',e=>{if(drag===null)return;drag=Math.max(RULES[5].y-60,Math.min(horizonY-4,toY(e)));e.preventDefault();});
@@ -428,6 +473,7 @@ function chSwell(sec){const S=setup(sec),x=S.x;S.resize(1);
     if(p<.02)hint.classList.add('on');else if(!interactive)hint.classList.remove('on');setCap(CAPS,p);
     if(feelOn&&navigator.vibrate){const ph=Math.sin(now*.0011);if(ph>.98&&now-lastBuzz>800){lastBuzz=now;try{navigator.vibrate(18);}catch(e){}}}
     return 'Ch. 4 · Swell and Wind';},
+  demo(){sw.value='27';swellA=27;setTimeout(()=>{feel.click();},2200);setTimeout(()=>{feel.click();},5200);return 'A swell from the northwest, then the view from the deck';},
   init(){sw.addEventListener('input',()=>{swellA=+sw.value;});feel.addEventListener('click',()=>{feelOn=!feelOn;feel.setAttribute('aria-pressed',String(feelOn));feel.textContent=feelOn?'Overhead':'Feel it';});}};}
 
 /* ===================== WAKE ===================== */
@@ -456,12 +502,13 @@ function chWake(sec){const S=setup(sec),x=S.x;S.resize(1);
     if(sail.done){x.globalAlpha=a*Math.min(1,(t-sail.t0)/1500);x.strokeStyle=LINE;x.lineWidth=1.5;x.beginPath();x.arc(HAWAII[0],HAWAII[1],14,0,6.283);x.stroke();x.fillStyle=LINE;x.beginPath();x.arc(HAWAII[0],HAWAII[1],3,0,6.283);x.fill();x.fillStyle=PAPER;x.fillText('HAWAIʻI',HAWAII[0],HAWAII[1]-22);x.setLineDash([2,4]);x.strokeStyle='rgba(238,243,246,.5)';x.beginPath();x.moveTo(sail.pos[0],sail.pos[1]);x.lineTo(HAWAII[0],HAWAII[1]);x.stroke();x.setLineDash([]);}x.restore();}
   const CAPS=[[0,.06,''],[.06,.18,'The last thing is speed. You count the wake.'],[.18,.34,'How long for the foam to pass from bow to stern. Do it a hundred times and you know your speed in your bones.'],[.34,.56,'Where you started. Which way you are pointed. How fast. How long. That is the whole sum. They carried it in their heads for three thousand miles.'],[.56,.7,'Nothing out here is empty. It is all information, if you have learned to read it.'],[.7,1.01,'Your turn. Sail the canoe from Tahiti toward Hawaiʻi by feel. Release when you think you have arrived.']];
   return {resize(){S.resize(S.W<600?1.15:1);},frame(p,now){S.begin();S.bg(.5,.5);S.world();const wk=1-seg(p,.34,.4),sys=seg(p,.34,.4)*(1-seg(p,.68,.74)),ch=seg(p,.68,.74);
-    if(wk>0)wake(wk*seg(p,0,.08),now,seg(p,.18,.22));if(sys>0)system(sys,now);if(ch>0){chart(ch,now);S.c.classList.add('grab');sail.on=true;}else{S.c.classList.remove('grab');sail.on=false;}
+    if(wk>0)wake(wk*seg(p,0,.08),now,seg(p,.18,.22));if(sys>0)system(sys,now);if(ch>0){if(sail.demo!==undefined&&!sail.done){sail.demo+=1/150;const u=Math.min(1,sail.demo);const nx=TAHITI[0]-150*u+Math.sin(u*6)*18,ny=TAHITI[1]-(TAHITI[1]-150)*u;const dx=nx-sail.pos[0],dy=ny-sail.pos[1];sail.hdg=Math.atan2(dy,dx);sail.dist+=Math.hypot(dx,dy);sail.pos=[nx,ny];sail.trail.push([nx,ny]);if(u>=1){sail.done=true;sail.t0=now;delete sail.demo;}}chart(ch,now);S.c.classList.add('grab');sail.on=true;}else{S.c.classList.remove('grab');sail.on=false;}
     if(p>.18&&p<.34){ro.classList.add('on');ro.innerHTML='Bow to stern <b>5.6 s</b><br>Hull 20 m<br><span class="big">7 KN</span>';}
     else if(ch>0){ro.classList.add('on');const km=Math.round(sail.dist*4.4);const hrs=km/(7*1.852);const days=Math.floor(hrs/24),h=Math.round(hrs%24);const deg=Math.round(((sail.hdg*180/Math.PI)+90+360)%360);ro.innerHTML=`Heading <b>${String(deg).padStart(3,'0')}°</b><br>Speed <b>7 kn</b><br>Run <b>${km} km</b><br><span class="big">${days}D ${h}H</span>`;}
     else ro.classList.remove('on');
     if(p<.02)hint.classList.add('on');else if(ch<1)hint.classList.remove('on');if(ch>=1&&!sail.drag&&!sail.done){hint.textContent='Drag the canoe';hint.classList.add('on');}
     setCap(CAPS,p);return 'Ch. 5 · The Wake';},
+  demo(){sail.demo=0;return 'Sailing north by dead reckoning; the true island appears when the canoe stops';},
   init(){S.c.addEventListener('pointerdown',e=>{if(!sail.on||sail.done)return;const [px,py]=S.toD(e);if(Math.hypot(px-sail.pos[0],py-sail.pos[1])>80)return;sail.drag=true;S.c.setPointerCapture(e.pointerId);hint.classList.remove('on');e.preventDefault();});
     S.c.addEventListener('pointermove',e=>{if(!sail.drag)return;const [px,py]=S.toD(e);const nx=Math.max(60,Math.min(940,px)),ny=Math.max(60,Math.min(940,py));const dx=nx-sail.pos[0],dy=ny-sail.pos[1];const d=Math.hypot(dx,dy);if(d>2){sail.hdg=Math.atan2(dy,dx);sail.dist+=d;sail.pos=[nx,ny];sail.trail.push([nx,ny]);}e.preventDefault();});
     const rel=()=>{if(!sail.drag)return;sail.drag=false;sail.done=true;sail.t0=performance.now();};S.c.addEventListener('pointerup',rel);S.c.addEventListener('pointercancel',rel);}};}
@@ -479,6 +526,31 @@ function loop(now){const vh=innerHeight;let cur=null,curP=0,label='Navigating by
   rail.forEach(a=>a.setAttribute('aria-current',a.getAttribute('href')==='#'+active?'true':'false'));
   requestAnimationFrame(loop);}
 requestAnimationFrame(loop);
+
+/* ===================== GUIDE, TOUR, CONTROLS ===================== */
+const guide=document.getElementById('guide'),bPlay=document.getElementById('bPlay'),bReplay=document.getElementById('bReplay'),bHelp=document.getElementById('bHelp'),tourMsg=document.getElementById('tourMsg');
+let seen=false;try{seen=localStorage.getItem('nbn-guide')==='1';}catch(e){}
+if(seen)guide.hidden=true;else document.body.style.overflow='hidden';
+function closeGuide(){guide.hidden=true;document.body.style.overflow='';try{localStorage.setItem('nbn-guide','1');}catch(e){}}
+document.getElementById('gBegin').addEventListener('click',closeGuide);
+document.getElementById('gTour').addEventListener('click',()=>{closeGuide();startTour();});
+bHelp.addEventListener('click',()=>{stopTour();guide.hidden=false;});
+addEventListener('keydown',e=>{if(e.key==='?'){guide.hidden=!guide.hidden;}if(e.key==='Escape'&&!guide.hidden)closeGuide();if(e.key===' '&&guide.hidden&&document.activeElement===document.body){e.preventDefault();tour.on?stopTour():startTour();}});
+const tour={on:false,i:0,raf:0,phase:'scroll',y:0,target:0,until:0};
+const SPEED=0.028; // viewport heights per frame ≈ 1.7 vh/s at 60fps → ~50 s per chapter
+function msg(t){tourMsg.textContent=t;tourMsg.classList.toggle('on',!!t);}
+function currentIndex(){const y=scrollY+innerHeight*.5;let i=0;secs.forEach((s,k)=>{if(s.sec.offsetTop<=y)i=k;});return i;}
+function startTour(from){tour.on=true;tour.i=from??currentIndex();bPlay.setAttribute('aria-pressed','true');bPlay.firstChild.textContent='❚❚';tour.phase='scroll';const sec=secs[tour.i].sec;if(Math.abs(scrollY-sec.offsetTop)>innerHeight*.6)window.scrollTo({top:sec.offsetTop,behavior:'auto'});tour.y=scrollY;msg('Tour · scroll, tap or press space to take over');setTimeout(()=>{if(tour.on)msg('');},3000);cancelAnimationFrame(tour.raf);tour.raf=requestAnimationFrame(tourStep);}
+function stopTour(){if(!tour.on)return;tour.on=false;cancelAnimationFrame(tour.raf);bPlay.setAttribute('aria-pressed','false');bPlay.firstChild.textContent='▶';msg('');}
+function tourStep(now){if(!tour.on)return;const {sec,ch}=secs[tour.i];const end=sec.offsetTop+sec.offsetHeight-innerHeight;
+  if(tour.phase==='scroll'){tour.y=Math.min(end,tour.y+innerHeight*SPEED);window.scrollTo(0,tour.y);
+    if(tour.y>=end-1){tour.phase='demo';const t=ch.demo?ch.demo():'';msg(t?'Example · '+t:'');tour.until=now+7000;}}
+  else if(tour.phase==='demo'){if(now>=tour.until){msg('');if(tour.i<secs.length-1){tour.i++;tour.phase='jump';tour.target=secs[tour.i].sec.offsetTop;}else{tour.phase='done';tour.target=document.getElementById('close').offsetTop;}}}
+  else if(tour.phase==='jump'||tour.phase==='done'){tour.y+= (tour.target-tour.y)*.08;window.scrollTo(0,tour.y);if(Math.abs(tour.target-tour.y)<2){window.scrollTo(0,tour.target);if(tour.phase==='done'){stopTour();return;}tour.phase='scroll';}}
+  tour.raf=requestAnimationFrame(tourStep);}
+['wheel','touchstart','pointerdown','keydown'].forEach(ev=>addEventListener(ev,e=>{if(!tour.on)return;if(ev==='pointerdown'&&(e.target.closest('.bar')||e.target.closest('.guide')))return;if(ev==='keydown'&&e.key===' ')return;stopTour();},{passive:true}));
+bPlay.addEventListener('click',()=>tour.on?stopTour():startTour());
+bReplay.addEventListener('click',()=>{stopTour();const i=currentIndex();window.scrollTo({top:secs[i].sec.offsetTop,behavior:'smooth'});});
 })();
 </script>
 </body>
